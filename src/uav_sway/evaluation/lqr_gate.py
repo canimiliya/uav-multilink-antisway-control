@@ -13,7 +13,7 @@ from .controlled_metrics import compute_controlled_metrics, load_controlled_csv
 THRESHOLDS = {"approach_stop": (0.25, 0.45, 0.15, 3.0), "crosswind_hover": (0.30, 0.35, 0.15, 0.0), "gust_micro_adjust": (0.20, 0.30, 0.15, 0.30)}
 
 
-def raw_lqr_gate(run_paths: dict[str, Path], pid_paths: dict[str, Path]) -> dict:
+def raw_lqr_gate(run_paths: dict[str, Path], pid_paths: dict[str, Path], include_global: bool = True) -> dict:
     results = {}; all_pass = True; residual = False
     for scenario, path in run_paths.items():
         _, v = load_controlled_csv(path); final_target, max_rmse, max_z, _ = THRESHOLDS[scenario]
@@ -32,4 +32,25 @@ def raw_lqr_gate(run_paths: dict[str, Path], pid_paths: dict[str, Path]) -> dict
         checks["position_fairness"] = lqr["x_position_rmse_m"] <= 1.10 * pid["x_position_rmse_m"]
         if scenario == "approach_stop": checks["approach_tip_improvement"] = lqr["tip_rms_m"] <= 0.95 * pid["tip_rms_m"]
         checks = {k: bool(x) for k, x in checks.items()}; results[scenario] = {"checks": checks, "pass": bool(all(checks.values())), "metrics": lqr, "pid_metrics": pid}; all_pass = all_pass and results[scenario]["pass"]
-    return {"source": "independent_raw_csv_recomputation", "pass": bool(all_pass and residual), "residual_sway_confirmed": bool(residual), "scenarios": results}
+    gate = {"source": "independent_raw_csv_recomputation", "residual_sway_confirmed": bool(residual), "scenarios": results}
+    if include_global:
+        root = Path(__file__).resolve().parents[3]
+        local_path = root / "artifacts/s4/linearization/local_validation.json"
+        operating_path = root / "artifacts/s4/linearization/operating_region_validation.json"
+        score_path = root / "artifacts/s4/repair/scoring_formula_audit.json"
+        grid_path = root / "artifacts/s4/tuning/lqr_grid_repair_64.csv"
+        selection_path = root / "artifacts/s4/tuning/lqr_selection.json"
+        local = json.loads(local_path.read_text(encoding="utf-8")) if local_path.exists() else {}
+        score_audit = json.loads(score_path.read_text(encoding="utf-8")) if score_path.exists() else {}
+        selection = json.loads(selection_path.read_text(encoding="utf-8")) if selection_path.exists() else {}
+        grid_rows = sum(1 for _ in grid_path.open("r", encoding="utf-8")) - 1 if grid_path.exists() else 0
+        selected = selection.get("selected")
+        gate["local_linearization_pass"] = bool(local.get("pass", False) and local.get("local_validation_reference") == "10x_epsilon")
+        gate["operating_region_validation_reported"] = bool(operating_path.exists())
+        gate["scoring_formula_correct"] = bool(score_audit.get("pass", False))
+        gate["grid_size"] = int(grid_rows)
+        gate["selected_candidate_is_safe"] = bool(selection.get("selection_status") == "SELECTED_SAFE_CANDIDATE" and isinstance(selected, dict) and selected.get("safe_gate", False))
+        gate["pass"] = bool(all_pass and residual and gate["local_linearization_pass"] and gate["operating_region_validation_reported"] and gate["scoring_formula_correct"] and grid_rows == 64 and gate["selected_candidate_is_safe"])
+    else:
+        gate["pass"] = bool(all_pass)
+    return gate

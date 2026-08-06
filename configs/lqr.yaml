@@ -24,20 +24,27 @@ fixed_weights:
   body_pitch_rate: 1.0
 joint_angle_weight_candidates:
 - 20.0
-- 40.0
 - 80.0
 joint_velocity_weight_candidates:
 - 3.0
-- 6.0
 - 12.0
 input_weight_candidates:
 - 0.5
 - 1.0
-- 2.0
+position_error_weight_candidates:
+- 20.0
+- 40.0
+- 80.0
+- 160.0
+velocity_error_weight_candidates:
+- 4.0
+- 8.0
 attitude_natural_frequency_rad_s: 4.0
 attitude_damping_ratio: 0.9
-selected_grid_index: null
-selected_joint_angle_weight: null
-selected_joint_velocity_weight: null
-selected_input_weight: null
-diagnostic_grid_index: 27
+selected_grid_index: 36
+selected_joint_angle_weight: 20.0
+selected_joint_velocity_weight: 12.0
+selected_input_weight: 1.0
+diagnostic_grid_index: null
+selected_position_error_weight: 80.0
+selected_velocity_error_weight: 4.0

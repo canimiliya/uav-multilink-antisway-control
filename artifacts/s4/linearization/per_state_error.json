@@ -1,0 +1,251 @@
+{
+  "2x_epsilon": {
+    "position_error_x": {
+      "absolute_rmse": 9.032368091182123e-12,
+      "normalized_rmse": 4.5161840455910626e-08,
+      "p95_error": 9.512701447474679e-08
+    },
+    "velocity_error_x": {
+      "absolute_rmse": 3.5636084050295675e-10,
+      "normalized_rmse": 1.7818042025147837e-06,
+      "p95_error": 3.6614659044837363e-06
+    },
+    "altitude_error": {
+      "absolute_rmse": 4.1258268995586795e-11,
+      "normalized_rmse": 2.0629134497793396e-07,
+      "p95_error": 4.03558895749642e-07
+    },
+    "vertical_velocity": {
+      "absolute_rmse": 1.6086989665926646e-09,
+      "normalized_rmse": 8.043494832963324e-06,
+      "p95_error": 1.6956921275462617e-05
+    },
+    "pitch": {
+      "absolute_rmse": 9.797508704082871e-11,
+      "normalized_rmse": 4.8987543520414335e-06,
+      "p95_error": 9.948172278206417e-06
+    },
+    "body_pitch_rate": {
+      "absolute_rmse": 3.4710389066792143e-09,
+      "normalized_rmse": 1.7355194533396074e-05,
+      "p95_error": 3.487782972520777e-05
+    },
+    "joint_1_angle": {
+      "absolute_rmse": 3.147555048017695e-11,
+      "normalized_rmse": 1.573777524008848e-06,
+      "p95_error": 3.5492101814035792e-06
+    },
+    "joint_2_angle": {
+      "absolute_rmse": 7.781898689325653e-11,
+      "normalized_rmse": 3.890949344662826e-06,
+      "p95_error": 8.871376722935379e-06
+    },
+    "joint_3_angle": {
+      "absolute_rmse": 5.5649762632949604e-11,
+      "normalized_rmse": 2.7824881316474795e-06,
+      "p95_error": 4.938622808005308e-06
+    },
+    "joint_4_angle": {
+      "absolute_rmse": 5.167407743550888e-11,
+      "normalized_rmse": 2.583703871775444e-06,
+      "p95_error": 6.188316519479796e-06
+    },
+    "joint_5_angle": {
+      "absolute_rmse": 2.055443977840536e-11,
+      "normalized_rmse": 1.0277219889202681e-06,
+      "p95_error": 2.466292830333789e-06
+    },
+    "joint_1_velocity": {
+      "absolute_rmse": 8.91796347267446e-10,
+      "normalized_rmse": 4.458981736337232e-06,
+      "p95_error": 1.0331061107755747e-05
+    },
+    "joint_2_velocity": {
+      "absolute_rmse": 2.5458880622962292e-09,
+      "normalized_rmse": 1.2729440311481143e-05,
+      "p95_error": 2.9518367900464312e-05
+    },
+    "joint_3_velocity": {
+      "absolute_rmse": 1.8883451369273217e-09,
+      "normalized_rmse": 9.441725684636614e-06,
+      "p95_error": 1.9243093366687386e-05
+    },
+    "joint_4_velocity": {
+      "absolute_rmse": 1.5335721446413157e-09,
+      "normalized_rmse": 7.667860723206578e-06,
+      "p95_error": 1.6860635146431856e-05
+    },
+    "joint_5_velocity": {
+      "absolute_rmse": 5.779284044168923e-10,
+      "normalized_rmse": 2.889642022084462e-06,
+      "p95_error": 6.9086839152451676e-06
+    },
+    "worst_state": "body_pitch_rate"
+  },
+  "5x_epsilon": {
+    "position_error_x": {
+      "absolute_rmse": 1.6554428068045487e-09,
+      "normalized_rmse": 3.310885613609099e-06,
+      "p95_error": 1.1220495889515332e-06
+    },
+    "velocity_error_x": {
+      "absolute_rmse": 6.914966282585848e-09,
+      "normalized_rmse": 1.3829932565171696e-05,
+      "p95_error": 1.253939391260739e-05
+    },
+    "altitude_error": {
+      "absolute_rmse": 3.502318576947553e-10,
+      "normalized_rmse": 7.004637153895108e-07,
+      "p95_error": 1.4322842428467007e-06
+    },
+    "vertical_velocity": {
+      "absolute_rmse": 1.3334015834555097e-08,
+      "normalized_rmse": 2.6668031669110195e-05,
+      "p95_error": 5.5768001753166526e-05
+    },
+    "pitch": {
+      "absolute_rmse": 2.1102938804222126e-08,
+      "normalized_rmse": 0.00042205877608444243,
+      "p95_error": 0.0001732588552033548
+    },
+    "body_pitch_rate": {
+      "absolute_rmse": 1.8582060649059275e-07,
+      "normalized_rmse": 0.00037164121298118556,
+      "p95_error": 0.00014091976835661164
+    },
+    "joint_1_angle": {
+      "absolute_rmse": 7.936048473126272e-08,
+      "normalized_rmse": 0.0015872096946252551,
+      "p95_error": 0.0005931431126813009
+    },
+    "joint_2_angle": {
+      "absolute_rmse": 4.1672934433919816e-08,
+      "normalized_rmse": 0.0008334586886783961,
+      "p95_error": 0.000317562306294711
+    },
+    "joint_3_angle": {
+      "absolute_rmse": 2.9670156662751685e-08,
+      "normalized_rmse": 0.0005934031332550335,
+      "p95_error": 0.00023228024578148703
+    },
+    "joint_4_angle": {
+      "absolute_rmse": 9.40502072601622e-09,
+      "normalized_rmse": 0.00018810041452032433,
+      "p95_error": 7.15468723787917e-05
+    },
+    "joint_5_angle": {
+      "absolute_rmse": 2.916707994728888e-10,
+      "normalized_rmse": 5.833415989457775e-06,
+      "p95_error": 7.0443927743907305e-06
+    },
+    "joint_1_velocity": {
+      "absolute_rmse": 2.010059013388245e-07,
+      "normalized_rmse": 0.00040201180267764866,
+      "p95_error": 0.00012824480245610993
+    },
+    "joint_2_velocity": {
+      "absolute_rmse": 3.0267254744365227e-07,
+      "normalized_rmse": 0.0006053450948873048,
+      "p95_error": 0.0002139150382042005
+    },
+    "joint_3_velocity": {
+      "absolute_rmse": 1.0930202507367569e-07,
+      "normalized_rmse": 0.00021860405014735156,
+      "p95_error": 8.196939083348113e-05
+    },
+    "joint_4_velocity": {
+      "absolute_rmse": 3.2745475210473506e-07,
+      "normalized_rmse": 0.0006549095042094698,
+      "p95_error": 0.00021195063215394066
+    },
+    "joint_5_velocity": {
+      "absolute_rmse": 1.322611281035378e-07,
+      "normalized_rmse": 0.0002645222562070756,
+      "p95_error": 9.227471248654847e-05
+    },
+    "worst_state": "joint_1_angle"
+  },
+  "10x_epsilon": {
+    "position_error_x": {
+      "absolute_rmse": 9.245339701459197e-08,
+      "normalized_rmse": 9.2453397014592e-05,
+      "p95_error": 0.00023405088441149868
+    },
+    "velocity_error_x": {
+      "absolute_rmse": 2.7754067258766853e-06,
+      "normalized_rmse": 0.002775406725876686,
+      "p95_error": 0.007014020922835351
+    },
+    "altitude_error": {
+      "absolute_rmse": 1.1498661413162388e-09,
+      "normalized_rmse": 1.149866141316239e-06,
+      "p95_error": 2.4376821992038e-06
+    },
+    "vertical_velocity": {
+      "absolute_rmse": 4.460028171066803e-08,
+      "normalized_rmse": 4.460028171066803e-05,
+      "p95_error": 9.324374080569688e-05
+    },
+    "pitch": {
+      "absolute_rmse": 1.1002074378121139e-06,
+      "normalized_rmse": 0.01100207437812114,
+      "p95_error": 0.02709401305646817
+    },
+    "body_pitch_rate": {
+      "absolute_rmse": 3.5150160601296754e-05,
+      "normalized_rmse": 0.03515016060129675,
+      "p95_error": 0.0873833661763167
+    },
+    "joint_1_angle": {
+      "absolute_rmse": 4.771500499145997e-06,
+      "normalized_rmse": 0.047715004991459975,
+      "p95_error": 0.12515684017268688
+    },
+    "joint_2_angle": {
+      "absolute_rmse": 3.1612364931528293e-06,
+      "normalized_rmse": 0.031612364931528296,
+      "p95_error": 0.08060188599744846
+    },
+    "joint_3_angle": {
+      "absolute_rmse": 1.6115507615642567e-06,
+      "normalized_rmse": 0.01611550761564256,
+      "p95_error": 0.039794764771064375
+    },
+    "joint_4_angle": {
+      "absolute_rmse": 1.6442091224137735e-07,
+      "normalized_rmse": 0.0016442091224137733,
+      "p95_error": 0.004446441287563155
+    },
+    "joint_5_angle": {
+      "absolute_rmse": 1.523975257344452e-07,
+      "normalized_rmse": 0.0015239752573444514,
+      "p95_error": 0.003775397632934172
+    },
+    "joint_1_velocity": {
+      "absolute_rmse": 0.00013552767945122839,
+      "normalized_rmse": 0.1355276794512284,
+      "p95_error": 0.3467071509541472
+    },
+    "joint_2_velocity": {
+      "absolute_rmse": 7.683562209747394e-05,
+      "normalized_rmse": 0.07683562209747398,
+      "p95_error": 0.20103749070378854
+    },
+    "joint_3_velocity": {
+      "absolute_rmse": 4.927651225622445e-05,
+      "normalized_rmse": 0.04927651225622444,
+      "p95_error": 0.12403416687121584
+    },
+    "joint_4_velocity": {
+      "absolute_rmse": 1.654993368316473e-05,
+      "normalized_rmse": 0.016549933683164725,
+      "p95_error": 0.03629873202201117
+    },
+    "joint_5_velocity": {
+      "absolute_rmse": 3.7850552353555386e-06,
+      "normalized_rmse": 0.003785055235355537,
+      "p95_error": 0.009236204037598297
+    },
+    "worst_state": "joint_1_velocity"
+  }
+}

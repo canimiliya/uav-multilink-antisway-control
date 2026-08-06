@@ -6,3 +6,16 @@ Failure 1: the required 20-point local nonlinear prediction audit does not meet 
 Failure 2: all 27 fixed Q/R candidates solved DARE and had closed-loop spectral radius below 0.999, but none passed the required development-scene fairness gate. Diagnostic candidate 27 gives approach_stop x-RMSE 0.16478218835934288 m versus frozen PID 0.09819340462735267 m, and crosswind_hover x-RMSE 0.16746910759733513 m versus frozen PID 0.08971880565767204 m. Both exceed 110% of the corresponding PID values.
 
 The diagnostic runs remain finite, unanchored, above the height limits, within attitude/input limits, and approach_stop tip RMS is 0.1309127535391128 m versus PID 0.221244144544995 m. No PID, model, wind, reference, inner-loop, Udaan, MPPI, MPC, or force-injection workaround was used.
+
+--- S4-LQR-VALIDATION-FAIRNESS-FIX-R1 outcome ---
+The historical 20-point wide-region limitation above was preserved unchanged
+as operating_region_validation.json. The authorized 200-sample mirrored local
+validation at 2x, 5x, and 10x finite-difference epsilon passed at 10x: median
+4.3630118193450674e-05 and P95 0.11255382889532099.
+
+The scoring formula was corrected so all four terms are penalties. The frozen
+64-point grid recorded 64 candidates and selected candidate 36 after 24 safe
+candidates passed both development-scene fairness and approach sway gates.
+The three formal raw CSV runs passed the independent gate; approach-stop tip
+RMS improved by 23.677493709094964 percent. No protected S1-S3 file, model,
+PID, wind, common inner loop, input limit, or Udaan source was modified.

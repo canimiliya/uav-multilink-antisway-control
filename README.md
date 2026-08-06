@@ -49,15 +49,15 @@ outside this stage.
 S4 implements the nominal five-link full-state LQR identification path:
 name-based 16-state injection/extraction, an automatically checked free-flight
 equilibrium, a 50-physics-step nonlinear closed-loop map, central finite
-differences, controllability/PBH analysis, discrete DARE, the frozen 27-point
-Q/R grid, raw CSV comparison, and independent gates. The LQR reuses the S3
-runtime model, geometric inner loop, wind bank, references, and acceleration
-limits without changing S1-S3 files.
+differences, controllability/PBH analysis, discrete DARE, raw CSV comparison,
+and independent gates. The original 27-point Q/R evidence is retained, while
+the authorized repair uses the frozen 64-point position/velocity/joint/input
+grid. The LQR reuses the S3 runtime model, geometric inner loop, wind bank,
+references, and acceleration limits without changing S1-S3 files.
 
-S4 is currently BLOCKED by the frozen fairness gate: none of the 27 Q/R
-candidates keeps both development-scenario x-RMSE values within 110% of the
-frozen PID while also meeting the approach-stop sway-improvement gate. All
-three diagnostic LQR runs are finite, free-flight, bounded, and the
-approach-stop tip RMS improves, but constant-wind position bias makes the
-no-integral LQR crosswind x-RMSE worse than the allowed limit. The complete
-diagnostic grid and raw gate are retained under `artifacts/s4/`.
+The repair separates the original wide operating-region linearization result
+from a 200-sample mirrored local validation at 2x, 5x, and 10x finite-
+difference epsilon. The 10x local validation passes. Corrected all-positive
+candidate scoring selects a safe Q/R candidate from only `approach_stop` and
+`crosswind_hover`; the three raw-CSV LQR scenarios pass the position-fairness
+and approach-stop sway gates. Evidence is retained under `artifacts/s4/`.

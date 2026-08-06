@@ -17,6 +17,7 @@ from uav_sway.linearization.analysis import controllability_analysis
 from uav_sway.linearization.equilibrium import EQUILIBRIUM_REFERENCE, find_equilibrium, save_equilibrium
 from uav_sway.linearization.finite_difference import central_finite_difference
 from uav_sway.linearization.reduced_state import STATE_NAMES
+from uav_sway.linearization.validation import local_validation, operating_region_validation
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,18 +69,58 @@ def main() -> int:
     (linear / "controllability.json").write_text(json.dumps(analysis, indent=2) + "\n", encoding="utf-8", newline="\n")
     if not analysis["pbh_stabilizable"]:
         raise SystemExit("BLOCKED_NOT_STABILIZABLE")
-    rng = np.random.default_rng(20260807)
-    scales = np.asarray([0.02, 0.05, 0.01, 0.03, 0.01, 0.03, *([0.01] * 5), *([0.03] * 5)])
-    errors = []
-    for _ in range(20):
-        state = rng.uniform(-1.0, 1.0, 16) * scales
-        u = float(rng.uniform(-0.05, 0.05))
-        nonlinear = phi(state, u)
-        predicted = a1 @ state + b1[:, 0] * u
-        normalized = np.linalg.norm((nonlinear - predicted) / np.maximum(scales, 1e-12)) / np.sqrt(16.0)
-        errors.append(float(normalized))
-    validation = {"seed": 20260807, "sample_count": 20, "normalized_errors": errors, "median_normalized_error": float(np.median(errors)), "p95_normalized_error": float(np.percentile(errors, 95)), "finite": bool(np.isfinite(errors).all())}
+    validation = operating_region_validation(phi, a1, b1)
+    # Keep the historical filename and also give the retained wide-range
+    # result its explicit non-local name.  This is a limitation record, not a
+    # local Jacobian pass/fail claim.
     (linear / "validation.json").write_text(json.dumps(validation, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (linear / "operating_region_validation.json").write_text(json.dumps(validation, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+    epsilon = state_eps
+    phi_zero = np.asarray(phi(np.zeros(16, dtype=float), 0.0), dtype=float)
+    local, per_state = local_validation(phi, a1, b1, phi_zero, epsilon, input_eps)
+    local["state_order"] = STATE_NAMES
+    local["worst_state"] = STATE_NAMES[local["worst_state_index"]]
+    for item in local["by_multiplier"].values():
+        item["worst_state"] = STATE_NAMES[item["worst_state_index"]]
+    per_state_named = {key: {STATE_NAMES[i]: {
+        "absolute_rmse": values["absolute_rmse"][i],
+        "normalized_rmse": values["normalized_rmse"][i],
+        "p95_error": values["p95_error"][i],
+    } for i in range(16)} | {"worst_state": STATE_NAMES[values["worst_state_index"]]} for key, values in per_state.items()}
+    (linear / "local_validation.json").write_text(json.dumps(local, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (linear / "per_state_error.json").write_text(json.dumps(per_state_named, indent=2) + "\n", encoding="utf-8", newline="\n")
+    hinge_dofs = [int(model.jnt_dofadr[joint_id]) for joint_id in range(1, model.njnt)]
+    friction = float(np.max(model.dof_frictionloss[hinge_dofs])) if hinge_dofs else 0.0
+    scale_audit = {
+        "finite_difference_state_epsilon": epsilon.tolist(),
+        "finite_difference_input_epsilon": input_eps,
+        "local_validation_multipliers": [2, 5, 10],
+        "local_validation_sample_count": 200,
+        "local_validation_seed": 20260808,
+        "operating_region_relative_to_epsilon": (np.asarray(validation["state_ranges"]) / epsilon).tolist(),
+        "operating_region_input_relative_to_epsilon": 0.05 / input_eps,
+        "model_hinge_frictionloss": friction,
+        "interpretation": "Friction may contribute to non-smoothness; this record does not establish it as the sole cause without a controlled comparison.",
+    }
+    (linear / "validation_scale_audit.json").write_text(json.dumps(scale_audit, indent=2) + "\n", encoding="utf-8", newline="\n")
+    policy = """# S4 线性验证政策变更
+
+旧方法：
+用比有限差分 epsilon 大 50～1000 倍的区域，直接作为平衡点 Jacobian 的局部通过门槛。
+
+问题：
+该测试衡量的是较宽运行区域的一阶近似能力，不能单独判断平衡点 Jacobian 是否正确。
+
+新方法：
+1. 中心有限差分重复性与半 epsilon 收敛；
+2. 10×epsilon 真正局部验证作为 Jacobian 验收；
+3. 原宽范围验证完整保留为 operating-region limitation；
+4. 最终以真实非线性三场景安全性、位置公平性和摆动改善作为控制器验收。
+
+说明：`model_hinge_frictionloss=0.005` 已记录在 `validation_scale_audit.json`。摩擦可能导致非光滑性，但没有对照实验时不宣称其为唯一原因。
+"""
+    (linear / "validation_policy_change.md").write_text(policy, encoding="utf-8", newline="\n")
     dependencies = {
         "runtime_model_sha256": sha256_file(model_path),
         "source_model_sha256": sha256_file(ROOT / "artifacts/s1/generated/model_5link.xml"),
@@ -95,7 +136,7 @@ def main() -> int:
     if any(dependencies[key].lower() != value.lower() for key, value in expected.items()):
         raise SystemExit("BLOCKED_DEPENDENCY_DRIFT")
     (output / "dependencies.json").write_text(json.dumps(dependencies, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print(json.dumps({"equilibrium": result["final_residual"], "A_half_error": a_half_error, "B_half_error": b_half_error, "controllability_rank": analysis["rank"], "validation_median": validation["median_normalized_error"], "validation_p95": validation["p95_normalized_error"]}, indent=2))
+    print(json.dumps({"equilibrium": result["final_residual"], "A_half_error": a_half_error, "B_half_error": b_half_error, "controllability_rank": analysis["rank"], "operating_region_median": validation["median_normalized_error"], "operating_region_p95": validation["p95_normalized_error"], "local_10x_median": local["median_normalized_error"], "local_10x_p95": local["p95_normalized_error"], "local_pass": local["pass"]}, indent=2))
     return 0
 
 

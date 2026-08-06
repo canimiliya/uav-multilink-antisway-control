@@ -1,0 +1,49 @@
+{
+  "finite_difference_state_epsilon": [
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    1e-05,
+    0.0001,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001
+  ],
+  "finite_difference_input_epsilon": 0.001,
+  "local_validation_multipliers": [
+    2,
+    5,
+    10
+  ],
+  "local_validation_sample_count": 200,
+  "local_validation_seed": 20260808,
+  "operating_region_relative_to_epsilon": [
+    200.0,
+    500.0,
+    100.0,
+    300.0,
+    999.9999999999999,
+    300.0,
+    999.9999999999999,
+    999.9999999999999,
+    999.9999999999999,
+    999.9999999999999,
+    999.9999999999999,
+    300.0,
+    300.0,
+    300.0,
+    300.0,
+    300.0
+  ],
+  "operating_region_input_relative_to_epsilon": 50.0,
+  "model_hinge_frictionloss": 0.005,
+  "interpretation": "Friction may contribute to non-smoothness; this record does not establish it as the sole cause without a controlled comparison."
+}

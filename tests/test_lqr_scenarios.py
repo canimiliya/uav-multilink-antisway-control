@@ -19,7 +19,9 @@ def test_three_lqr_raw_runs_are_finite_and_free_flight():
         assert metrics["maximum_abs_pitch_rad"] < np.deg2rad(25.0)
 
 
-def test_s4_selection_explicitly_records_no_safe_candidate():
+def test_s4_selection_records_the_safe_repair_candidate():
     selection = json.loads((ROOT / "artifacts/s4/tuning/lqr_selection.json").read_text(encoding="utf-8"))
-    assert selection["selection_status"] == "BLOCKED_NO_SAFE_CANDIDATE"
-    assert selection["selected"] is None
+    assert selection["selection_status"] == "SELECTED_SAFE_CANDIDATE"
+    assert selection["grid_size"] == 64
+    assert selection["gust_used_for_selection"] is False
+    assert selection["selected"]["safe_gate"] is True

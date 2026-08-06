@@ -1,0 +1,29 @@
+{
+  "formula": "mean(tip_rms_ratios) + 0.25*mean(position_rmse_ratios) + 0.05*mean(control_rate_ratios) + 0.05*mean(saturation_rates)",
+  "uniform_case": {
+    "tip_rms_ratios": [
+      1.0,
+      1.0
+    ],
+    "position_rmse_ratios": [
+      1.0,
+      1.0
+    ],
+    "control_rate_ratios": [
+      1.0,
+      1.0
+    ],
+    "saturation_rates": [
+      0.0,
+      0.0
+    ]
+  },
+  "computed_uniform_case": 1.3,
+  "directional_checks": {
+    "larger_position_penalty_increases_score": true,
+    "larger_saturation_penalty_increases_score": true,
+    "larger_sway_penalty_increases_score": true,
+    "larger_control_rate_penalty_increases_score": true
+  },
+  "pass": true
+}

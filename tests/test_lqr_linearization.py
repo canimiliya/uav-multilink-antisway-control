@@ -26,3 +26,23 @@ def test_linearization_validation_is_recorded_without_overclaiming():
     assert validation["sample_count"] == 20
     assert validation["finite"]
     assert validation["median_normalized_error"] > 0.10 or validation["p95_normalized_error"] > 0.25
+
+
+def test_local_validation_uses_mirrors_and_passes_at_10x_epsilon():
+    import json
+    local = json.loads((ROOT / "artifacts/s4/linearization/local_validation.json").read_text(encoding="utf-8"))
+    assert local["sample_count"] == 200
+    assert local["mirror_samples"] is True
+    assert set(local["by_multiplier"]) == {"2x_epsilon", "5x_epsilon", "10x_epsilon"}
+    assert local["pass"] is True
+    assert local["by_multiplier"]["10x_epsilon"]["median_normalized_error"] < 0.10
+    assert local["by_multiplier"]["10x_epsilon"]["p95_normalized_error"] < 0.25
+
+
+def test_operating_region_failure_is_preserved_separately():
+    import json
+    old = json.loads((ROOT / "artifacts/s4/linearization/operating_region_validation.json").read_text(encoding="utf-8"))
+    assert old["seed"] == 20260807
+    assert old["sample_count"] == 20
+    assert old["result"] == "operating_region_limitation"
+    assert old["median_normalized_error"] > 1.0

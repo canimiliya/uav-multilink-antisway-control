@@ -27,3 +27,19 @@ COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party/udaan/tests
 RESULT: 226 passed in 17.07s; exit 0
 
 PROTECTED_SCOPE_AUDIT: S0/S1/S2/S3, frozen configs, S3 inner loop, Udaan submodule unchanged.
+
+--- S4-LQR-VALIDATION-FAIRNESS-FIX-R1 repair run ---
+START_HEAD=f74e37043e7731046e70af465ff86ba25e6f23d4
+COMMAND: D:\anaconda\envs\uav_sway\python.exe scripts/identify_s4_lqr.py --runtime-model artifacts/s3/runtime/model_5link_controlled.xml --model-config configs/model_5link.yaml --output-dir artifacts/s4
+RESULT: equilibrium 1.0733273954080052e-16; operating-region median 1.2959295869930947; operating-region P95 1.8835727269367404; local 10x median 4.3630118193450674e-05; local 10x P95 0.11255382889532099; local pass true; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\python.exe scripts/tune_s4_lqr.py --linear-model artifacts/s4/linearization/linear_model.npz --config configs/lqr.yaml --output-dir artifacts/s4/tuning --headless
+RESULT: 64 candidates recorded; 24 safe candidates; selected index 36; score 1.1218171609085839; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\python.exe scripts/run_s4_lqr.py --model-config configs/model_5link.yaml --lqr-config configs/lqr.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s4
+RESULT: three formal runs generated; raw gate true; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\python.exe scripts/render_s4_lqr.py --pid-dir artifacts/s3/runs --lqr-dir artifacts/s4/runs --output-dir artifacts/s4/figures
+RESULT: repaired comparison figures generated; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests
+RESULT: 54 passed in 2.41s; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party\udaan\tests
+RESULT: 226 passed in 18.19s; exit 0
+PROTECTED_SCOPE_AUDIT: artifacts/s0-s3, frozen model/configs, S3 inner loop, disturbances/scenarios, and Udaan submodule unchanged.

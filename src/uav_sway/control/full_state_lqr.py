@@ -3,11 +3,39 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Sequence
 
 import numpy as np
 
 from .acceleration_limiter import AccelerationLimiter
 from .base import ReferenceState
+
+
+def lqr_candidate_score(
+    tip_rms_ratios: Sequence[float],
+    position_rmse_ratios: Sequence[float],
+    control_rate_ratios: Sequence[float],
+    saturation_rates: Sequence[float],
+) -> float:
+    """Return the frozen S4 candidate score.
+
+    Every term is a penalty.  In particular, worse position tracking and
+    higher saturation must increase the score rather than improve it.
+    """
+    arrays = [
+        np.asarray(tip_rms_ratios, dtype=float),
+        np.asarray(position_rmse_ratios, dtype=float),
+        np.asarray(control_rate_ratios, dtype=float),
+        np.asarray(saturation_rates, dtype=float),
+    ]
+    if any(array.size == 0 or not np.isfinite(array).all() for array in arrays):
+        raise ValueError("LQR score inputs must be non-empty and finite")
+    return float(
+        np.mean(arrays[0])
+        + 0.25 * np.mean(arrays[1])
+        + 0.05 * np.mean(arrays[2])
+        + 0.05 * np.mean(arrays[3])
+    )
 
 
 @dataclass(frozen=True)
