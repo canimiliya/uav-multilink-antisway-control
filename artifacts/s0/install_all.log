@@ -1,0 +1,6 @@
+COMMAND: conda run -n uav_sway python -m pip install -e ".[all]"
+WORKDIR: third_party/udaan
+STARTED: 2026-08-06 (local execution time recorded by task runner)
+RESULT: TIMEOUT
+DETAIL: The command produced no captured stdout/stderr before the 300-second execution limit. The explicitly identified conda/python processes were then stopped. No successful installation is claimed.
+INSTALL_ALL_EXIT_CODE: 124 (task-runner timeout; pip process did not provide a native exit code)

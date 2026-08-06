@@ -1,0 +1,9 @@
+TASK=S0-BASELINE-R1
+FAILURE_1: WSL2 distributions were checked and none had Conda; Ubuntu-24.04 had system Python 3.12.3 only.
+FALLBACK: A Windows Conda 26.1.1 installation was available, so the isolated environment was created as a Windows win-64 environment. This is a scope limitation because the preferred WSL2 execution path was unavailable.
+FAILURE_2: Udaan full extras installation (.[all]) timed out after 300 seconds without captured installer output. The process was stopped; no success is claimed.
+NEXT_ALLOWED_ACTION: Per the frozen task, minimal installation is attempted without modifying Udaan source or dependency declarations.
+BASELINE_ATTEMPT_1: official command launched the MuJoCo window and ran about 10 seconds, then raised a real traceback in Udaan mouse camera callback with installed mujoco 3.11.0 (mjv_moveCamera signature mismatch). No pass claimed.
+BASELINE_ATTEMPT_2: after pinning mujoco==3.0.1, the exact official command completed its 10-second simulation without traceback; the visible window was closed with Q.
+BASELINE_ATTEMPT_3: clean default-camera rerun of the exact official command completed without traceback; local evidence was captured.
+AUXILIARY_MEDIA: official CLI --record path was used only to obtain a local first-frame screenshot; it was not substituted for the required exact command.

@@ -1,0 +1,66 @@
+TASK=S0-BASELINE-R1
+START_HEAD=UNBORN
+WORKSPACE=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+WSL_PROJECT=/mnt/d/Desktop/my_project/Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+
+PRECHECK
+  pwd; ls -la; git status; git rev-parse HEAD; git remote -v
+  RESULT: empty directory; git status/rev-parse/remote each returned 128; no prior HEAD.
+
+REPOSITORY
+  git init -b main
+  git remote add origin https://github.com/canimiliya/uav-multilink-antisway-control.git
+  RESULT: success; origin set; main initialized.
+
+WSL CHECK
+  wsl.exe -l -v
+  wsl.exe -d Ubuntu-24.04 -- bash -lc 'command -v conda; conda --version; python3 --version'
+  RESULT: WSL2 available; no conda in checked WSL distributions; Ubuntu-24.04 system Python was 3.12.3.
+  FALLBACK: host Windows Conda 26.1.1 used to create the required isolated Python 3.11 environment; this limitation is recorded in failure.log.
+
+ENVIRONMENT
+  D:\anaconda\Scripts\conda.exe create -n uav_sway python=3.11 -y
+  RESULT: exit 0; Python 3.11.15 environment created at D:\anaconda\envs\uav_sway.
+
+UPSTREAM
+  git submodule add https://github.com/vkotaru/udaan.git third_party/udaan
+  git -C third_party/udaan fetch origin 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816
+  git -C third_party/udaan checkout --detach 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816
+  RESULT: submodule fetched and checked out exact frozen SHA 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816.
+
++INSTALLATION
+  conda run -n uav_sway python -m pip install --upgrade pip
+  RESULT: exit 0.
+  conda run -n uav_sway python -m pip install -e ".[all]"
+  RESULT: timed out after 300 seconds without captured installer output; process stopped; INSTALL_ALL_EXIT_CODE=124; install_all.log preserved.
+  conda run -n uav_sway python -m pip install -e .
+  RESULT: exit 0; udaan 1.3.0 installed editable.
+  conda run -n uav_sway python -m pip install numpy scipy matplotlib pyyaml pandas pytest
+  RESULT: exit 0; pandas installed, remaining packages satisfied.
+  python -m pip install --force-reinstall --no-deps mujoco==3.0.1
+  RESULT: exit 0; compatible runtime pin; Udaan declares mujoco>=3.0.
+
+HELP
+  udaan --help; udaan run quad-payload --help
+  RESULT: first conda-run wrapper attempt failed with Windows GBK UnicodeEncodeError; failure retained in help logs.
+  D:\anaconda\envs\uav_sway\Scripts\udaan.exe --help
+  D:\anaconda\envs\uav_sway\Scripts\udaan.exe run quad-payload --help
+  RESULT: direct environment executables exit 0; -t/--time and -c/--cable-model links verified.
+
+TEST
+  cd third_party/udaan; pytest -q
+  RESULT: exit 0; 226 passed in 19.21s; pytest.log preserved.
+
+BASELINE
+  udaan run quad-payload -t 10 -c links
+  ATTEMPT_1 RESULT: exit 1 after about 10 seconds; real traceback from Udaan mouse callback with mujoco 3.11.0 API mismatch; preserved.
+  udaan run quad-payload -t 10 -c links
+  ATTEMPT_2 RESULT: exit 0 after mujoco==3.0.1; simulated 10 seconds; window closed with Q; no traceback.
+  udaan run quad-payload -t 10 -c links
+  ATTEMPT_3 RESULT: exit 0; clean default-camera rerun; no traceback; local window evidence captured.
+  udaan run quad-payload -t 10 -c links -r TEMP\udaan_baseline_record_test.mp4
+  AUXILIARY RESULT: exit 0; official record option used only to obtain a local first-frame screenshot; not a substitute for the exact command.
+
+EVIDENCE
+  baseline.png: local first frame extracted from the auxiliary official recording; visibly contains MuJoCo scene, quadrotor, rigid link chain, and green payload.
+  environment.txt and pip_freeze.txt: captured after final runtime pin.

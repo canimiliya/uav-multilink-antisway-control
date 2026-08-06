@@ -1,0 +1,155 @@
+COMMAND: udaan run quad-payload -t 10 -c links
+Running quad-payload (mujoco, links) for 10.0s ...
++--------------------- Traceback (most recent call last) ---------------------+
+| D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended   |
+| Multi-Link Cutting Device under Wind                                        |
+| Disturbances\third_party\udaan\udaan\cli\run.py:152 in quad_payload         |
+|                                                                             |
+|   149     _setup_recording(mdl, record)                                     |
+|   150     typer.echo(f"Running quad-payload ({model}, {cable_model}) for    |
+|       {time}s ...")                                                         |
+|   151     mdl.simulate(tf=time, payload_position=x0)                        |
+| > 152     _hold_viewer(mdl)                                                 |
+|   153                                                                       |
+|   154                                                                       |
+|   155 @run_app.command("multi-quad")                                        |
+|                                                                             |
+| D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended   |
+| Multi-Link Cutting Device under Wind                                        |
+| Disturbances\third_party\udaan\udaan\cli\run.py:16 in _hold_viewer          |
+|                                                                             |
+|    13 def _hold_viewer(mdl):                                                |
+|    14     """Keep MuJoCo viewer open after simulation if it has one."""     |
+|    15     if hasattr(mdl, "_mjMdl") and mdl._mjMdl is not None:             |
+| >  16         mdl._mjMdl.wait_for_close()                                   |
+|    17                                                                       |
+|    18                                                                       |
+|    19 def _setup_recording(mdl, record_path):                               |
+|                                                                             |
+| D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended   |
+| Multi-Link Cutting Device under Wind                                        |
+| Disturbances\third_party\udaan\udaan\models\mujoco\__init__.py:354 in       |
+| wait_for_close                                                              |
+|                                                                             |
+|   351             if self._viewer._record_path:                             |
+|   352                 self._viewer.close()                                  |
+|   353             else:                                                     |
+| > 354                 self._viewer.hold()                                   |
+|   355                                                                       |
+|   356     def set_overlay(self, text):                                      |
+|   357         """Set overlay text displayed in the top-left corner."""      |
+|                                                                             |
+| D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended   |
+| Multi-Link Cutting Device under Wind                                        |
+| Disturbances\third_party\udaan\udaan\models\mujoco\__init__.py:269 in hold  |
+|                                                                             |
+|   266                                                                       |
+|   267         while self._window and not                                    |
+|       glfw.window_should_close(self._window):                               |
+|   268             self.render()                                             |
+| > 269             glfw.wait_events_timeout(1.0 / 60.0)                      |
+|   270         self.close()                                                  |
+|   271                                                                       |
+|   272     def close(self):                                                  |
+|                                                                             |
+| D:\anaconda\envs\uav_sway\Lib\site-packages\glfw\__init__.py:2847 in        |
+| wait_events_timeout                                                         |
+|                                                                             |
+|   2844         Wrapper for:                                                 |
+|   2845             void glfwWaitEventsTimeout(double timeout);              |
+|   2846         """                                                          |
+| > 2847         _glfw.glfwWaitEventsTimeout(timeout)                         |
+|   2848                                                                      |
+|   2849 if hasattr(_glfw, 'glfwPostEmptyEvent'):                             |
+|   2850     _glfw.glfwPostEmptyEvent.restype = None                          |
+|                                                                             |
+| D:\anaconda\envs\uav_sway\Lib\site-packages\glfw\__init__.py:692 in         |
+| errcheck                                                                    |
+|                                                                             |
+|    689         if _exc_info_from_callback is not None:                      |
+|    690             exc = _exc_info_from_callback                            |
+|    691             _exc_info_from_callback = None                           |
+| >  692             _reraise(exc[1], exc[2])                                 |
+|    693         return result                                                |
+|    694                                                                      |
+|    695     for symbol in dir(_glfw):                                        |
+|                                                                             |
+| D:\anaconda\envs\uav_sway\Lib\site-packages\glfw\__init__.py:70 in _reraise |
+|                                                                             |
+|     67 if sys.version_info.major > 2:                                       |
+|     68     _to_char_p = lambda s: s.encode('utf-8')                         |
+|     69     def _reraise(exception, traceback):                              |
+| >   70         raise exception.with_traceback(traceback)                    |
+|     71 else:                                                                |
+|     72     _to_char_p = lambda s: s                                         |
+|     73     def _reraise(exception, traceback):                              |
+|                                                                             |
+| D:\anaconda\envs\uav_sway\Lib\site-packages\glfw\__init__.py:671 in         |
+| callback_wrapper                                                            |
+|                                                                             |
+|    668             # to handle the exception first.                         |
+|    669             return                                                   |
+|    670         try:                                                         |
+| >  671             return func(*args, **kwargs)                             |
+|    672         except (KeyboardInterrupt, SystemExit):                      |
+|    673             raise                                                    |
+|    674         except:                                                      |
+|                                                                             |
+| D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended   |
+| Multi-Link Cutting Device under Wind                                        |
+| Disturbances\third_party\udaan\udaan\models\mujoco\__init__.py:57 in        |
+| _mouse_move_callback                                                        |
+|                                                                             |
+|    54         else:                                                         |
+|    55             return                                                    |
+|    56                                                                       |
+| >  57         mujoco.mjv_moveCamera(                                        |
+|    58             self._model, action, dx / width, dy / height,             |
+|       self._scene, self._camera                                             |
+|    59         )                                                             |
+|    60                                                                       |
++-----------------------------------------------------------------------------+
+TypeError: mjv_moveCamera(): incompatible function arguments. The following 
+argument types are supported:
+    1. (m: mujoco._structs.MjModel, action: typing.SupportsInt | 
+typing.SupportsIndex, reldx: typing.SupportsFloat | typing.SupportsIndex, 
+reldy: typing.SupportsFloat | typing.SupportsIndex, cam: 
+mujoco._structs.MjvCamera) -> None
+
+Invoked with: <mujoco._structs.MjModel object at 0x000001C06B15F0F0>, 
+<mjtMouse.mjMOUSE_ROTATE_V: 1>, 0.0, -0.0011111111111111111, 
+<mujoco._structs.MjvScene object at 0x000001C06B0BDDF0>, <MjvCamera
+  azimuth: 135.0
+  distance: 3.315749064836451
+  elevation: -20.0
+  fixedcamid: -1
+  lookat: array([ 0.00253055, -0.00472672,  1.82461942])
+  orthographic: 0
+  trackbodyid: 1
+  type: 1
+>
+BASELINE_EXIT_CODE=1
+
+ATTEMPT_2_COMMAND: udaan run quad-payload -t 10 -c links
+Running quad-payload (mujoco, links) for 10.0s ...
+
+ATTEMPT_3_COMMAND: udaan run quad-payload -t 10 -c links
+Running quad-payload (mujoco, links) for 10.0s ...
+
+AUXILIARY_RECORD_TEST_COMMAND: udaan run quad-payload -t 10 -c links -r C:\Users\ADMINI~1\AppData\Local\Temp\udaan_baseline_record_test.mp4
+R u n n i n g   q u a d - p a y l o a d   ( m u j o c o ,   l i n k s )   f o r   1 0 . 0 s   . . .  
+ u d a a n . e x e   :   I M A G E I O   F F M P E G _ W R I T E R   W A R N I N G :   i n p u t   i m a g e   i s   n o t   d i v i s i b l e   b y   m a c r o _ b l o c k _ s i z e = 1 6 ,   r e s i z i n g   f r o m   ( 1 2 0 0 ,   9 0  
+ 0 )   t o   ( 1 2 0 0 ,   9 1 2 )   t o   e n s u r e   v i d e o   c o m p a t i b i l i t y   w i t h   m o s t   c o d e c s   a n d   p l a y e r s .   T o   p r e v e n t   r e s i z i n g ,   m a k e   y o u r   i n p u t   i m a g  
+ e   d i v i s i b l e   b y   t h e   m a c r o _ b l o c k _ s i z e   o r   s e t   t h e   m a c r o _ b l o c k _ s i z e   t o   1   ( r i s k i n g   i n c o m p a t i b i l i t y ) .  
+ A t   l i n e : 2   c h a r : 2 8 5  
+ +   . . .   t e s t V i d e o " ;   &   ' D : \ a n a c o n d a \ e n v s \ u a v _ s w a y \ S c r i p t s \ u d a a n . e x e '   r u n   q u a d -   . . .  
+ +                                   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~  
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( I M A G E I O   F F M P E G _ . . . c o m p a t i b i l i t y ) . : S t r i n g )   [ ] ,   R e m o t e E x c e p t i o n  
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r  
+    
+ AUXILIARY_RECORD_TEST_EXIT_CODE=0
+
+BASELINE_ATTEMPT_2_EXIT_CODE=0
+BASELINE_ATTEMPT_3_EXIT_CODE=0
+BASELINE_EXIT_CODE=0
+BASELINE_MEDIA=artifacts/s0/baseline.png
