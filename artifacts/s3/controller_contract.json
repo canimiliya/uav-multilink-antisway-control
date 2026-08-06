@@ -1,0 +1,18 @@
+{
+  "controller": "pid",
+  "protocol_mode": "free_flight_controlled",
+  "anchor_active": false,
+  "rotor_motors_zero": true,
+  "pid_reads": [
+    "uav_x",
+    "uav_vx",
+    "x_ref",
+    "vx_ref",
+    "ax_ref"
+  ],
+  "pid_does_not_read": [
+    "joint_angles",
+    "joint_velocities",
+    "tip_displacement"
+  ]
+}

@@ -1,0 +1,7 @@
+S3 execution diagnostics; failures are retained rather than overwritten.
+
+2026-08-07T00:00:00+08:00
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests
+RESULT: 1 failed, 35 passed
+FAILURE: test_runtime_model_changes_only_wrench_ranges compared the automatically summed model mass with exact == 13.24; actual floating representation was 13.239999999999998.
+FOLLOW_UP: production artifact was not changed; the test was corrected to use an absolute 1e-12 tolerance for a floating-point mass sum, then the full suite was rerun.

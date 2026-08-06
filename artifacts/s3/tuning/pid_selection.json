@@ -1,0 +1,21 @@
+{
+  "selected": {
+    "index": 24,
+    "kp": 1.6,
+    "kd": 1.8,
+    "ki": 0.1,
+    "safe_gate": true,
+    "score": 0.2269590594479357,
+    "approach_x_rmse": 0.09819340462735267,
+    "crosswind_x_rmse": 0.08971880565767204,
+    "approach_final_x_error": 0.05307742755283762,
+    "crosswind_final_x_error": 0.05467012907018943
+  },
+  "grid_size": 27,
+  "development_scenarios": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "score_formula": "mean(x_rmse)+0.25*mean(abs(final_x_error))+0.10*mean(saturation_rate)+0.001*mean(control_rate_proxy)",
+  "sway_metrics_used_for_selection": false
+}

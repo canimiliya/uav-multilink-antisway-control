@@ -1,0 +1,47 @@
+TASK=S3-POSITION-PID-FREE-FLIGHT-R1
+START_HEAD=e96b01230164ad9cfacf46dbf5769110e843197c
+PRECHECK: git -c safe.directory=... status --porcelain ; rev-parse HEAD ; submodule status ; Udaan status/rev-parse
+PRECHECK_EXIT=0
+PRECHECK_RESULT=main clean; Udaan clean at 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816; Python 3.11.15; MuJoCo 3.0.1
+
+COMMAND: python -m compileall -q src/uav_sway/control src/uav_sway/evaluation scripts/tune_s3_pid.py scripts/run_s3_pid.py scripts/render_s3_pid.py
+EXIT=0
+
+COMMAND: python scripts/run_s3_pid.py --model-config configs/model_5link.yaml --controller-config configs/controllers.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s3
+EXIT=0 (initial smoke before tuning)
+
+COMMAND: python scripts/tune_s3_pid.py --model-config configs/model_5link.yaml --controller-config configs/controllers.yaml --output-dir artifacts/s3/tuning --headless
+EXIT=0
+RESULT=27/27 candidates evaluated; selected kp=1.6 kd=1.8 ki=0.1; candidate raw CSV scratch removed after pid_grid.csv and pid_selection.json were retained
+
+COMMAND: python scripts/run_s3_pid.py --model-config configs/model_5link.yaml --controller-config configs/controllers.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s3
+EXIT=0
+RESULT=three formal free-flight runs; raw_gate.pass=true; anchor_active=false
+
+COMMAND: python scripts/render_s3_pid.py --input-dir artifacts/s3/runs --output artifacts/s3/figures/pid_three_scenarios.png
+EXIT=0
+
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests
+EXIT=0; 36 passed
+
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party/udaan/tests
+EXIT=0; 226 passed
+
+COMMAND: git diff --check
+EXIT=0
+COMMAND: git -c safe.directory=... status --porcelain
+RESULT=clean before commit
+
+FINAL VERIFICATION AFTER SAFETY-GATE REFINEMENT:
+COMMAND: python scripts/tune_s3_pid.py --model-config configs/model_5link.yaml --controller-config configs/controllers.yaml --output-dir artifacts/s3/tuning --headless
+EXIT=0; 27/27 candidates; selected index 24 (kp=1.6, kd=1.8, ki=0.1)
+COMMAND: Remove generated artifacts/s3/tuning/candidates scratch after retaining pid_grid.csv and pid_selection.json
+EXIT=0
+COMMAND: python scripts/run_s3_pid.py --model-config configs/model_5link.yaml --controller-config configs/controllers.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s3
+EXIT=0; raw_gate.pass=true; UAV and cutter height checks true
+COMMAND: python scripts/render_s3_pid.py --input-dir artifacts/s3/runs --output artifacts/s3/figures/pid_three_scenarios.png
+EXIT=0
+COMMAND: pytest -q tests
+EXIT=0; 36 passed
+COMMAND: pytest -q third_party/udaan/tests
+EXIT=0; 226 passed

@@ -31,6 +31,17 @@ cutter, a byte-stable wind/reference bank, a unified raw-run CSV schema, and
 metrics computed directly from raw CSV. Headless smoke uses the model-level
 anchor with `controller: none`; it does not claim reference tracking.
 
-No PID, LQR, MPPI, MPC, outer-loop controller, electrical-wire or cutting
-contact model, vision system, three-dimensional stochastic wind, or
-real-hardware deployment is included.
+S3 adds a free-flight position-PID baseline. The PID uses only UAV x position
+and velocity errors plus the S2 x reference derivatives; it does not use joint
+or tip state for feedback. A shared three-dimensional position stabilizer and
+the Udaan `GeometricAttitudeController` convert the limited acceleration
+command into total thrust and body torques. The S3 runtime XML is an
+actuator-range-only copy of the frozen S1 XML; its source/runtime fingerprint
+comparison is recorded in `artifacts/s3/runtime/runtime_model_diff.json`.
+
+The frozen 27-point grid selects one PID parameter set using position tracking
+and control smoothness only. Three free-flight scenarios are recorded in
+`artifacts/s3/runs/`, and `artifacts/s3/raw_gate.json` is recomputed directly
+from those CSV files. LQR, MPPI, MPC, wind-model changes, electrical-wire or
+cutting-contact models, vision systems, and real-hardware deployment remain
+outside this stage.

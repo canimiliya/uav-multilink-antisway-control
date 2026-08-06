@@ -1,0 +1,32 @@
+{
+  "total_system_mass_kg": 13.239999999999998,
+  "attitude_natural_frequency_rad_s": 4.0,
+  "attitude_damping_ratio": 0.9,
+  "K_R": [
+    10.493226666672,
+    15.464522666672,
+    19.97349333328
+  ],
+  "K_Omega": [
+    4.7219520000024,
+    6.9590352000024005,
+    8.988071999976
+  ],
+  "position_y": {
+    "kp": 1.5,
+    "kd": 2.0
+  },
+  "position_z": {
+    "kp": 4.0,
+    "kd": 3.5
+  },
+  "torque_limits_Nm": [
+    -25.0,
+    25.0,
+    -25.0,
+    25.0,
+    -12.0,
+    12.0
+  ],
+  "source": "shared_inner_loop_simulation_assumption"
+}

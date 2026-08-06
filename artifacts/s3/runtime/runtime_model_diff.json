@@ -1,0 +1,1335 @@
+{
+  "source_xml": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s1\\generated\\model_5link.xml",
+  "runtime_xml": "artifacts\\s3\\runtime\\model_5link_controlled.xml",
+  "source_sha256": "a4a0f641ea3c579c893a00c9db52217a066b9de9f8667d40917157a4f3c72a0a",
+  "runtime_sha256": "19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d",
+  "total_mass_kg": 13.239999999999998,
+  "max_total_thrust_ratio": 2.2,
+  "computed_max_thrust_N": 285.74568,
+  "source_fingerprint": {
+    "timestep": 0.001,
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "nq": 12,
+    "nv": 11,
+    "bodies": [
+      {
+        "name": "world",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor",
+        "mass": 9.74,
+        "inertia": [
+          0.655826666667,
+          0.966532666667,
+          1.24834333333
+        ]
+      },
+      {
+        "name": "link_1",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_2_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_2",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_3_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_3",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_4_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_4",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_5_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_5",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "cutter",
+        "mass": 2.5,
+        "inertia": [
+          0.00941666666667,
+          0.0462708333333,
+          0.0475208333333
+        ]
+      }
+    ],
+    "joints": [
+      {
+        "name": "quadrotor_free",
+        "type": 0,
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          0.0
+        ],
+        "damping": 0.0,
+        "frictionloss": 0.0
+      },
+      {
+        "name": "joint_1",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_2",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_3",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_4",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_5",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      }
+    ],
+    "geoms": [
+      {
+        "name": "ground",
+        "type": 0,
+        "size": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "m400_fuselage",
+        "type": 6,
+        "size": [
+          0.2,
+          0.15,
+          0.07
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "m400_lower_body",
+        "type": 6,
+        "size": [
+          0.14,
+          0.11,
+          0.05
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.1
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_0",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_0",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          0.378302127935,
+          0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_1",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_1",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          -0.378302127935,
+          0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_2",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_2",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          -0.378302127935,
+          -0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_3",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_3",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          0.378302127935,
+          -0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "joint_marker_1",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_1_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_2",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_2_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_3",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_3_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_4",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_4_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_5",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_5_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "cutter_geom",
+        "type": 6,
+        "size": [
+          0.225,
+          0.08,
+          0.07
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.07
+        ]
+      }
+    ],
+    "equality": [
+      {
+        "name": "passive_anchor",
+        "type": 1,
+        "active": 0,
+        "obj1": 1,
+        "obj2": 0
+      }
+    ],
+    "actuators": [
+      {
+        "name": "rotor_motor_0",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_1",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_2",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_3",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0249945776
+        ]
+      },
+      {
+        "name": "thrust_motor",
+        "ctrlrange": [
+          0.0,
+          40.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "mx_motor",
+        "ctrlrange": [
+          -3.0,
+          3.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "my_motor",
+        "ctrlrange": [
+          -3.0,
+          3.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "name": "mz_motor",
+        "ctrlrange": [
+          -3.0,
+          3.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "runtime_fingerprint": {
+    "timestep": 0.001,
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "nq": 12,
+    "nv": 11,
+    "bodies": [
+      {
+        "name": "world",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor",
+        "mass": 9.74,
+        "inertia": [
+          0.655826666667,
+          0.966532666667,
+          1.24834333333
+        ]
+      },
+      {
+        "name": "link_1",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_2_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_2",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_3_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_3",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_4_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_4",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "link_5_mount",
+        "mass": 0.0,
+        "inertia": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_5",
+        "mass": 0.2,
+        "inertia": [
+          0.00419791666667,
+          0.00419791666667,
+          6.25e-05
+        ]
+      },
+      {
+        "name": "cutter",
+        "mass": 2.5,
+        "inertia": [
+          0.00941666666667,
+          0.0462708333333,
+          0.0475208333333
+        ]
+      }
+    ],
+    "joints": [
+      {
+        "name": "quadrotor_free",
+        "type": 0,
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          0.0
+        ],
+        "damping": 0.0,
+        "frictionloss": 0.0
+      },
+      {
+        "name": "joint_1",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_2",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_3",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_4",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      },
+      {
+        "name": "joint_5",
+        "type": 3,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "range": [
+          -1.74532925199,
+          1.74532925199
+        ],
+        "damping": 0.05,
+        "frictionloss": 0.005
+      }
+    ],
+    "geoms": [
+      {
+        "name": "ground",
+        "type": 0,
+        "size": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "m400_fuselage",
+        "type": 6,
+        "size": [
+          0.2,
+          0.15,
+          0.07
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "m400_lower_body",
+        "type": 6,
+        "size": [
+          0.14,
+          0.11,
+          0.05
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.1
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_0",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_0",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          0.378302127935,
+          0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_1",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_1",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          -0.378302127935,
+          0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_2",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_2",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          -0.378302127935,
+          -0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_arm_geom_3",
+        "type": 6,
+        "size": [
+          0.378302127935,
+          0.012,
+          0.012
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "quadrotor_rotor_prop_geom_3",
+        "type": 5,
+        "size": [
+          0.3175,
+          0.005,
+          0.0
+        ],
+        "pos": [
+          0.378302127935,
+          -0.378302127935,
+          0.0
+        ]
+      },
+      {
+        "name": "joint_marker_1",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_1_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_2",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_2_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_3",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_3_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_4",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_4_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "joint_marker_5",
+        "type": 2,
+        "size": [
+          0.045,
+          0.0,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "link_5_geom",
+        "type": 3,
+        "size": [
+          0.025,
+          0.25,
+          0.0
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.25
+        ]
+      },
+      {
+        "name": "cutter_geom",
+        "type": 6,
+        "size": [
+          0.225,
+          0.08,
+          0.07
+        ],
+        "pos": [
+          0.0,
+          0.0,
+          -0.07
+        ]
+      }
+    ],
+    "equality": [
+      {
+        "name": "passive_anchor",
+        "type": 1,
+        "active": 0,
+        "obj1": 1,
+        "obj2": 0
+      }
+    ],
+    "actuators": [
+      {
+        "name": "rotor_motor_0",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_1",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_2",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -0.0249945776
+        ]
+      },
+      {
+        "name": "rotor_motor_3",
+        "ctrlrange": [
+          0.0,
+          10.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0249945776
+        ]
+      },
+      {
+        "name": "thrust_motor",
+        "ctrlrange": [
+          0.0,
+          285.74568
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "mx_motor",
+        "ctrlrange": [
+          -25.0,
+          25.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "my_motor",
+        "ctrlrange": [
+          -25.0,
+          25.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "name": "mz_motor",
+        "ctrlrange": [
+          -12.0,
+          12.0
+        ],
+        "gear": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "physics_fingerprint_equal": true,
+  "actuator_changes_only": true,
+  "changed_actuator_ranges": {
+    "thrust_motor": [
+      0.0,
+      285.74568
+    ],
+    "mx_motor": [
+      -25.0,
+      25.0
+    ],
+    "my_motor": [
+      -25.0,
+      25.0
+    ],
+    "mz_motor": [
+      -12.0,
+      12.0
+    ]
+  }
+}

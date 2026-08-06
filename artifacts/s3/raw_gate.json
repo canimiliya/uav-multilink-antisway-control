@@ -1,0 +1,64 @@
+{
+  "pass": true,
+  "residual_sway_confirmed": true,
+  "scenarios": {
+    "approach_stop": {
+      "checks": {
+        "finite": true,
+        "anchor_inactive": true,
+        "minimum_uav_height": true,
+        "minimum_tip_height": true,
+        "joint_range": true,
+        "roll_limit": true,
+        "pitch_limit": true,
+        "ax_limit": true,
+        "ax_slew_limit": true,
+        "thrust_limit": true,
+        "torque_limit": true,
+        "final_x_error": true,
+        "x_rmse": true,
+        "z_rmse": true
+      },
+      "pass": true
+    },
+    "crosswind_hover": {
+      "checks": {
+        "finite": true,
+        "anchor_inactive": true,
+        "minimum_uav_height": true,
+        "minimum_tip_height": true,
+        "joint_range": true,
+        "roll_limit": true,
+        "pitch_limit": true,
+        "ax_limit": true,
+        "ax_slew_limit": true,
+        "thrust_limit": true,
+        "torque_limit": true,
+        "final_x_error": true,
+        "x_rmse": true,
+        "z_rmse": true
+      },
+      "pass": true
+    },
+    "gust_micro_adjust": {
+      "checks": {
+        "finite": true,
+        "anchor_inactive": true,
+        "minimum_uav_height": true,
+        "minimum_tip_height": true,
+        "joint_range": true,
+        "roll_limit": true,
+        "pitch_limit": true,
+        "ax_limit": true,
+        "ax_slew_limit": true,
+        "thrust_limit": true,
+        "torque_limit": true,
+        "final_x_error": true,
+        "x_rmse": true,
+        "z_rmse": true
+      },
+      "pass": true
+    }
+  },
+  "source": "independent_raw_csv_recomputation"
+}
