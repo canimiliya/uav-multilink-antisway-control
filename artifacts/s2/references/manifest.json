@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "scenario": "approach_stop",
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "1121292b601cee28cd4fab7aebeb0a0de7388322f888445437b6b7932c780897",
+      "config_sha256": "52673d67942deb102b4db98a805530cb33dfe08a76e0c3e0e1a704e034e5de58",
+      "path": "artifacts/s2/references/approach_stop.csv"
+    },
+    {
+      "scenario": "crosswind_hover",
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "ec3035b8ff37a5665f38c90ec84cbb30e787f090fc694bf4e2484d83f00461e7",
+      "config_sha256": "52673d67942deb102b4db98a805530cb33dfe08a76e0c3e0e1a704e034e5de58",
+      "path": "artifacts/s2/references/crosswind_hover.csv"
+    },
+    {
+      "scenario": "gust_micro_adjust",
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "bcdf53e24b48a20c3898b7ca08ce208f2bfe09096c500d932dea857355a40be7",
+      "config_sha256": "52673d67942deb102b4db98a805530cb33dfe08a76e0c3e0e1a704e034e5de58",
+      "path": "artifacts/s2/references/gust_micro_adjust.csv"
+    }
+  ]
+}

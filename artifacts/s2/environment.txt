@@ -1,0 +1,14 @@
+TASK=S2-WIND-SCENARIO-METRICS-R1
+DATE=2026-08-06T21:49:43.2051450+08:00
+PROJECT=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+=== OS ===
+Microsoft Windows NT 10.0.26100.0
+=== PYTHON ===
+Python 3.11.15
+D:\anaconda\envs\uav_sway\python.exe numpy 2.4.6 mujoco 3.0.1 pyyaml 6.0.3
+=== GIT ===
+38f78f7f37ba96adab3cfd8e350d40788446e446
+ M README.md ?? artifacts/s2/ ?? configs/aerodynamics.yaml ?? configs/scenarios.yaml ?? configs/wind_profiles.yaml ?? scripts/generate_s2_protocol.py ?? scripts/run_s2_wind_smoke.py ?? src/uav_sway/disturbances/ ?? src/uav_sway/evaluation/ ?? src/uav_sway/scenarios/ ?? tests/test_metrics.py ?? tests/test_s2_batch.py ?? tests/test_scenario_references.py ?? tests/test_wind_forces.py ?? tests/test_wind_profiles.py ?? tests/test_wind_reproducibility.py
+ 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816 third_party/udaan (9eb1a2d)
+
+9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816

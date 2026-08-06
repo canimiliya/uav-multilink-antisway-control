@@ -1,0 +1,248 @@
+{
+  "generator_version": "s2-wind-profiles-r1",
+  "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+  "files": [
+    {
+      "profile": "constant_crosswind",
+      "seed": null,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "50de9f2c99afdc518fa087cec75dca4935c661433b3146d30a2da9a7c1a78f1b",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/constant_crosswind.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "one_cosine_gust",
+      "seed": null,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "6d34bf24a43a70f5da2a2758530f5ac0cec1a03dde5604ca6b494728d88ecc11",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/one_cosine_gust.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 0,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "6e41f93750342b9ab2ad44b4136c4dfd5ed4ffbb6afb690293dc1d47b8e09a9b",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_000.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 1,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "6cea83fd473df380056b49f972b508d5506f6968bdfd471a012133b9098ea29b",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_001.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 2,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "21b0b97e3a879140c59844bf823f190de2e04c2d555edada5b84863d34deb14d",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_002.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 3,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "b55aef45eed1def1a45f28f5bb4d50001d3f5c11503dfc7a3027008916f2827b",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_003.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 4,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "3a90ffb9d8d746d1e92e736c1fc01f5fb5930905b8f72c99efbc66ae65429726",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_004.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 5,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "b48eda3230297fe0ba9cd1d2b8c2658ee237a776f32f710ebfe8485d6c3e5c01",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_005.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 6,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "daedcfa7475eebba63f64fdeeb16d824d42a92c0e0f6d73dfd18f37715bb2411",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_006.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 7,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "bfa3e61aadf6a91fc8713d0ea106a7bf83dd45b36e42ab6e4023cca82110660f",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_007.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 8,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "54c1493ca37e1784dec34938150b16c3f23cc8a7761dcd0fa7f626b0cc04d5cb",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_008.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 9,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "d14da7eec29fc4ba291f4b994f06ba644a451473bd2871bb1141303a38aec773",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_009.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 10,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "bb826f9edee6da42cc59853b4910c823930b1b4551aae6002989e5aa4a45d901",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_010.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 11,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "44d0d073e32fdf2a62f7dd2e14939fb5e515ac9e482014b5d225e25bc91befd5",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_011.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 12,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "5700d631f7be921e4d06df0b9423ca2ce9109ae1e43b17e01246ab86df1c80c2",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_012.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 13,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "e6822c87fbfd332a5a187d0f8cc85207c1afa6bd59f372945e7f01ea1bce43f3",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_013.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 14,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "83bd2bd991aa84834b0c190b097567fdc0328988d62a24744ca0063d3d4bbf08",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_014.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 15,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "d3c342948c48b5d628c344be213f527f38f1aad13b1e09bad6fdca2ab8d0d763",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_015.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 16,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "34a2b6c95b86024ab3f930a53a6af7986f1ffe23ec15730d7725ce94a1bd8141",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_016.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 17,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "0bc75e76b492fc64c711ffb034c13684c07b04322cdb4158ff1fd2c8fcfd9732",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_017.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 18,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "1dddca8237250459909c00e6a9781e6f8375c01b189ed43e19d7ceec019978ca",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_018.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    },
+    {
+      "profile": "low_frequency_random",
+      "seed": 19,
+      "sample_count": 2401,
+      "dt": 0.005,
+      "duration": 12.0,
+      "sha256": "3cb6c0eb40bddf197070ac10f3023dc3abf6c719ba9a2e3871fc6d57e880937b",
+      "config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095",
+      "path": "artifacts/s2/wind_bank/random_seed_019.csv",
+      "generator_version": "s2-wind-profiles-r1"
+    }
+  ]
+}

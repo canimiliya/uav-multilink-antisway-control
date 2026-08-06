@@ -1,0 +1,144 @@
+TASK=S2-WIND-SCENARIO-METRICS-R1
+WORKDIR=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+COMMAND: python scripts/generate_s2_protocol.py --config configs/scenarios.yaml --wind-config configs/wind_profiles.yaml --seeds 0-19 --output-dir artifacts/s2
+{
+  "physics_dt_s": 0.001,
+  "signal_dt_s": 0.005,
+  "future_control_dt_s": 0.05,
+  "duration_s": 12.0,
+  "signal_sample_count": 2401,
+  "wind_profiles": [
+    "constant_crosswind",
+    "one_cosine_gust",
+    "low_frequency_random"
+  ],
+  "scenarios": [
+    "approach_stop",
+    "crosswind_hover",
+    "gust_micro_adjust"
+  ],
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "controller_implemented": false,
+  "wind_axis": "world_x",
+  "headless_smoke_mode": "anchored_wind_validation",
+  "wind_config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095"
+}
+GENERATE_EXIT_CODE=0
+COMMAND: python scripts/run_s2_wind_smoke.py --model-config configs/model_5link.yaml --profiles constant_crosswind one_cosine_gust low_frequency_random --random-seed 0 --headless --output-dir artifacts/s2/smoke
+{
+  "constant_crosswind": {
+    "source_csv": "artifacts\\s2\\smoke\\constant_crosswind\\run.csv",
+    "sample_count": 2401,
+    "duration_s": 12.0,
+    "tip_max_abs_m": 0.08975903949993688,
+    "tip_rms_m": 0.04379338628395865,
+    "uav_position_rmse_m": 0.0019555566898974194,
+    "settled": true,
+    "settling_time_s": 6.33,
+    "settling_band_m": 0.05,
+    "settling_hold_time_s": 1.0,
+    "control_energy_proxy": 0.0,
+    "control_rate_proxy": 0.0,
+    "solve_time_mean_ms": 0.0,
+    "solve_time_p95_ms": 0.0,
+    "solve_time_max_ms": 0.0,
+    "saturation_rate": 0.0,
+    "finite_outputs": true,
+    "minimum_tip_height_m": 0.38560635926289,
+    "maximum_abs_joint_angle_rad": 0.046108066398732946,
+    "protocol_mode": "anchored_wind_validation",
+    "scenario": "crosswind_hover",
+    "seed": -1
+  }
+}
+{
+  "one_cosine_gust": {
+    "source_csv": "artifacts\\s2\\smoke\\one_cosine_gust\\run.csv",
+    "sample_count": 2401,
+    "duration_s": 12.0,
+    "tip_max_abs_m": 0.059238245638092796,
+    "tip_rms_m": 0.029753893458128945,
+    "uav_position_rmse_m": 0.24144586644611452,
+    "settled": true,
+    "settling_time_s": 5.0,
+    "settling_band_m": 0.05,
+    "settling_hold_time_s": 1.0,
+    "control_energy_proxy": 0.0,
+    "control_rate_proxy": 0.0,
+    "solve_time_mean_ms": 0.0,
+    "solve_time_p95_ms": 0.0,
+    "solve_time_max_ms": 0.0,
+    "saturation_rate": 0.0,
+    "finite_outputs": true,
+    "minimum_tip_height_m": 0.3848245613302001,
+    "maximum_abs_joint_angle_rad": 0.021195913900033454,
+    "protocol_mode": "anchored_wind_validation",
+    "scenario": "gust_micro_adjust",
+    "seed": -1
+  }
+}
+{
+  "random_seed_000": {
+    "source_csv": "artifacts\\s2\\smoke\\random_seed_000\\run.csv",
+    "sample_count": 2401,
+    "duration_s": 12.0,
+    "tip_max_abs_m": 0.029860510259177936,
+    "tip_rms_m": 0.013358420533153854,
+    "uav_position_rmse_m": 2.4153672649062825,
+    "settled": true,
+    "settling_time_s": 6.0,
+    "settling_band_m": 0.05,
+    "settling_hold_time_s": 1.0,
+    "control_energy_proxy": 0.0,
+    "control_rate_proxy": 0.0,
+    "solve_time_mean_ms": 0.0,
+    "solve_time_p95_ms": 0.0,
+    "solve_time_max_ms": 0.0,
+    "saturation_rate": 0.0,
+    "finite_outputs": true,
+    "minimum_tip_height_m": 0.38683471626281446,
+    "maximum_abs_joint_angle_rad": 0.012073229451973564,
+    "protocol_mode": "anchored_wind_validation",
+    "scenario": "approach_stop",
+    "seed": 0
+  }
+}
+SMOKE_EXIT_CODE=0
+COMMAND: pytest -q tests | Tee-Object artifacts/s2/pytest_project.log
+PROJECT_PYTEST_EXIT_CODE=0
+COMMAND: pytest -q third_party/udaan/tests | Tee-Object artifacts/s2/pytest_upstream.log
+UPSTREAM_PYTEST_EXIT_CODE=0
+
+
+COMMAND: capture Python, MuJoCo, Git, and submodule environment to artifacts/s2/environment.txt
+ENVIRONMENT_CAPTURED=1
+COMMAND: normalize artifact logs to UTF-8 without BOM
+LOG_ENCODING_REPAIRED=1
+
+COMMAND: independent manifest/reference/CSV/force audit
+AUDIT_EXIT_CODE=0
+COMMAND: git diff --check
+DIFF_CHECK_EXIT_CODE=0
+COMMAND: protected-scope diff audit
+PROTECTED_SCOPE_AUDIT_EXIT_CODE=0

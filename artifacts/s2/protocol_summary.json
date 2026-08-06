@@ -1,0 +1,43 @@
+{
+  "physics_dt_s": 0.001,
+  "signal_dt_s": 0.005,
+  "future_control_dt_s": 0.05,
+  "duration_s": 12.0,
+  "signal_sample_count": 2401,
+  "wind_profiles": [
+    "constant_crosswind",
+    "one_cosine_gust",
+    "low_frequency_random"
+  ],
+  "scenarios": [
+    "approach_stop",
+    "crosswind_hover",
+    "gust_micro_adjust"
+  ],
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "controller_implemented": false,
+  "wind_axis": "world_x",
+  "headless_smoke_mode": "anchored_wind_validation",
+  "wind_config_sha256": "3a1e06a2418631b7dcbb60eea6d040b44ae8d06a6ffac2f75565007ea416a095"
+}

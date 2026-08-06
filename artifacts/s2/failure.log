@@ -1,0 +1,2 @@
+TASK=S2-WIND-SCENARIO-METRICS-R1 failure record
+The first project test run during implementation reported 1 failure in tests/test_metrics.py because the synthetic expected uav_position_rmse and control-energy values were initially miscomputed. No production model, protected S1 file, or upstream source was changed. The test fixture expectations were corrected, and the final project test run passed 19 tests. This record is retained as diagnostic evidence.

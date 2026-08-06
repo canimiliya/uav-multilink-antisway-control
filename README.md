@@ -2,8 +2,9 @@
 
 Project nature: 2026 personal simulation reproduction.
 
-Current stage: S1 passive six-DoF DJI Matrice 400-class UAV plus generated
-4/5/6-link planar rigid-chain model.
+Current stage: S2 reproducible wind/scenario/metrics protocol on the S1 passive
+six-DoF DJI Matrice 400-class UAV plus generated 4/5/6-link planar rigid-chain
+model.
 
 The upstream Udaan baseline remains isolated at
 `https://github.com/vkotaru/udaan.git`, commit
@@ -24,5 +25,12 @@ finite bounded simulation, and no penetration. The historical 0.60 threshold
 is retained only as a candidate future controlled-study target; see
 `artifacts/s1/acceptance_policy_change.md`.
 
-No wind field, pilot trajectory, PID, LQR, MPPI, MPC, outer-loop controller,
-experimental S1/S2/S3 scene, or real-hardware deployment is included.
+S2 adds three world-x wind profiles, three reference-only pilot scenarios,
+independent quadratic force proxies for the quadrotor, each link, and the
+cutter, a byte-stable wind/reference bank, a unified raw-run CSV schema, and
+metrics computed directly from raw CSV. Headless smoke uses the model-level
+anchor with `controller: none`; it does not claim reference tracking.
+
+No PID, LQR, MPPI, MPC, outer-loop controller, electrical-wire or cutting
+contact model, vision system, three-dimensional stochastic wind, or
+real-hardware deployment is included.
