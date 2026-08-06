@@ -22,3 +22,12 @@ corrected decay ratio is above the frozen 0.60 limit.
 
 5. The independent CSV/JSON recomputation test passed, and the upstream regression
    remained 226 passed with exit 0.
+
+TASK=S1-M400-PARAMETER-REBASE-R1
+
+6. First M400 generation attempt exited 1 because MuJoCo rejected the
+   zero-mass appearance geoms when inertiafromgeom was true. Recovery was made
+   only in the project generator: inertiafromgeom was set false and explicit
+   positive inertials were added for the M400 body, rigid links, and cutter.
+   No protected configuration, timestep, damping, friction, or upstream source
+   was changed. The rerun generated and loaded all three models with exit 0.

@@ -22,3 +22,16 @@ gravity=0 0 -9.81
 integrator=RK4
 wind=none
 outer_controller=none
+
+=== S1-M400-PARAMETER-REBASE-R1 ===
+START_HEAD=c49e750549b71337af10c6a6fbd82ab10bb6ba2b
+Python=3.11.15
+MuJoCo=3.0.1
+M400_mass_kg=9.74
+M400_inertia_is_measured=false
+total_link_mass_kg=1.0
+cutter_mass_kg=2.5
+external_payload_mass_kg=3.5
+total_takeoff_mass_kg=13.24
+project_pytest=8 passed
+upstream_pytest=226 passed

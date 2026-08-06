@@ -74,3 +74,40 @@ EXIT_CODE=1
 
 [2026-08-06] pytest -q third_party/udaan/tests (final field-order source)
 EXIT_CODE=0
+
+TASK=S1-M400-PARAMETER-REBASE-R1
+START_HEAD=c49e750549b71337af10c6a6fbd82ab10bb6ba2b
+WORKDIR=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+
+[2026-08-06] git status --porcelain -> empty; exit 0
+[2026-08-06] git rev-parse HEAD -> c49e750549b71337af10c6a6fbd82ab10bb6ba2b; exit 0
+[2026-08-06] git submodule status -> 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816; exit 0
+[2026-08-06] git -C third_party/udaan status --porcelain -> empty; exit 0
+[2026-08-06] D:\anaconda\envs\uav_sway\python.exe --version -> Python 3.11.15; exit 0
+[2026-08-06] python -c "import mujoco; print(mujoco.__version__)" -> 3.0.1; exit 0
+
+[2026-08-06] python scripts/build_models.py --configs configs/model_4link.yaml configs/model_5link.yaml configs/model_6link.yaml --output-dir artifacts/s1/generated
+EXIT_CODE=1 on first attempt: MuJoCo rejected zero-mass quadrotor appearance geoms while inertiafromgeom was true.
+Recovery: set project-owned compiler inertiafromgeom=false and added explicit positive inertials for the M400 body, each rigid link, and the box cutter. No timestep, damping, friction, source, or upstream file was changed.
+EXIT_CODE=0 on rerun; all three XML files generated and loaded.
+
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --output-dir artifacts/s1
+EXIT_CODE=0
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --render --output-dir artifacts/s1
+EXIT_CODE=0
+[2026-08-06] pytest -q tests
+PROJECT_PYTEST_EXIT_CODE=0; 8 passed
+[2026-08-06] pytest -q third_party/udaan/tests
+UPSTREAM_PYTEST_EXIT_CODE=0; 226 passed
+[2026-08-06] independent CSV/JSON RMS and parameter summary checks
+EXIT_CODE=0
+[2026-08-06] python scripts/build_models.py --configs configs/model_4link.yaml configs/model_5link.yaml configs/model_6link.yaml --output-dir artifacts/s1/generated (final summary regeneration)
+EXIT_CODE=0
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --output-dir artifacts/s1 (final rerun)
+EXIT_CODE=0
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --render --output-dir artifacts/s1 (final rerun)
+EXIT_CODE=0
+[2026-08-06] pytest -q tests (final test source)
+PROJECT_PYTEST_EXIT_CODE=0; 8 passed
+[2026-08-06] pytest -q third_party/udaan/tests (final test source)
+UPSTREAM_PYTEST_EXIT_CODE=0; 226 passed

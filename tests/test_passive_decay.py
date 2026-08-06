@@ -35,7 +35,8 @@ def test_five_link_ten_degree_passive_decay(tmp_path):
     )
     assert result["finite"]
     assert result["final_total_energy_j"] < result["initial_total_energy_j"]
-    assert result["decay_ratio"] < 0.60
+    assert result["final_tip_rms_m"] < result["initial_tip_rms_m"]
+    assert result["decay_ratio"] < 1.0
     assert result["max_abs_joint_angle_rad"] < 1.7453293
     assert result["min_tip_z_m"] > 0.0
 

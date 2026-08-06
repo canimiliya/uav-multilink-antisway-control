@@ -1,8 +1,8 @@
 {
   "steps_before_snapshot": 250,
   "replay_steps": 1000,
-  "qpos_max_error": 1.5265566588595902e-16,
-  "qvel_max_error": 8.326672684688674e-17,
-  "cutter_tip_max_error_m": 3.885780586188048e-16,
+  "qpos_max_error": 1.6653345369377348e-16,
+  "qvel_max_error": 2.6129272356900657e-16,
+  "cutter_tip_max_error_m": 5.551115123125783e-16,
   "threshold": 1e-09
 }

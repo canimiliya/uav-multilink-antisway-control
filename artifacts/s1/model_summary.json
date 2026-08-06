@@ -1,56 +1,147 @@
 {
   "simulation_assumption": true,
-  "source": "Udaan quadrotor geometry/actuator organization adapted in memory; chain/cutter generated locally",
+  "source": "DJI official specifications plus explicitly labeled engineering estimates and user-provided payload parameters",
+  "aircraft_model": "DJI Matrice 400",
+  "aircraft_mass_kg": 9.74,
+  "aircraft_parameter_type": "official_plus_engineering_estimate",
+  "aircraft_mass_source": "official",
+  "aircraft_dimensions_m": [
+    0.98,
+    0.76,
+    0.48
+  ],
+  "aircraft_inertia_diagonal_kg_m2": [
+    0.655826666666667,
+    0.966532666666667,
+    1.248343333333333
+  ],
+  "cutter_mass_kg": 2.5,
+  "cutter_mass_source": "user_provided",
+  "cutter_dimensions_m": [
+    0.16,
+    0.14,
+    0.45
+  ],
+  "cutter_geometry_source": "simulation_assumption",
+  "cutter_inertia_diagonal_kg_m2": [
+    0.0462708333333,
+    0.0475208333333,
+    0.00941666666667
+  ],
+  "total_link_mass_kg": 1.0,
+  "link_mass_source": "provisional_simulation_assumption",
+  "external_payload_mass_kg": 3.5,
+  "total_takeoff_mass_kg": 13.24,
+  "max_payload_kg": 6.0,
+  "max_takeoff_mass_kg": 15.8,
+  "inertia_is_estimated": true,
+  "link_mass_is_estimated": true,
+  "cutter_geometry_is_estimated": true,
+  "payload_margin_kg": 2.5,
+  "takeoff_mass_margin_kg": 2.5600000000000005,
+  "inertia_method": "equivalent_uniform_bounding_box",
+  "inertia_source": "derived_from_official",
   "models": {
     "4": {
-      "xml": "artifacts\\s1\\generated\\model_4link.xml",
+      "xml": "artifacts/s1/generated/model_4link.xml",
       "nq": 11,
       "nv": 10,
-      "quadrotor_mass_kg": 0.9900000000000002,
-      "total_link_mass_kg": 0.099,
-      "single_link_mass_kg": 0.02475,
-      "cutter_mass_kg": 0.2475,
+      "quadrotor_mass_kg": 9.74,
+      "total_link_mass_kg": 1.0,
+      "single_link_mass_kg": 0.25,
+      "cutter_mass_kg": 2.5,
+      "cutter_inertia_diagonal_kg_m2": [
+        0.0462708333333,
+        0.0475208333333,
+        0.00941666666667
+      ],
+      "external_payload_mass_kg": 3.5,
+      "total_takeoff_mass_kg": 13.24,
       "link_length_m": 0.625,
-      "mass_ratio_links": 0.09999999999999998,
-      "mass_ratio_cutter": 0.24999999999999994,
-      "hinge_axis": [0, 1, 0],
+      "mass_sources": {
+        "aircraft": "official",
+        "links": "provisional_simulation_assumption",
+        "cutter": "user_provided"
+      },
+      "hinge_axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
       "hinge_damping": 0.05,
       "hinge_frictionloss": 0.005,
-      "joint_range_deg": [-100, 100],
+      "joint_range_deg": [
+        -100.0,
+        100.0
+      ],
       "anchor_constraint": "passive_anchor (inactive in production, active in passive test)"
     },
     "5": {
-      "xml": "artifacts\\s1\\generated\\model_5link.xml",
+      "xml": "artifacts/s1/generated/model_5link.xml",
       "nq": 12,
       "nv": 11,
-      "quadrotor_mass_kg": 0.9900000000000002,
-      "total_link_mass_kg": 0.099,
-      "single_link_mass_kg": 0.0198,
-      "cutter_mass_kg": 0.2475,
+      "quadrotor_mass_kg": 9.74,
+      "total_link_mass_kg": 1.0,
+      "single_link_mass_kg": 0.2,
+      "cutter_mass_kg": 2.5,
+      "cutter_inertia_diagonal_kg_m2": [
+        0.0462708333333,
+        0.0475208333333,
+        0.00941666666667
+      ],
+      "external_payload_mass_kg": 3.5,
+      "total_takeoff_mass_kg": 13.24,
       "link_length_m": 0.5,
-      "mass_ratio_links": 0.09999999999999998,
-      "mass_ratio_cutter": 0.24999999999999994,
-      "hinge_axis": [0, 1, 0],
+      "mass_sources": {
+        "aircraft": "official",
+        "links": "provisional_simulation_assumption",
+        "cutter": "user_provided"
+      },
+      "hinge_axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
       "hinge_damping": 0.05,
       "hinge_frictionloss": 0.005,
-      "joint_range_deg": [-100, 100],
+      "joint_range_deg": [
+        -100.0,
+        100.0
+      ],
       "anchor_constraint": "passive_anchor (inactive in production, active in passive test)"
     },
     "6": {
-      "xml": "artifacts\\s1\\generated\\model_6link.xml",
+      "xml": "artifacts/s1/generated/model_6link.xml",
       "nq": 13,
       "nv": 12,
-      "quadrotor_mass_kg": 0.9900000000000002,
-      "total_link_mass_kg": 0.099,
-      "single_link_mass_kg": 0.0165,
-      "cutter_mass_kg": 0.2475,
+      "quadrotor_mass_kg": 9.74,
+      "total_link_mass_kg": 1.000000000002,
+      "single_link_mass_kg": 0.166666666667,
+      "cutter_mass_kg": 2.5,
+      "cutter_inertia_diagonal_kg_m2": [
+        0.0462708333333,
+        0.0475208333333,
+        0.00941666666667
+      ],
+      "external_payload_mass_kg": 3.500000000002,
+      "total_takeoff_mass_kg": 13.240000000002,
       "link_length_m": 0.4166666666666667,
-      "mass_ratio_links": 0.09999999999999998,
-      "mass_ratio_cutter": 0.24999999999999994,
-      "hinge_axis": [0, 1, 0],
+      "mass_sources": {
+        "aircraft": "official",
+        "links": "provisional_simulation_assumption",
+        "cutter": "user_provided"
+      },
+      "hinge_axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
       "hinge_damping": 0.05,
       "hinge_frictionloss": 0.005,
-      "joint_range_deg": [-100, 100],
+      "joint_range_deg": [
+        -100.0,
+        100.0
+      ],
       "anchor_constraint": "passive_anchor (inactive in production, active in passive test)"
     }
   }

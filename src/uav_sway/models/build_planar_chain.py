@@ -11,22 +11,24 @@ import xml.etree.ElementTree as ET
 from .model_config import ModelConfig, load_model_config
 
 
-QUAD_MASS_REFERENCE = 0.75 + 4 * 0.01 + 4 * 0.05
-CUTTER_SIZE = (0.45, 0.16, 0.14)
-
-
 def _vec(values: tuple[float, ...] | list[float]) -> str:
     return " ".join(f"{float(value):.12g}" for value in values)
 
 
-def _add_quadrotor(worldbody: ET.Element) -> ET.Element:
+def _add_quadrotor(worldbody: ET.Element, airframe) -> ET.Element:
+    # The Udaan visual/site and actuator organization is adapted in memory;
+    # this project-owned quadrotor uses the frozen M400 mass/inertia values.
     quad = ET.SubElement(worldbody, "body", {
         "name": "quadrotor", "pos": "0 0 3.2", "quat": "1 0 0 0",
     })
     ET.SubElement(quad, "joint", {"name": "quadrotor_free", "type": "free"})
+    ET.SubElement(quad, "inertial", {
+        "pos": "0 0 0", "mass": f"{airframe.mass_kg:.12g}",
+        "diaginertia": _vec(airframe.inertia_diagonal_kg_m2),
+    })
     ET.SubElement(quad, "geom", {
-        "name": "quadrotor_geom", "type": "box", "size": "0.08 0.04 0.025",
-        "mass": "0.75", "rgba": "0.15 0.15 0.15 1",
+        "name": "quadrotor_geom", "type": "box", "size": _vec(tuple(x / 2 for x in airframe.dimensions_m)),
+        "mass": "0", "rgba": "0.15 0.15 0.15 0.18",
     })
     arms = (
         ("0", "0.92388 0 0 0.382683"),
@@ -34,21 +36,22 @@ def _add_quadrotor(worldbody: ET.Element) -> ET.Element:
         ("2", "-0.382683 0 0 0.92388"),
         ("3", "-0.92388 0 0 0.382683"),
     )
+    rotor_xy = airframe.rotor_xy_coordinate_abs_m
     prop_pos = (
-        "0.1414213562 0.1414213562 0",
-        "-0.1414213562 0.1414213562 0",
-        "-0.1414213562 -0.1414213562 0",
-        "0.1414213562 -0.1414213562 0",
+        f"{rotor_xy:.12g} {rotor_xy:.12g} 0",
+        f"{-rotor_xy:.12g} {rotor_xy:.12g} 0",
+        f"{-rotor_xy:.12g} {-rotor_xy:.12g} 0",
+        f"{rotor_xy:.12g} {-rotor_xy:.12g} 0",
     )
     for index, (suffix, quat) in enumerate(arms):
         ET.SubElement(quad, "geom", {
             "name": f"quadrotor_rotor_arm_geom_{suffix}", "type": "box",
-            "pos": "0 0 0", "quat": quat, "size": "0.2 0.01 0.01",
-            "mass": "0.01", "rgba": "0.4 0.4 0.45 1",
+            "pos": "0 0 0", "quat": quat, "size": f"{rotor_xy:.12g} 0.012 0.012",
+            "mass": "0", "rgba": "0.4 0.4 0.45 1",
         })
         ET.SubElement(quad, "geom", {
             "name": f"quadrotor_rotor_prop_geom_{suffix}", "type": "cylinder",
-            "size": "0.1 0.005", "pos": prop_pos[index], "mass": "0.05",
+            "size": f"{airframe.propeller_diameter_m / 2:.12g} 0.005", "pos": prop_pos[index], "mass": "0",
             "rgba": "0.95 0.45 0.1 1",
         })
         ET.SubElement(quad, "site", {
@@ -68,20 +71,35 @@ def _add_quadrotor(worldbody: ET.Element) -> ET.Element:
     return quad
 
 
-def _add_chain(quad: ET.Element, config: ModelConfig, cutter_mass: float) -> None:
+def _add_chain(quad: ET.Element, config: ModelConfig) -> None:
     parent = quad
     length = config.link_length
     joint_min, joint_max = config.joint_range_rad
-    link_mass = QUAD_MASS_REFERENCE * 0.10 / config.n_links
+    link_mass = config.total_link_mass_kg / config.n_links
+    link_radius = 0.025
+    link_i_transverse = link_mass * (length * length / 12.0 + link_radius * link_radius / 4.0)
+    link_i_axial = link_mass * link_radius * link_radius / 2.0
+    cutter_x, cutter_y, cutter_z = config.payload.dimensions_xyz_m
+    cutter_mass = config.payload.mass_kg
+    cutter_inertia = (
+        cutter_mass * (cutter_y * cutter_y + cutter_z * cutter_z) / 12.0,
+        cutter_mass * (cutter_x * cutter_x + cutter_z * cutter_z) / 12.0,
+        cutter_mass * (cutter_x * cutter_x + cutter_y * cutter_y) / 12.0,
+    )
     for index in range(1, config.n_links + 1):
+        link_pos = config.airframe.suspension_mount_body_m if index == 1 else (0.0, 0.0, 0.0)
         link = ET.SubElement(parent, "body", {
-            "name": f"link_{index}", "pos": "0 0 0", "quat": "1 0 0 0",
+            "name": f"link_{index}", "pos": _vec(link_pos), "quat": "1 0 0 0",
         })
         ET.SubElement(link, "joint", {
             "name": f"joint_{index}", "type": "hinge", "axis": _vec(config.hinge_axis),
             "limited": "true", "range": f"{joint_min:.12g} {joint_max:.12g}",
             "damping": f"{config.hinge_damping:.12g}",
             "frictionloss": f"{config.hinge_frictionloss:.12g}",
+        })
+        ET.SubElement(link, "inertial", {
+            "pos": f"0 0 {-length / 2:.12g}", "mass": f"{link_mass:.12g}",
+            "diaginertia": _vec((link_i_transverse, link_i_transverse, link_i_axial)),
         })
         ET.SubElement(link, "geom", {
             "name": f"link_{index}_geom", "type": "capsule",
@@ -97,11 +115,15 @@ def _add_chain(quad: ET.Element, config: ModelConfig, cutter_mass: float) -> Non
         "name": "cutter", "pos": f"0 0 {-length:.12g}",
     })
     ET.SubElement(cutter, "geom", {
-        "name": "cutter_geom", "type": "box", "size": _vec(tuple(x / 2 for x in CUTTER_SIZE)),
-        "mass": f"{cutter_mass:.12g}", "rgba": "0.1 0.75 0.25 1",
+        "name": "cutter_geom", "type": "box", "size": _vec(config.payload.half_extents_xyz_m),
+        "mass": f"{config.payload.mass_kg:.12g}", "rgba": "0.1 0.75 0.25 1",
+    })
+    ET.SubElement(cutter, "inertial", {
+        "pos": "0 0 0", "mass": f"{cutter_mass:.12g}",
+        "diaginertia": _vec(cutter_inertia),
     })
     ET.SubElement(cutter, "site", {
-        "name": "cutter_tip", "type": "sphere", "pos": f"0 0 {-CUTTER_SIZE[2] / 2:.12g}",
+        "name": "cutter_tip", "type": "sphere", "pos": _vec(config.payload.tip_local_position_m),
         "size": "0.025", "rgba": "0.95 0.85 0.1 1",
     })
 
@@ -114,7 +136,7 @@ def build_planar_chain_model(config_path: str | Path, output_path: str | Path) -
 
     root = ET.Element("mujoco", {"model": f"uav_planar_chain_{config.n_links}link"})
     root.append(ET.Comment("Quadrotor geometry/actuator organization adapted in memory from Udaan; no upstream file is modified."))
-    ET.SubElement(root, "compiler", {"angle": "radian", "coordinate": "local", "inertiafromgeom": "true"})
+    ET.SubElement(root, "compiler", {"angle": "radian", "coordinate": "local", "inertiafromgeom": "false"})
     option = ET.SubElement(root, "option", {"timestep": "0.001", "gravity": "0 0 -9.81", "integrator": "RK4"})
     ET.SubElement(option, "flag", {"energy": "enable"})
     visual = ET.SubElement(root, "visual")
@@ -127,9 +149,8 @@ def build_planar_chain_model(config_path: str | Path, output_path: str | Path) -
     ET.SubElement(worldbody, "light", {"name": "key", "pos": "2 2 6", "dir": "-0.2 -0.2 -1", "directional": "true", "diffuse": "0.9 0.9 0.9"})
     ET.SubElement(worldbody, "geom", {"name": "ground", "type": "plane", "size": "0 0 1", "material": "ground_mat", "condim": "1"})
     ET.SubElement(worldbody, "camera", {"name": "main_camera", "mode": "targetbody", "target": "quadrotor", "pos": "4 -6 3", "fovy": "50"})
-    quad = _add_quadrotor(worldbody)
-    cutter_mass = QUAD_MASS_REFERENCE * 0.25
-    _add_chain(quad, config, cutter_mass)
+    quad = _add_quadrotor(worldbody, config.airframe)
+    _add_chain(quad, config)
 
     equality = ET.SubElement(root, "equality")
     ET.SubElement(equality, "weld", {"name": "passive_anchor", "body1": "quadrotor", "active": "false", "solref": "0.02 1"})

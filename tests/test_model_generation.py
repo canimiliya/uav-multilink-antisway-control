@@ -2,6 +2,7 @@ from pathlib import Path
 
 import mujoco
 import numpy as np
+import pytest
 
 from uav_sway.models.build_planar_chain import build_planar_chain_model
 from uav_sway.models.model_config import load_model_config
@@ -38,16 +39,16 @@ def test_all_frozen_chain_sizes_load_with_expected_topology(tmp_path):
         assert mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_SITE, "cutter_tip") >= 0
 
 
-def test_mass_ratios_and_configuration_are_frozen(tmp_path):
+def test_mass_and_geometry_configuration_are_frozen(tmp_path):
     model = _build(tmp_path, 5)
     config = load_model_config(ROOT / "configs" / "model_5link.yaml")
     quad = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "quadrotor")
     cutter = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "cutter")
     link_ids = [mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, f"link_{i}") for i in range(1, 6)]
-    quad_mass = model.body_mass[quad]
-    assert model.body_mass[cutter] / quad_mass == pytest.approx(0.25, rel=0.01)
-    assert sum(model.body_mass[i] for i in link_ids) / quad_mass == pytest.approx(0.10, rel=0.01)
+    assert model.body_mass[quad] == pytest.approx(9.74, abs=1e-9)
+    assert model.body_mass[cutter] == pytest.approx(2.5, abs=1e-9)
+    assert sum(model.body_mass[i] for i in link_ids) == pytest.approx(1.0, abs=1e-9)
     assert config.link_length == 0.5
-
-
-import pytest
+    cutter_geom = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "cutter_geom")
+    assert model.geom_type[cutter_geom] == mujoco.mjtGeom.mjGEOM_BOX
+    assert np.allclose(model.geom_size[cutter_geom], [0.08, 0.07, 0.225])

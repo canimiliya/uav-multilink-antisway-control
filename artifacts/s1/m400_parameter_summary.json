@@ -1,0 +1,41 @@
+{
+  "aircraft_model": "DJI Matrice 400",
+  "aircraft_mass_kg": 9.74,
+  "aircraft_dimensions_m": [
+    0.98,
+    0.76,
+    0.48
+  ],
+  "aircraft_parameter_type": "official_plus_engineering_estimate",
+  "aircraft_mass_source": "official",
+  "aircraft_inertia_diagonal_kg_m2": [
+    0.655826666666667,
+    0.966532666666667,
+    1.248343333333333
+  ],
+  "cutter_mass_kg": 2.5,
+  "cutter_mass_source": "user_provided",
+  "cutter_dimensions_m": [
+    0.16,
+    0.14,
+    0.45
+  ],
+  "cutter_geometry_source": "simulation_assumption",
+  "cutter_inertia_diagonal_kg_m2": [
+    0.0462708333333,
+    0.0475208333333,
+    0.00941666666667
+  ],
+  "total_link_mass_kg": 1.0,
+  "link_mass_source": "provisional_simulation_assumption",
+  "total_takeoff_mass_kg": 13.24,
+  "max_payload_kg": 6.0,
+  "max_takeoff_mass_kg": 15.8,
+  "inertia_is_estimated": true,
+  "link_mass_is_estimated": true,
+  "cutter_geometry_is_estimated": true,
+  "payload_margin_kg": 2.5,
+  "takeoff_mass_margin_kg": 2.5600000000000005,
+  "inertia_method": "equivalent_uniform_bounding_box",
+  "inertia_source": "derived_from_official"
+}
