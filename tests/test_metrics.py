@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from uav_sway.evaluation.metrics import compute_metrics
+from uav_sway.evaluation.metrics import compute_metrics, control_rate_formula_audit, control_rate_proxy
 from uav_sway.evaluation.schema import schema_columns
 
 
@@ -30,7 +30,7 @@ def test_metrics_recompute_rms_rmse_and_control_proxies(tmp_path):
     assert metrics["tip_rms_m"] == pytest.approx(np.sqrt(0.375 / 2.0))
     assert metrics["uav_position_rmse_m"] == pytest.approx(np.sqrt(0.04 / 2.0))
     assert metrics["control_energy_proxy"] == 4.5
-    assert metrics["control_rate_proxy"] == 2.5
+    assert metrics["control_rate_proxy"] == 5.0
     assert metrics["saturation_rate"] == 1 / 3
     assert metrics["finite_outputs"] is True
 
@@ -41,3 +41,22 @@ def test_metrics_reports_unsettled_signal(tmp_path):
     metrics = compute_metrics(path, settling_start_s=0.0)
     assert metrics["settled"] is False
     assert metrics["settling_time_s"] is None
+
+
+def test_control_rate_proxy_uniform_case():
+    assert control_rate_proxy(np.asarray([0.0, 1.0, 2.0]), np.asarray([1.0, 2.0, 0.0])) == pytest.approx(5.0)
+
+
+def test_control_rate_proxy_nonuniform_case():
+    assert control_rate_proxy(np.asarray([0.0, 0.5, 2.0]), np.asarray([0.0, 1.0, 4.0])) == pytest.approx(8.0)
+
+
+def test_control_rate_proxy_constant_case():
+    assert control_rate_proxy(np.asarray([0.0, 1.0, 2.0, 3.0]), np.asarray([2.0, 2.0, 2.0, 2.0])) == pytest.approx(0.0)
+
+
+def test_metrics_formula_audit_is_production_computed():
+    audit = control_rate_formula_audit()
+    assert audit["uniform_case"]["computed"] == pytest.approx(5.0)
+    assert audit["nonuniform_case"]["computed"] == pytest.approx(8.0)
+    assert audit["constant_case_computed"] == pytest.approx(0.0)

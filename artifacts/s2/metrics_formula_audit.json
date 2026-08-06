@@ -1,0 +1,33 @@
+{
+  "metric": "control_rate_proxy",
+  "formula": "sum((diff(u)/diff(t))^2 * diff(t))",
+  "uniform_case": {
+    "time": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "command": [
+      1.0,
+      2.0,
+      0.0
+    ],
+    "expected": 5.0,
+    "computed": 5.0
+  },
+  "nonuniform_case": {
+    "time": [
+      0.0,
+      0.5,
+      2.0
+    ],
+    "command": [
+      0.0,
+      1.0,
+      4.0
+    ],
+    "expected": 8.0,
+    "computed": 8.0
+  },
+  "constant_case_computed": 0.0
+}

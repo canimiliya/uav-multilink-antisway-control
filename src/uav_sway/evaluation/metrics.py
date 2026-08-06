@@ -34,6 +34,50 @@ def _integral(values: np.ndarray, time: np.ndarray) -> float:
     return float(np.trapezoid(values, time))
 
 
+def control_rate_proxy(time: np.ndarray, command: np.ndarray) -> float:
+    """Compute sum((diff(command) / diff(time))**2 * diff(time))."""
+    time = np.asarray(time, dtype=float)
+    command = np.asarray(command, dtype=float)
+    if time.shape != command.shape:
+        raise ValueError("time and command must have the same shape")
+    if len(time) < 2:
+        return 0.0
+    dt = np.diff(time)
+    if np.any(dt <= 0.0):
+        raise ValueError("time must be strictly increasing")
+    du = np.diff(command)
+    rate = du / dt
+    return float(np.sum(rate**2 * dt))
+
+
+def control_rate_formula_audit() -> dict:
+    """Return production-computed examples for the frozen control-rate formula."""
+    uniform_time = np.asarray([0.0, 1.0, 2.0])
+    uniform_command = np.asarray([1.0, 2.0, 0.0])
+    nonuniform_time = np.asarray([0.0, 0.5, 2.0])
+    nonuniform_command = np.asarray([0.0, 1.0, 4.0])
+    constant_command = np.asarray([2.0, 2.0, 2.0, 2.0])
+    return {
+        "metric": "control_rate_proxy",
+        "formula": "sum((diff(u)/diff(t))^2 * diff(t))",
+        "uniform_case": {
+            "time": uniform_time.tolist(),
+            "command": uniform_command.tolist(),
+            "expected": 5.0,
+            "computed": control_rate_proxy(uniform_time, uniform_command),
+        },
+        "nonuniform_case": {
+            "time": nonuniform_time.tolist(),
+            "command": nonuniform_command.tolist(),
+            "expected": 8.0,
+            "computed": control_rate_proxy(nonuniform_time, nonuniform_command),
+        },
+        "constant_case_computed": control_rate_proxy(
+            np.arange(len(constant_command), dtype=float), constant_command
+        ),
+    }
+
+
 def _settling(time: np.ndarray, signal: np.ndarray, start_time: float, band: float = 0.05, hold_time: float = 1.0) -> tuple[bool, float | None]:
     start_indices = np.flatnonzero(time >= start_time)
     if len(start_indices) == 0:
@@ -62,7 +106,6 @@ def compute_metrics(path: str | Path, settling_start_s: float = 0.0) -> dict:
         raise ValueError("time must be strictly increasing")
     if duration <= 0:
         raise ValueError("run duration must be positive")
-    rate = np.diff(values["ax_cmd_limited"]) / dt if len(dt) else np.zeros(0)
     settled, settling_time = _settling(time, displacement, settling_start_s)
     return {
         "source_csv": str(path),
@@ -76,7 +119,7 @@ def compute_metrics(path: str | Path, settling_start_s: float = 0.0) -> dict:
         "settling_band_m": 0.05,
         "settling_hold_time_s": 1.0,
         "control_energy_proxy": _integral(values["ax_cmd_limited"] ** 2, time),
-        "control_rate_proxy": _integral(rate**2, time[:-1]) if len(rate) else 0.0,
+        "control_rate_proxy": control_rate_proxy(time, values["ax_cmd_limited"]),
         "solve_time_mean_ms": float(np.mean(values["solve_time_ms"])),
         "solve_time_p95_ms": float(np.percentile(values["solve_time_ms"], 95)),
         "solve_time_max_ms": float(np.max(values["solve_time_ms"])),

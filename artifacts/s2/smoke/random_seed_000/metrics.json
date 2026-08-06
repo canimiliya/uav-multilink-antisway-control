@@ -4,7 +4,7 @@
   "duration_s": 12.0,
   "tip_max_abs_m": 0.029860510259177936,
   "tip_rms_m": 0.013358420533153854,
-  "uav_position_rmse_m": 2.4153672649062825,
+  "uav_position_rmse_m": 2.4221070168142362,
   "settled": true,
   "settling_time_s": 6.0,
   "settling_band_m": 0.05,

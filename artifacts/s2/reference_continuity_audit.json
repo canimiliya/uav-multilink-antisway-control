@@ -1,0 +1,18 @@
+{
+  "scenario": "approach_stop",
+  "epsilon_s": 1e-07,
+  "boundaries_s": [
+    1.0,
+    2.0,
+    5.0,
+    6.0
+  ],
+  "maximum_x_jump_m": 1.4999999997655777e-07,
+  "maximum_vx_jump_m_s": 2.2648549702353193e-14,
+  "maximum_ax_jump_m_s2": 4.4999995670602984e-07,
+  "sampled_vx_jump_at_2s_m_s": 5.606250000000923e-05,
+  "sampled_vx_jump_at_6s_m_s": 5.606250000000923e-05,
+  "continuous_x": true,
+  "continuous_vx": true,
+  "continuous_ax": true
+}

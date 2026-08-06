@@ -12,6 +12,7 @@ import numpy as np
 
 from uav_sway.disturbances.wind_io import sha256_file, write_wind_csv
 from uav_sway.disturbances.wind_profiles import GENERATOR_VERSION, generate_wind_profile, load_wind_config
+from uav_sway.evaluation.metrics import control_rate_formula_audit
 from uav_sway.evaluation.schema import schema_description
 from uav_sway.scenarios.reference_profiles import generate_reference
 from uav_sway.scenarios.scenario_config import load_scenario_config
@@ -35,6 +36,37 @@ def _write_reference(path: Path, reference: dict[str, np.ndarray]) -> None:
                 format(float(reference["yaw_ref"][index]), ".17g"), str(reference["event"][index]),
                 str(int(round(time / 0.05))) if np.isclose(time / 0.05, round(time / 0.05), atol=1e-10) else "-1",
             ])
+
+
+def _reference_continuity_audit(config: dict) -> dict:
+    epsilon = 1e-7
+    boundaries = [1.0, 2.0, 5.0, 6.0]
+    maximum_x_jump = 0.0
+    maximum_vx_jump = 0.0
+    maximum_ax_jump = 0.0
+    for boundary in boundaries:
+        times = np.asarray([boundary - epsilon, boundary, boundary + epsilon], dtype=float)
+        reference = generate_reference("approach_stop", times, config)
+        maximum_x_jump = max(maximum_x_jump, float(np.max(np.abs(np.diff(reference["x_ref"])))), float(np.ptp(reference["x_ref"])))
+        maximum_vx_jump = max(maximum_vx_jump, float(np.max(np.abs(np.diff(reference["vx_ref"])))), float(np.ptp(reference["vx_ref"])))
+        maximum_ax_jump = max(maximum_ax_jump, float(np.max(np.abs(np.diff(reference["ax_ref"])))), float(np.ptp(reference["ax_ref"])))
+    sampled_time = np.arange(2401, dtype=float) * 0.005
+    sampled = generate_reference("approach_stop", sampled_time, config)
+    jump_2 = abs(float(sampled["vx_ref"][400] - sampled["vx_ref"][399]))
+    jump_6 = abs(float(sampled["vx_ref"][1200] - sampled["vx_ref"][1199]))
+    return {
+        "scenario": "approach_stop",
+        "epsilon_s": epsilon,
+        "boundaries_s": boundaries,
+        "maximum_x_jump_m": maximum_x_jump,
+        "maximum_vx_jump_m_s": maximum_vx_jump,
+        "maximum_ax_jump_m_s2": maximum_ax_jump,
+        "sampled_vx_jump_at_2s_m_s": jump_2,
+        "sampled_vx_jump_at_6s_m_s": jump_6,
+        "continuous_x": bool(maximum_x_jump < 1e-6),
+        "continuous_vx": bool(maximum_vx_jump < 1e-5),
+        "continuous_ax": bool(maximum_ax_jump < 1e-4),
+    }
 
 
 def main() -> int:
@@ -76,6 +108,15 @@ def main() -> int:
         _write_reference(path, reference)
         reference_entries.append({"scenario": scenario, "sample_count": len(time), "dt": float(scenario_config["wind_and_log_dt"]), "duration": float(scenario_config["duration_s"]), "sha256": sha256_file(path), "config_sha256": sha256_file(scenario_config_path), "path": path.as_posix()})
     (ref_dir / "manifest.json").write_text(json.dumps({"files": reference_entries}, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+    (output / "reference_continuity_audit.json").write_text(
+        json.dumps(_reference_continuity_audit(scenario_config), indent=2) + "\n",
+        encoding="utf-8", newline="\n",
+    )
+    (output / "metrics_formula_audit.json").write_text(
+        json.dumps(control_rate_formula_audit(), indent=2) + "\n",
+        encoding="utf-8", newline="\n",
+    )
 
     protocol = {
         "physics_dt_s": float(scenario_config["physics_dt"]), "signal_dt_s": float(scenario_config["wind_and_log_dt"]),

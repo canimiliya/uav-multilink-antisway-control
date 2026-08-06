@@ -142,3 +142,30 @@ COMMAND: git diff --check
 DIFF_CHECK_EXIT_CODE=0
 COMMAND: protected-scope diff audit
 PROTECTED_SCOPE_AUDIT_EXIT_CODE=0
+
+
+TASK=S2-REFERENCE-METRICS-CORRECTNESS-FIX-R1
+START_HEAD=5f25335ef8cf78943a73af605cf31ca560ab81c3
+WORKDIR=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+COMMAND: python scripts/generate_s2_protocol.py --config configs/scenarios.yaml --wind-config configs/wind_profiles.yaml --seeds 0-19 --output-dir artifacts/s2
+GENERATE_PROTOCOL_EXIT_CODE=0
+COMMAND: python scripts/run_s2_wind_smoke.py --model-config configs/model_5link.yaml --profiles constant_crosswind one_cosine_gust low_frequency_random --random-seed 0 --headless --output-dir artifacts/s2/smoke
+SMOKE_EXIT_CODE=0
+COMMAND: pytest -q tests
+PROJECT_PYTEST_EXIT_CODE=0
+PROJECT_PYTEST_SUMMARY=26 passed in 1.87s
+COMMAND: pytest -q third_party/udaan/tests
+UPSTREAM_PYTEST_EXIT_CODE=0
+UPSTREAM_PYTEST_SUMMARY=226 passed in 17.98s
+COMMAND: git diff --check
+DIFF_CHECK_EXIT_CODE=0
+COMMAND: protected-scope diff audit for configs/wind_profiles.yaml configs/aerodynamics.yaml configs/scenarios.yaml configs/airframes configs/payloads configs/model_4link.yaml configs/model_5link.yaml configs/model_6link.yaml artifacts/s1 third_party/udaan
+PROTECTED_SCOPE_AUDIT_EXIT_CODE=0
+COMMAND: independent wind SHA, reference continuity, metrics formula, smoke finiteness, and dynamics-invariant audit
+INDEPENDENT_AUDIT_EXIT_CODE=0
+COMMAND: final pytest -q tests
+FINAL_PROJECT_PYTEST_EXIT_CODE=0
+FINAL_PROJECT_PYTEST_SUMMARY=26 passed in 1.82s
+COMMAND: final pytest -q third_party/udaan/tests
+FINAL_UPSTREAM_PYTEST_EXIT_CODE=0
+FINAL_UPSTREAM_PYTEST_SUMMARY=226 passed in 18.06s

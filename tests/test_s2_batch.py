@@ -30,3 +30,18 @@ def test_protocol_and_headless_smoke_outputs_are_reproducible():
         assert recomputed["tip_max_abs_m"] == metrics["tip_max_abs_m"]
         assert recomputed["tip_rms_m"] == metrics["tip_rms_m"]
         assert not (s2 / "smoke" / case / "render.png").exists()
+
+
+def test_reference_and_metric_audits_pass():
+    s2 = ROOT / "artifacts/s2"
+    continuity = json.loads((s2 / "reference_continuity_audit.json").read_text(encoding="utf-8"))
+    assert continuity["continuous_x"] is True
+    assert continuity["continuous_vx"] is True
+    assert continuity["continuous_ax"] is True
+    assert continuity["sampled_vx_jump_at_2s_m_s"] < 1e-3
+    assert continuity["sampled_vx_jump_at_6s_m_s"] < 1e-3
+
+    formula = json.loads((s2 / "metrics_formula_audit.json").read_text(encoding="utf-8"))
+    assert formula["uniform_case"]["computed"] == 5.0
+    assert formula["nonuniform_case"]["computed"] == 8.0
+    assert formula["constant_case_computed"] == 0.0

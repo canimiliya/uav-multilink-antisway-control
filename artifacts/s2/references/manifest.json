@@ -5,7 +5,7 @@
       "sample_count": 2401,
       "dt": 0.005,
       "duration": 12.0,
-      "sha256": "1121292b601cee28cd4fab7aebeb0a0de7388322f888445437b6b7932c780897",
+      "sha256": "8cd101146a0bea68d848035b98d77ba61e388c3c818ca0a42a4c133de5706260",
       "config_sha256": "52673d67942deb102b4db98a805530cb33dfe08a76e0c3e0e1a704e034e5de58",
       "path": "artifacts/s2/references/approach_stop.csv"
     },
