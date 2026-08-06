@@ -1,0 +1,24 @@
+TASK=S1-PASSIVE-MODEL-R1
+DATE=2026-08-06
+PROJECT=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+
+=== PYTHON ===
+Python 3.11.15
+executable=D:\anaconda\envs\uav_sway\python.exe
+
+=== PACKAGES ===
+MuJoCo 3.0.1
+Udaan 1.3.0
+project=uav-sway 0.1.0
+
+=== GIT ===
+main HEAD=c1b7808badcf30475a43728139f7c3e71e3b1b5b (before S1 commit)
+Udaan HEAD=9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816
+Udaan source workspace=clean at preflight
+
+=== MODEL RUNTIME ===
+MuJoCo option timestep=0.001 s
+gravity=0 0 -9.81
+integrator=RK4
+wind=none
+outer_controller=none

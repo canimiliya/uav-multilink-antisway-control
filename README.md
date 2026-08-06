@@ -1,19 +1,20 @@
 # UAV Multi-Link Anti-Sway Control
 
-项目性质：2026 年个人仿真复现
+Project nature: 2026 personal simulation reproduction.
 
-当前阶段：S0 上游环境和基线
+Current stage: S1 passive six-DoF UAV plus generated 4/5/6-link planar rigid-chain model.
 
-固定 Udaan 仓库：<https://github.com/vkotaru/udaan.git>
+The upstream Udaan baseline remains isolated at
+`https://github.com/vkotaru/udaan.git`, commit
+`9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816`. Its baseline command is
+`udaan run quad-payload -t 10 -c links`.
 
-固定 Udaan 提交：`9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816`
+This stage generates project-owned MuJoCo XML from YAML configuration. The
+quadrotor retains a free joint and Udaan-style geometry/site actuators. The
+chain uses serial rigid bodies with one y-axis hinge per link; a model-level
+weld is activated only for passive validation. Cutter mass, link mass, and
+other model values are simulation assumptions, recorded in
+`artifacts/s1/model_summary.json`.
 
-基线运行命令：
-
-```bash
-udaan run quad-payload -t 10 -c links
-```
-
-本阶段尚未实现平面铰模型、风场和控制算法。
-
-未进行实机部署。
+No wind field, pilot trajectory, PID, LQR, MPPI, MPC, outer-loop controller,
+experimental S1/S2/S3 scene, or real-hardware deployment is included.

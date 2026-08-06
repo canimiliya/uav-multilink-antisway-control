@@ -1,0 +1,14 @@
+{
+  "n_links": 5,
+  "duration_s": 15.0,
+  "initial_angle_deg": 10.0,
+  "initial_tip_rms_m": 0.5892020117604799,
+  "final_tip_rms_m": 0.3277862738808204,
+  "decay_ratio": 0.5563223942522293,
+  "initial_total_energy_j": 34.78214218764056,
+  "final_total_energy_j": 34.69591020728668,
+  "max_abs_joint_angle_rad": 0.17453292519943295,
+  "max_abs_joint_velocity_rad_s": 0.30757328334407763,
+  "min_tip_z_m": 0.6294705584284547,
+  "finite": true
+}

@@ -1,0 +1,6 @@
+n_links: 6
+total_length: 2.5
+hinge_axis: [0, 1, 0]
+hinge_damping: 0.05
+hinge_frictionloss: 0.005
+joint_range_deg: [-100, 100]
