@@ -1,0 +1,8 @@
+TASK=S4-FULL-STATE-LQR-R1
+STATUS=BLOCKED
+
+Failure 1: the required 20-point local nonlinear prediction audit does not meet the frozen thresholds. The actual normalized median error is 1.2959295869930947 and P95 is 1.8835727269367401, versus required median < 0.10 and P95 < 0.25. The finite-difference matrices themselves are repeatable and half-epsilon converged.
+
+Failure 2: all 27 fixed Q/R candidates solved DARE and had closed-loop spectral radius below 0.999, but none passed the required development-scene fairness gate. Diagnostic candidate 27 gives approach_stop x-RMSE 0.16478218835934288 m versus frozen PID 0.09819340462735267 m, and crosswind_hover x-RMSE 0.16746910759733513 m versus frozen PID 0.08971880565767204 m. Both exceed 110% of the corresponding PID values.
+
+The diagnostic runs remain finite, unanchored, above the height limits, within attitude/input limits, and approach_stop tip RMS is 0.1309127535391128 m versus PID 0.221244144544995 m. No PID, model, wind, reference, inner-loop, Udaan, MPPI, MPC, or force-injection workaround was used.

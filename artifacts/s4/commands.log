@@ -1,0 +1,29 @@
+TASK=S4-FULL-STATE-LQR-R1
+START_HEAD=5afc3df1f4f8b8e47dc88a6c6cf966b045f1d79f
+
+COMMAND: git status --porcelain; git rev-parse HEAD; git submodule status; git -C third_party/udaan status --porcelain; git -C third_party/udaan rev-parse HEAD
+RESULT: clean; HEAD 5afc3df1f4f8b8e47dc88a6c6cf966b045f1d79f; Udaan 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816; exit 0
+
+COMMAND: D:\anaconda\envs\uav_sway\python.exe --version
+RESULT: Python 3.11.15; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\python.exe -c "import mujoco; print(mujoco.__version__)"
+RESULT: MuJoCo 3.0.1; exit 0
+
+COMMAND: python scripts/identify_s4_lqr.py --runtime-model artifacts/s3/runtime/model_5link_controlled.xml --model-config configs/model_5link.yaml --output-dir artifacts/s4
+RESULT: equilibrium 1.0733273954080052e-16; A 16x16; B 16x1; A half-epsilon 8.440641917798795e-11; B half-epsilon 3.878577267832885e-09; controllability rank 11; PBH stabilizable true; validation median 1.2959295869930947; p95 1.8835727269367401; exit 0
+
+COMMAND: python scripts/tune_s4_lqr.py --linear-model artifacts/s4/linearization/linear_model.npz --config configs/lqr.yaml --output-dir artifacts/s4/tuning --headless
+RESULT: all 27 DARE candidates finite/stable; no candidate passed frozen PID fairness gate; diagnostic candidate 27; exit 1 (expected blocked diagnostic)
+
+COMMAND: python scripts/run_s4_lqr.py --model-config configs/model_5link.yaml --lqr-config configs/lqr.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s4
+RESULT: three diagnostic runs finite/bounded/free-flight; independent raw gate false due position fairness; exit 2
+
+COMMAND: python scripts/render_s4_lqr.py --pid-dir artifacts/s3/runs --lqr-dir artifacts/s4/runs --output-dir artifacts/s4/figures
+RESULT: figures generated; exit 0
+
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests
+RESULT: 48 passed in 2.47s; exit 0
+COMMAND: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party/udaan/tests
+RESULT: 226 passed in 17.07s; exit 0
+
+PROTECTED_SCOPE_AUDIT: S0/S1/S2/S3, frozen configs, S3 inner loop, Udaan submodule unchanged.

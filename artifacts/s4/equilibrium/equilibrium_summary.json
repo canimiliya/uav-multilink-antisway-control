@@ -1,0 +1,36 @@
+{
+  "reference": {
+    "x_ref": 0.0,
+    "vx_ref": 0.0,
+    "ax_ref": 0.0,
+    "y_ref": 0.0,
+    "z_ref": 3.2,
+    "yaw_ref": 0.0
+  },
+  "state_names": [
+    "position_error_x",
+    "velocity_error_x",
+    "altitude_error",
+    "vertical_velocity",
+    "pitch",
+    "body_pitch_rate",
+    "joint_1_angle",
+    "joint_2_angle",
+    "joint_3_angle",
+    "joint_4_angle",
+    "joint_5_angle",
+    "joint_1_velocity",
+    "joint_2_velocity",
+    "joint_3_velocity",
+    "joint_4_velocity",
+    "joint_5_velocity"
+  ],
+  "initial_residual_max_abs": 1.0733273954080052e-16,
+  "final_residual_max_abs": 1.0733273954080052e-16,
+  "solver_used": false,
+  "solver_iterations": 0,
+  "repeat_error_max_abs": 0.0,
+  "anchor_active": false,
+  "wind": "zero",
+  "all_joint_angles_zero_initial_guess": true
+}

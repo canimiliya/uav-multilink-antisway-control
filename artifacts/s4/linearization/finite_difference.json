@@ -1,0 +1,35 @@
+{
+  "state_epsilon": [
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    1e-05,
+    0.0001,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001
+  ],
+  "input_epsilon": 0.001,
+  "half_epsilon_state_relative_fro_error": 8.440641917798795e-11,
+  "half_epsilon_input_relative_fro_error": 3.878577267832885e-09,
+  "repeat_max_abs_A_error": 0.0,
+  "repeat_max_abs_B_error": 0.0,
+  "A_shape": [
+    16,
+    16
+  ],
+  "B_shape": [
+    16,
+    1
+  ],
+  "finite": true,
+  "central_difference": true
+}

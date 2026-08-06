@@ -1,0 +1,21 @@
+{
+  "dimension": 16,
+  "state_order": [
+    "position_error_x",
+    "velocity_error_x",
+    "altitude_error",
+    "vertical_velocity",
+    "pitch",
+    "body_pitch_rate",
+    "joint_1_angle",
+    "joint_2_angle",
+    "joint_3_angle",
+    "joint_4_angle",
+    "joint_5_angle",
+    "joint_1_velocity",
+    "joint_2_velocity",
+    "joint_3_velocity",
+    "joint_4_velocity",
+    "joint_5_velocity"
+  ]
+}

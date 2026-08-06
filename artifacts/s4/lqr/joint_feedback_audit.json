@@ -1,0 +1,22 @@
+{
+  "joint_angle_columns": [
+    -8.229263110506148,
+    0.13355664441968587,
+    2.3328349759195652,
+    1.9756440761450145,
+    1.0576439226699355
+  ],
+  "joint_velocity_columns": [
+    3.8537205051848074,
+    3.0469466107154872,
+    2.229457533672531,
+    1.4553726568113927,
+    0.7402252101499793
+  ],
+  "minimum_abs_joint_angle_gain": 0.13355664441968587,
+  "minimum_abs_joint_velocity_gain": 0.7402252101499793,
+  "all_joint_angle_gains_nonzero": true,
+  "all_joint_velocity_gains_nonzero": true,
+  "joint_state_changes_output": true,
+  "feedback_state_dimension": 16
+}

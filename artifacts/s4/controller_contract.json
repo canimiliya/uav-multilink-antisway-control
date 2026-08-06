@@ -1,0 +1,35 @@
+{
+  "controller": "lqr",
+  "protocol_mode": "free_flight_controlled",
+  "state_dimension": 16,
+  "state_order": [
+    "position_error_x",
+    "velocity_error_x",
+    "altitude_error",
+    "vertical_velocity",
+    "pitch",
+    "body_pitch_rate",
+    "joint_1_angle",
+    "joint_2_angle",
+    "joint_3_angle",
+    "joint_4_angle",
+    "joint_5_angle",
+    "joint_1_velocity",
+    "joint_2_velocity",
+    "joint_3_velocity",
+    "joint_4_velocity",
+    "joint_5_velocity"
+  ],
+  "feedback_uses_joint_angles": true,
+  "feedback_uses_joint_velocities": true,
+  "anchor_active": false,
+  "wind_enabled_in_formal_runs": true,
+  "shared_inner_loop": "uav_sway.control.geometric_inner_loop.GeometricInnerLoop",
+  "limiter": {
+    "amplitude_m_s2": [-2.0, 2.0],
+    "slew_m_s2_per_update": 0.25,
+    "outer_dt_s": 0.05
+  },
+  "integral_state": false,
+  "other_optimizers": false
+}
