@@ -24,9 +24,18 @@ def main() -> int:
     build_planar_chain_model(args.config, xml_path)
     csv_path = output_dir / f"passive_decay_{config.n_links}link.csv"
     render_path = output_dir / f"model_{config.n_links}link.png" if args.render else None
-    result = simulate_passive(args.config, args.initial_angle_deg, args.duration, csv_path, render_path, model_path=xml_path)
-    summary_path = output_dir / "passive_run_summary.json"
-    summary_path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    plot_path = output_dir / f"passive_decay_{config.n_links}link.png"
+    metrics_path = output_dir / "passive_decay_metrics.json"
+    result = simulate_passive(
+        args.config,
+        args.initial_angle_deg,
+        args.duration,
+        csv_path,
+        render_path,
+        plot_path=plot_path,
+        metrics_path=metrics_path,
+        model_path=xml_path,
+    )
     print(json.dumps(result, indent=2))
     return 0
 

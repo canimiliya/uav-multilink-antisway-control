@@ -1,3 +1,29 @@
-.....                                                                    [100%]
-5 passed in 0.75s
-PROJECT_PYTEST_EXIT_CODE=0
+....F..                                                                  [100%]
+================================== FAILURES ===================================
+___________________ test_five_link_ten_degree_passive_decay ___________________
+
+tmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/pytest-of-Administrator/pytest-162/test_five_link_ten_degree_pass0')
+
+    def test_five_link_ten_degree_passive_decay(tmp_path):
+        xml_path = tmp_path / "model_5link.xml"
+        csv_path = tmp_path / "passive_decay_5link.csv"
+        metrics_path = tmp_path / "passive_decay_metrics.json"
+        build_planar_chain_model(ROOT / "configs/model_5link.yaml", xml_path)
+        result = simulate_passive(
+            ROOT / "configs/model_5link.yaml",
+            10.0,
+            15.0,
+            csv_path=csv_path,
+            metrics_path=metrics_path,
+            model_path=xml_path,
+        )
+        assert result["finite"]
+        assert result["final_total_energy_j"] < result["initial_total_energy_j"]
+>       assert result["decay_ratio"] < 0.60
+E       assert 0.6543792639045191 < 0.6
+
+tests\test_passive_decay.py:38: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_passive_decay.py::test_five_link_ten_degree_passive_decay
+1 failed, 6 passed in 1.59s
+PYTEST_PROJECT_EXIT_CODE=1

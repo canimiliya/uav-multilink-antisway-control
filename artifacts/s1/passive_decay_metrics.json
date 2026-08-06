@@ -1,0 +1,25 @@
+{
+  "duration_seconds": 15.0,
+  "initial_angle_deg": 10.0,
+  "equilibrium_quad_x": 0.0,
+  "equilibrium_tip_x": 0.0,
+  "equilibrium_tip_relative_x": 0.0,
+  "initial_window": [
+    0.0,
+    2.0
+  ],
+  "final_window": [
+    13.0,
+    15.0
+  ],
+  "initial_window_samples": 200,
+  "final_window_samples": 201,
+  "initial_tip_rms": 0.2786653699733282,
+  "final_tip_rms": 0.18235283967882696,
+  "decay_ratio": 0.6543792639045191,
+  "initial_total_energy": 34.78214218764056,
+  "final_total_energy": 34.69591020728668,
+  "energy_drop": 0.08623198035387958,
+  "energy_drop_percent": 0.2479202686501613,
+  "rms_reference": "static_vertical_equilibrium"
+}

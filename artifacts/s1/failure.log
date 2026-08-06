@@ -10,4 +10,15 @@ RECOVERED_FAILURES=true
 3. First --render invocation exited 1 because MuJoCo 3.0.1 Renderer has no close() method.
    Recovery: removed that incompatible call and reran the exact render command successfully.
 
-All recovered failures remain recorded here; final project and upstream test runs passed.
+The recovered S1 implementation failures remain recorded here. The later evidence-fix
+run is recorded below; its project threshold test is expected to fail because the
+corrected decay ratio is above the frozen 0.60 limit.
+
+4. Evidence-fix run with the static vertical equilibrium reference produced
+   initial_tip_rms=0.2786653699733282 m,
+   final_tip_rms=0.18235283967882696 m, and
+   decay_ratio=0.6543792639045191. The frozen threshold test failed with exit 1;
+   no model parameter, duration, timestep, or initial state was changed.
+
+5. The independent CSV/JSON recomputation test passed, and the upstream regression
+   remained 226 passed with exit 0.
