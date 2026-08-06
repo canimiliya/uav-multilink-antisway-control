@@ -111,3 +111,46 @@ EXIT_CODE=0
 PROJECT_PYTEST_EXIT_CODE=0; 8 passed
 [2026-08-06] pytest -q third_party/udaan/tests (final test source)
 UPSTREAM_PYTEST_EXIT_CODE=0; 226 passed
+
+TASK=S1-VISUAL-GEOMETRY-FIX-R1
+START_HEAD=dc51c8ef21146c0ec905b73aa54c170b64f3905d
+WORKDIR=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+
+[2026-08-06] preflight with session-scoped safe.directory
+git status --porcelain -> empty; exit 0
+git rev-parse HEAD -> dc51c8ef21146c0ec905b73aa54c170b64f3905d; exit 0
+git submodule status -> 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816; exit 0
+git -C third_party/udaan status --porcelain -> empty; exit 0
+python --version -> Python 3.11.15; exit 0
+python -c "import mujoco; print(mujoco.__version__)" -> 3.0.1; exit 0
+python -c "import udaan; print(udaan.__version__)" -> 1.3.0; exit 0
+
+[2026-08-06] python scripts/build_models.py --configs configs/model_4link.yaml configs/model_5link.yaml configs/model_6link.yaml --output-dir artifacts/s1/generated
+EXIT_CODE=0; all 4/5/6-link XML files generated and loaded
+
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --output-dir artifacts/s1
+EXIT_CODE=0; final RMS=0.2336630589779627 m; initial RMS=0.25897151242167576 m; ratio=0.9022732145051381; energy drop=0.1616762133403995 J
+
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --render --output-dir artifacts/s1
+EXIT_CODE=0; model_5link.png, model_5link_side.png, model_5link_oblique.png generated and visually inspected
+
+[2026-08-06] python -m pytest -q tests | Tee-Object artifacts/s1/pytest_project.log
+PROJECT_PYTEST_EXIT_CODE=0; 9 passed
+[2026-08-06] python -m pytest -q third_party/udaan/tests | Tee-Object artifacts/s1/pytest_upstream.log
+UPSTREAM_PYTEST_EXIT_CODE=0; 226 passed
+[2026-08-06] independent CSV/JSON and generated-XML checks
+EXIT_CODE=0; RMS errors < 1e-12; dimensions and marker counts verified
+
+Recovered visual-task diagnostics are preserved in artifacts/s1/failure.log.
+
+[2026-08-06] geometry review correction: cutter body local position set to
+last-link-end offset (0 0 -link_length) plus attachment_local_position_m;
+the frozen attachment point remains the top-center of the cutter.
+No mass, inertia, joint, damping, friction, timestep, or state parameters changed.
+
+[2026-08-06] python scripts/build_models.py --configs configs/model_4link.yaml configs/model_5link.yaml configs/model_6link.yaml --output-dir artifacts/s1/generated (final endpoint correction)
+EXIT_CODE=0
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --output-dir artifacts/s1 (final endpoint correction)
+EXIT_CODE=0; initial RMS=0.33198704403437546 m; final RMS=0.2786671530606764 m; ratio=0.8393916511748631; initial energy=333.2417808621432 J; final energy=333.09752497239873 J; min tip z=0.3784026063146554 m
+[2026-08-06] python scripts/run_s1_passive.py --config configs/model_5link.yaml --initial-angle-deg 10 --duration 15 --render --output-dir artifacts/s1 (final endpoint correction)
+EXIT_CODE=0; three complete views generated and visually inspected

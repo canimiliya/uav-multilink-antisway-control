@@ -1,0 +1,62 @@
+{
+  "cutter_orientation": "horizontal_x_axis",
+  "cutter_dimensions_xyz_m": [
+    0.45,
+    0.16,
+    0.14
+  ],
+  "cutter_half_extents_xyz_m": [
+    0.225,
+    0.08,
+    0.07
+  ],
+  "cutter_mass_kg": 2.5,
+  "cutter_attachment": "top_center",
+  "cutter_tip_location": "positive_x_end",
+  "dimension_envelope_visible_by_default": false,
+  "fuselage_geometry": "visual_only_simplified_box",
+  "fuselage_geometry_source": "visual_only_simulation_assumption",
+  "joint_marker_count_4link": 4,
+  "joint_marker_count_5link": 5,
+  "joint_marker_count_6link": 6,
+  "joint_markers_are_collisionless": true,
+  "joint_markers_are_massless": true,
+  "joint_marker_colors_rgba": [
+    [
+      0.95,
+      0.2,
+      0.2,
+      1.0
+    ],
+    [
+      0.95,
+      0.75,
+      0.15,
+      1.0
+    ],
+    [
+      0.2,
+      0.8,
+      0.35,
+      1.0
+    ],
+    [
+      0.1,
+      0.75,
+      0.9,
+      1.0
+    ],
+    [
+      0.25,
+      0.4,
+      0.95,
+      1.0
+    ],
+    [
+      0.8,
+      0.25,
+      0.9,
+      1.0
+    ]
+  ]
+}

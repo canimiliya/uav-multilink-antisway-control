@@ -33,6 +33,9 @@ suspension_mount_body_m: [0.0, 0.0, -0.24]
 suspension_mount_source: simulation_assumption
 suspension_mount_is_measured: false
 
+show_dimension_envelope: false
+visual_geometry_source: visual_only_simulation_assumption
+
 max_wind_resistance_m_s: 12.0
 max_wind_resistance_source: official
 max_pitch_angle_deg: 35.0

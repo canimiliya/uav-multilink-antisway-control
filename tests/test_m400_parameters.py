@@ -25,9 +25,11 @@ def test_m400_configuration_and_payload_limits(tmp_path):
     )
     assert all(value > 0 for value in airframe.inertia_diagonal_kg_m2)
     assert payload.mass_kg == pytest.approx(2.5, abs=1e-9)
-    assert payload.dimensions_xyz_m == (0.16, 0.14, 0.45)
-    assert payload.half_extents_xyz_m == (0.08, 0.07, 0.225)
-    assert payload.tip_local_position_m == (0.0, 0.0, -0.225)
+    assert payload.dimensions_xyz_m == (0.45, 0.16, 0.14)
+    assert payload.half_extents_xyz_m == (0.225, 0.08, 0.07)
+    assert payload.attachment_local_position_m == (0.0, 0.0, 0.0)
+    assert payload.geom_center_local_position_m == (0.0, 0.0, -0.07)
+    assert payload.tip_local_position_m == (0.225, 0.0, -0.07)
     external_payload = config.total_link_mass_kg + payload.mass_kg
     total_takeoff_mass = airframe.mass_kg + external_payload
     assert external_payload <= airframe.max_payload_kg
@@ -56,3 +58,11 @@ def test_m400_configuration_and_payload_limits(tmp_path):
         assert np.allclose(model.geom_pos[geom_id][:2], [x, y])
         assert model.geom_size[geom_id][0] == pytest.approx(0.3175)
     assert np.isfinite(model.body_mass).all()
+    assert np.allclose(model.body_inertia[cutter_id], [0.00941666666667, 0.0462708333333, 0.0475208333333])
+    assert np.allclose(model.body_pos[cutter_id], [0.0, 0.0, -0.5])
+    assert np.allclose(model.body_ipos[cutter_id], [0.0, 0.0, -0.07])
+    cutter_geom_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "cutter_geom")
+    assert np.allclose(model.geom_pos[cutter_geom_id], [0.0, 0.0, -0.07])
+    tip_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_SITE, "cutter_tip")
+    assert np.allclose(model.site_pos[tip_id], [0.225, 0.0, -0.07])
+    assert not config.airframe.show_dimension_envelope

@@ -2,8 +2,8 @@
   "duration_seconds": 15.0,
   "initial_angle_deg": 10.0,
   "equilibrium_quad_x": 0.0,
-  "equilibrium_tip_x": 0.0,
-  "equilibrium_tip_relative_x": 0.0,
+  "equilibrium_tip_x": 0.225,
+  "equilibrium_tip_relative_x": 0.225,
   "initial_window": [
     0.0,
     2.0
@@ -14,12 +14,12 @@
   ],
   "initial_window_samples": 200,
   "final_window_samples": 201,
-  "initial_tip_rms": 0.3539887929649506,
-  "final_tip_rms": 0.2898843678898549,
-  "decay_ratio": 0.8189083204070732,
-  "initial_total_energy": 334.93244957212687,
-  "final_total_energy": 334.78581372068123,
-  "energy_drop": 0.1466358514456374,
-  "energy_drop_percent": 0.04378072403344715,
+  "initial_tip_rms": 0.33198704403437546,
+  "final_tip_rms": 0.2786671530606764,
+  "decay_ratio": 0.8393916511748631,
+  "initial_total_energy": 333.2417808621432,
+  "final_total_energy": 333.09752497239873,
+  "energy_drop": 0.1442558897444428,
+  "energy_drop_percent": 0.04328865647375687,
   "rms_reference": "static_vertical_equilibrium"
 }

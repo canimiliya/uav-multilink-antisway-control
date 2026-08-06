@@ -72,9 +72,12 @@ def _static_equilibrium_reference(model, data) -> dict[str, float]:
     }
 
 
-def _frame(model, data) -> np.ndarray:
+def _frame(model, data, view: str = "oblique") -> np.ndarray:
     renderer = mujoco.Renderer(model, height=720, width=960)
-    renderer.update_scene(data, camera="main_camera")
+    camera_name = {"side": "side_camera", "oblique": "oblique_camera"}.get(view)
+    if camera_name is None:
+        raise ValueError(f"unknown evidence view: {view}")
+    renderer.update_scene(data, camera=camera_name)
     image = renderer.render()
     del renderer
     return image
@@ -89,6 +92,8 @@ def simulate_passive(
     plot_path: str | Path | None = None,
     metrics_path: str | Path | None = None,
     model_path: str | Path | None = None,
+    side_render_path: str | Path | None = None,
+    oblique_render_path: str | Path | None = None,
 ) -> dict:
     """Run a passive simulation with a model-level quadrotor weld anchor."""
     config = load_model_config(config_path)
@@ -99,7 +104,9 @@ def simulate_passive(
     data = mujoco.MjData(model)
     equilibrium = _static_equilibrium_reference(model, data)
     _set_initial_state(model, data, initial_angle_deg)
-    initial_frame = _frame(model, data) if render_path else None
+    initial_frame = _frame(model, data, "oblique") if render_path else None
+    side_frame = _frame(model, data, "side") if side_render_path else None
+    oblique_frame = initial_frame if oblique_render_path else None
 
     joint_ids = [_named_id(model, mujoco.mjtObj.mjOBJ_JOINT, f"joint_{i}") for i in range(1, config.n_links + 1)]
     joint_qpos = [model.jnt_qposadr[index] for index in joint_ids]
@@ -225,4 +232,12 @@ def simulate_passive(
         render_path = Path(render_path)
         render_path.parent.mkdir(parents=True, exist_ok=True)
         iio.imwrite(render_path, initial_frame)
+    if side_render_path is not None and side_frame is not None:
+        side_render_path = Path(side_render_path)
+        side_render_path.parent.mkdir(parents=True, exist_ok=True)
+        iio.imwrite(side_render_path, side_frame)
+    if oblique_render_path is not None and oblique_frame is not None:
+        oblique_render_path = Path(oblique_render_path)
+        oblique_render_path.parent.mkdir(parents=True, exist_ok=True)
+        iio.imwrite(oblique_render_path, oblique_frame)
     return result

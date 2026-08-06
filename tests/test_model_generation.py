@@ -1,4 +1,5 @@
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 import mujoco
 import numpy as np
@@ -51,4 +52,40 @@ def test_mass_and_geometry_configuration_are_frozen(tmp_path):
     assert config.link_length == 0.5
     cutter_geom = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "cutter_geom")
     assert model.geom_type[cutter_geom] == mujoco.mjtGeom.mjGEOM_BOX
-    assert np.allclose(model.geom_size[cutter_geom], [0.08, 0.07, 0.225])
+    assert np.allclose(model.geom_size[cutter_geom], [0.225, 0.08, 0.07])
+    assert model.geom_size[cutter_geom][0] > model.geom_size[cutter_geom][1]
+    assert model.geom_size[cutter_geom][0] > model.geom_size[cutter_geom][2]
+    assert np.allclose(model.geom_pos[cutter_geom], [0.0, 0.0, -0.07])
+
+
+def test_visual_geometry_is_massless_collisionless_and_topology_preserving(tmp_path):
+    model = _build(tmp_path, 5)
+    xml_root = ET.parse(tmp_path / "model_5link.xml").getroot()
+    geoms_by_name = {
+        geom.attrib["name"]: geom
+        for geom in xml_root.iter("geom")
+        if "name" in geom.attrib
+    }
+    envelope = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "m400_dimension_envelope_debug")
+    assert envelope < 0
+    for name in ("m400_fuselage", "m400_lower_body"):
+        geom_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, name)
+        assert geom_id >= 0
+        assert geoms_by_name[name].attrib["mass"] == "0"
+        assert model.geom_contype[geom_id] == 0
+        assert model.geom_conaffinity[geom_id] == 0
+    marker_ids = [mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, f"joint_marker_{i}") for i in range(1, 6)]
+    assert len(set(marker_ids)) == 5
+    assert all(marker_id >= 0 for marker_id in marker_ids)
+    assert all(geoms_by_name[f"joint_marker_{i}"].attrib["mass"] == "0" for i in range(1, 6))
+    assert all(model.geom_contype[marker_id] == 0 for marker_id in marker_ids)
+    assert all(model.geom_conaffinity[marker_id] == 0 for marker_id in marker_ids)
+    assert all(model.geom_group[marker_id] == 2 for marker_id in marker_ids)
+    expected_colors = np.asarray([
+        [0.95, 0.20, 0.20, 1.0],
+        [0.95, 0.75, 0.15, 1.0],
+        [0.20, 0.80, 0.35, 1.0],
+        [0.10, 0.75, 0.90, 1.0],
+        [0.25, 0.40, 0.95, 1.0],
+    ])
+    assert np.allclose(model.geom_rgba[marker_ids], expected_colors)

@@ -99,6 +99,26 @@ def main() -> int:
             "inertia_is_estimated", "link_mass_is_estimated", "cutter_geometry_is_estimated",
             "payload_margin_kg", "takeoff_mass_margin_kg", "inertia_method", "inertia_source",
         )}, indent=2) + "\n", encoding="utf-8")
+        visual_path = output_dir.parent / "visual_geometry_summary.json"
+        visual_path.write_text(json.dumps({
+            "cutter_orientation": "horizontal_x_axis",
+            "cutter_dimensions_xyz_m": list(load_model_config(args.configs[1]).payload.dimensions_xyz_m),
+            "cutter_half_extents_xyz_m": list(load_model_config(args.configs[1]).payload.half_extents_xyz_m),
+            "cutter_mass_kg": summaries["5"]["cutter_mass_kg"],
+            "cutter_attachment": "top_center",
+            "cutter_tip_location": "positive_x_end",
+            "dimension_envelope_visible_by_default": load_model_config(args.configs[1]).airframe.show_dimension_envelope,
+            "fuselage_geometry": "visual_only_simplified_box",
+            "fuselage_geometry_source": load_model_config(args.configs[1]).airframe.visual_geometry_source,
+            "joint_marker_count_4link": 4,
+            "joint_marker_count_5link": 5,
+            "joint_marker_count_6link": 6,
+            "joint_markers_are_collisionless": True,
+            "joint_markers_are_massless": True,
+            "joint_marker_colors_rgba": [list(color) for color in __import__(
+                "uav_sway.models.build_planar_chain", fromlist=["JOINT_MARKER_COLORS"]
+            ).JOINT_MARKER_COLORS],
+        }, indent=2) + "\n", encoding="utf-8")
     return 0
 
 
