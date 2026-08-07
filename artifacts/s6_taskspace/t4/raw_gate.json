@@ -1,0 +1,26 @@
+{
+  "observer_candidates": [
+    {
+      "candidate_id": "dob_001",
+      "safe": true,
+      "observer_contribution_pass": false
+    },
+    {
+      "candidate_id": "dob_002",
+      "safe": true,
+      "observer_contribution_pass": false
+    },
+    {
+      "candidate_id": "dob_003",
+      "safe": true,
+      "observer_contribution_pass": false
+    },
+    {
+      "candidate_id": "dob_004",
+      "safe": true,
+      "observer_contribution_pass": false
+    }
+  ],
+  "full_candidates": [],
+  "result": "CLOSED_WITH_NO_USABLE_METHOD"
+}

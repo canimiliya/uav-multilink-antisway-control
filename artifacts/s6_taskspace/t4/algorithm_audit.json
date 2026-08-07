@@ -1,0 +1,17 @@
+{
+  "method": "DOB-TS-RMPC",
+  "task_lqr_candidate": "lqr_011",
+  "observer_source": "uav_sway.control.disturbance_observer.MatchedDisturbanceObserver",
+  "observer_grid_size": 4,
+  "mpc_grid_size": 36,
+  "disturbance_limit_m_s2": 2.0,
+  "internal_model": "frozen 16D A/B with C_task task output",
+  "double_disturbance_compensation": false,
+  "future_wind_used": false,
+  "future_target_leakage": false,
+  "shared_geometric_inner_loop": true,
+  "outer_loop_hz": 20,
+  "physical_model_modified": false,
+  "selection_uses_gust": false,
+  "selection_uses_random_holdout": false
+}

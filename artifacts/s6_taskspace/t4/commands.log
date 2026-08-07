@@ -1,0 +1,2 @@
+D:\anaconda\envs\uav_sway\python.exe scripts/tune_s6t4_dob_ts_rmpc.py --dry-grid
+D:\anaconda\envs\uav_sway\python.exe scripts/tune_s6t4_dob_ts_rmpc.py

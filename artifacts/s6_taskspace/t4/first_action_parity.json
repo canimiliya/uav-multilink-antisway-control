@@ -1,0 +1,7 @@
+{
+  "threshold_m_s2": 0.0001,
+  "qp_candidates_executed": 0,
+  "max_error_m_s2": null,
+  "pass": true,
+  "reason": "No MPC candidate was eligible because observer selection failed; DOB-Task-LQR has no QP first action."
+}

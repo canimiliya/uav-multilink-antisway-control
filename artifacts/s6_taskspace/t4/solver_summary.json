@@ -1,0 +1,26 @@
+{
+  "observer_candidates": [
+    {
+      "candidate_id": "dob_001",
+      "calm": 0.01731386922115785,
+      "crosswind": 0.01717780091628488
+    },
+    {
+      "candidate_id": "dob_002",
+      "calm": 0.017192753019575176,
+      "crosswind": 0.019986838817159517
+    },
+    {
+      "candidate_id": "dob_003",
+      "calm": 0.018343523531861725,
+      "crosswind": 0.017737984173261143
+    },
+    {
+      "candidate_id": "dob_004",
+      "calm": 0.01744789670970429,
+      "crosswind": 0.019430903790087464
+    }
+  ],
+  "mpc_candidates_executed": 0,
+  "qp_failure_count": 0
+}

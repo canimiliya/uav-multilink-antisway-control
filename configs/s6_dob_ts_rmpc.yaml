@@ -1,0 +1,24 @@
+method: DOB-TS-RMPC
+observer_gain_grid: [0.05, 0.15, 0.30, 0.60]
+disturbance_limit: 2.0
+task_lqr:
+  candidate_id: lqr_011
+  w_p: 80.0
+  w_theta: 5.0
+  R: 1.0
+mpc_grid:
+  horizon_steps: [20, 40]
+  alpha_p: [1.0, 2.0, 4.0]
+  alpha_theta: [1.0, 2.0]
+  residual_weight: [1.0, 4.0, 16.0]
+cost:
+  q_s4_scale: 0.01
+  residual_penalty: "lambda_v * v^2"
+limits:
+  ax_min_m_s2: -2.0
+  ax_max_m_s2: 2.0
+  ax_slew_m_s2_per_update: 0.25
+runtime:
+  physics_hz: 1000
+  inner_hz: 200
+  outer_hz: 20

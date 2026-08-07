@@ -1,0 +1,77 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "dob_001",
+      "observer_gain": 0.05,
+      "scenes": {
+        "task_acquire_calm": {
+          "d_hat_final": 1.13137736733063e-06,
+          "d_hat_mean_after_settle": -6.1490800266800475e-06,
+          "d_hat_std_after_settle": 9.703236881512304e-05,
+          "finite_outputs": true
+        },
+        "task_acquire_crosswind": {
+          "d_hat_final": -0.08962934549714377,
+          "d_hat_mean_after_settle": -0.08854071078835095,
+          "d_hat_std_after_settle": 0.0013313567586641863,
+          "finite_outputs": true
+        }
+      }
+    },
+    {
+      "candidate_id": "dob_002",
+      "observer_gain": 0.15,
+      "scenes": {
+        "task_acquire_calm": {
+          "d_hat_final": -4.1860994647576255e-07,
+          "d_hat_mean_after_settle": 3.822710705758878e-05,
+          "d_hat_std_after_settle": 0.00014941885180007406,
+          "finite_outputs": true
+        },
+        "task_acquire_crosswind": {
+          "d_hat_final": -0.08966906803999496,
+          "d_hat_mean_after_settle": -0.0892880157072872,
+          "d_hat_std_after_settle": 0.0011165648721120345,
+          "finite_outputs": true
+        }
+      }
+    },
+    {
+      "candidate_id": "dob_003",
+      "observer_gain": 0.3,
+      "scenes": {
+        "task_acquire_calm": {
+          "d_hat_final": -1.3754037096297397e-09,
+          "d_hat_mean_after_settle": 5.9677943195400395e-05,
+          "d_hat_std_after_settle": 0.00015781827856871418,
+          "finite_outputs": true
+        },
+        "task_acquire_crosswind": {
+          "d_hat_final": -0.08968629114784406,
+          "d_hat_mean_after_settle": -0.0893702197694113,
+          "d_hat_std_after_settle": 0.0011691834052496178,
+          "finite_outputs": true
+        }
+      }
+    },
+    {
+      "candidate_id": "dob_004",
+      "observer_gain": 0.6,
+      "scenes": {
+        "task_acquire_calm": {
+          "d_hat_final": -1.251944974345769e-10,
+          "d_hat_mean_after_settle": 6.195911829046513e-05,
+          "d_hat_std_after_settle": 0.00017071486610179318,
+          "finite_outputs": true
+        },
+        "task_acquire_crosswind": {
+          "d_hat_final": -0.08968611879201877,
+          "d_hat_mean_after_settle": -0.08942916188089729,
+          "d_hat_std_after_settle": 0.0011512290333512757,
+          "finite_outputs": true
+        }
+      }
+    }
+  ],
+  "interpretation": "finite and stable estimate audit only; no true wind is used as a reference"
+}

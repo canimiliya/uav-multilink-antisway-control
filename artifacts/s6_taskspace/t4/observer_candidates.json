@@ -1,0 +1,66 @@
+[
+  {
+    "candidate_id": "dob_001",
+    "index": 1,
+    "observer_gain": 0.05,
+    "safe": true,
+    "calm_no_degradation": true,
+    "observer_score": 2.2340961414398834,
+    "contribution": {
+      "calm_no_degradation": true,
+      "crosswind_position_improvement": -0.0918527646208677,
+      "crosswind_final_tip_improvement": -0.8760240253093049,
+      "crosswind_acquisition_dominance": false,
+      "pass": false
+    },
+    "observer_contribution_pass": false
+  },
+  {
+    "candidate_id": "dob_002",
+    "index": 2,
+    "observer_gain": 0.15,
+    "safe": true,
+    "calm_no_degradation": true,
+    "observer_score": 2.236862295897337,
+    "contribution": {
+      "calm_no_degradation": true,
+      "crosswind_position_improvement": -0.0954587700420349,
+      "crosswind_final_tip_improvement": -0.8771480753948457,
+      "crosswind_acquisition_dominance": false,
+      "pass": false
+    },
+    "observer_contribution_pass": false
+  },
+  {
+    "candidate_id": "dob_003",
+    "index": 3,
+    "observer_gain": 0.3,
+    "safe": true,
+    "calm_no_degradation": true,
+    "observer_score": 2.237456331221223,
+    "contribution": {
+      "calm_no_degradation": true,
+      "crosswind_position_improvement": -0.09657074293995527,
+      "crosswind_final_tip_improvement": -0.8772301876613265,
+      "crosswind_acquisition_dominance": false,
+      "pass": false
+    },
+    "observer_contribution_pass": false
+  },
+  {
+    "candidate_id": "dob_004",
+    "index": 4,
+    "observer_gain": 0.6,
+    "safe": true,
+    "calm_no_degradation": true,
+    "observer_score": 2.2381000929661212,
+    "contribution": {
+      "calm_no_degradation": true,
+      "crosswind_position_improvement": -0.09762818654617153,
+      "crosswind_final_tip_improvement": -0.8772834357216216,
+      "crosswind_acquisition_dominance": false,
+      "pass": false
+    },
+    "observer_contribution_pass": false
+  }
+]
