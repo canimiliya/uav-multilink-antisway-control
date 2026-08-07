@@ -1,0 +1,15 @@
+{
+  "audit_date": "2026-08-08",
+  "search_scope": ["GitHub", "GitLab", "author pages", "official project pages", "supplementary code links"],
+  "global_finding": "No official controller repository or supplementary source package was identified for the eight audited candidates in targeted searches. No code is copied or imported.",
+  "candidates": [
+    {"candidate_id":"C1","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code / paper license only","readme_completeness":null,"search_evidence":"arXiv Code/Data/Media section contained no author repository link; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C2","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code; PLOS article CC BY is not a code license","readme_completeness":null,"search_evidence":"PLOS article and supporting-information links reviewed; targeted title + GitHub search returned no official controller repository."},
+    {"candidate_id":"C3","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code identified","readme_completeness":null,"search_evidence":"Official ScienceDirect article reviewed; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C4","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code identified","readme_completeness":null,"search_evidence":"Official ScienceDirect article reviewed; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C5","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code identified","readme_completeness":null,"search_evidence":"Official SAGE article reviewed; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C6","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code / arXiv paper license only","readme_completeness":null,"search_evidence":"Official arXiv page reviewed; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C7","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code; article CC BY-NC-ND does not grant code rights","readme_completeness":null,"search_evidence":"Official Scientific Reports/PubMed pages reviewed; targeted title + GitHub search returned no official repository."},
+    {"candidate_id":"C8","code_available":false,"repository":null,"last_commit":null,"language":null,"dependencies":null,"license":"No code / arXiv paper license only","readme_completeness":null,"search_evidence":"Official arXiv page reviewed; targeted title + GitHub search returned no official repository."}
+  ]
+}

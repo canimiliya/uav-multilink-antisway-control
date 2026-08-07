@@ -1,0 +1,40 @@
+{
+  "result": "PASS_BASELINE_SELECTED",
+  "selected_candidate_id": "C1",
+  "selected_method": "SEP-NMPC",
+  "paper_title": "SEP-NMPC: Safety Enhanced Passivity-Based Nonlinear Model Predictive Control for a UAV Slung Payload System",
+  "year": 2026,
+  "venue": "ICRA 2026 accepted; arXiv:2603.08860",
+  "identifier": "arXiv:2603.08860; https://doi.org/10.48550/arXiv.2603.08860",
+  "selection_reason": [
+    "The paper explicitly studies a single quadrotor with a suspended payload and gives the complete outer-loop model, NMPC problem, passivity inequality, and HOCBF equations.",
+    "The original outer-loop decision is a 3D translational force and the paper explicitly assumes an attitude-thrust inner loop, so the x component can be converted to the frozen x-acceleration interface without replacing GeometricInnerLoop.",
+    "The paper's 2 s / 40-node discretization is compatible with a 20 Hz outer-loop implementation; the current benchmark can enforce the already frozen acceleration and slew limits.",
+    "The method is selected before any controller implementation or performance experiment; future performance on the current five-link plant is unknown."
+  ],
+  "main_strengths": [
+    "Passivity-based swing-energy dissipation embedded directly in the predictive optimization.",
+    "Explicit payload-aware HOCBF formulation and formal stability/safety argument.",
+    "Reported simulation and real-world experiments in the original paper."
+  ],
+  "main_model_gaps": [
+    "Original model is a point mass on a massless rigid cable with two swing angles.",
+    "Current plant has five massive rigid links, damped/frictional hinges, a rigid 2.5 kg cutter, and distributed aerodynamic forces.",
+    "The paper does not specify a wind observer or future-wind feedforward contract; current adaptation must use nominal prediction and measured/history-only feedback."
+  ],
+  "adaptation_required": true,
+  "adaptation_summary": "Use a frozen planar reduced internal predictor and an equivalent cutter-tip/multi-link sway output, retain the paper's passivity-constrained NMPC structure, map its x force to ax_cmd, and evaluate the unchanged full five-link MuJoCo plant. This is a fair adaptation contract, not a claim that SEP-NMPC natively models five links.",
+  "fairness_risk": "MODERATE",
+  "implementation_cost": "HIGH",
+  "code_available": false,
+  "code_repository": null,
+  "license": "No controller code identified; arXiv paper is distributed under the arXiv perpetual non-exclusive license.",
+  "future_performance_unknown": true,
+  "ls_pmpc_frozen_before_external_baseline": true,
+  "hard_gate_pass_count": 2,
+  "shortlisted_candidates": ["C1", "C2"],
+  "selection_frozen_before_implementation": true,
+  "no_controller_implemented_in_s5c": true,
+  "no_performance_experiment_run_in_s5c": true,
+  "accessed_date": "2026-08-08"
+}
