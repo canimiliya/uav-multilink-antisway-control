@@ -1,0 +1,26 @@
+{
+  "external_wind_forecast_m_s": 0.0,
+  "static_air_drag_enabled": true,
+  "moving_body_force_nonzero": true,
+  "moving_body_forces": {
+    "quadrotor_x": -0.22344000000000003,
+    "link_1_x": -0.018375,
+    "link_2_x": -0.018375,
+    "link_3_x": -0.018375,
+    "link_4_x": -0.018375,
+    "link_5_x": -0.018375,
+    "cutter_x": -0.014406000000000004,
+    "total_x": -0.329721
+  },
+  "static_body_force_zero": true,
+  "static_body_forces": {
+    "quadrotor_x": 0.0,
+    "link_1_x": 0.0,
+    "link_2_x": 0.0,
+    "link_3_x": 0.0,
+    "link_4_x": 0.0,
+    "link_5_x": 0.0,
+    "cutter_x": 0.0,
+    "total_x": 0.0
+  }
+}

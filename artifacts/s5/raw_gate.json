@@ -1,6 +1,5 @@
 {
   "source": "independent_raw_csv_recomputation",
-  "pass": false,
   "status": "BLOCKED_NO_SAFE_MPPI",
   "formal_runs_present": false,
   "selected_candidate_is_safe": false,

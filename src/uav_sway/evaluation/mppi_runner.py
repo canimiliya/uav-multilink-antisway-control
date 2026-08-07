@@ -116,6 +116,7 @@ def run_mppi_scenario(model_config_path: str | Path, mppi_config: dict,
         float(mppi_config["tip_displacement_weight"]), float(mppi_config["terminal_multiplier"]),
         float(mppi_config["ax_min_m_s2"]), float(mppi_config["ax_max_m_s2"]),
         float(mppi_config["ax_slew_limit_m_s2_per_update"]),
+        model_config=model_cfg, aerodynamic_config=aero,
     )
     mppi.reset(0.0)
     actuator_ids = {name: _id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, name) for name in (
@@ -188,7 +189,7 @@ def run_mppi_scenario(model_config_path: str | Path, mppi_config: dict,
                     "position_error_x": state.position[0] - reference.x_ref,
                     "velocity_error_x": state.velocity[0] - reference.vx_ref, "pid_integral_x": 0.0,
                     "ax_reference_feedforward": reference.ax_ref, "ax_pid_feedback": 0.0,
-                    "ax_cmd_amplitude_limited": d.amplitude_limited, "ax_slew_limited": d.limited,
+                    "ax_cmd_amplitude_limited": d.amplitude_limited, "ax_slew_limited": d.slew_limited,
                     "thrust_cmd_raw_N": thrust_raw, "thrust_cmd_limited_N": thrust_lim,
                     "mx_cmd_raw_Nm": torque_raw[0], "my_cmd_raw_Nm": torque_raw[1], "mz_cmd_raw_Nm": torque_raw[2],
                     "mx_cmd_limited_Nm": torque_lim[0], "my_cmd_limited_Nm": torque_lim[1], "mz_cmd_limited_Nm": torque_lim[2],
@@ -203,6 +204,7 @@ def run_mppi_scenario(model_config_path: str | Path, mppi_config: dict,
                     "mppi_invalid_rollouts": md.invalid_rollouts,
                     "mppi_rollout_physics_steps": md.rollout_physics_steps,
                     "mppi_rollout_calls": md.rollout_calls,
+                    "rotor_motor_max_abs_cmd": float(np.max(np.abs(data.ctrl[[actuator_ids[f"rotor_motor_{i}"] for i in range(4)]]))),
                 })
                 log_calls += 1
         if step < physics_steps:

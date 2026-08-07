@@ -30,3 +30,18 @@ EXIT_CODE=0; 226 passed in 19.78s
 Protection policy: S1-S4 artifacts, frozen configs, model/disturbance/scenario/inner-loop sources, PID/LQR files, and Udaan were not modified.
 python -m compileall -q src/uav_sway/mppi src/uav_sway/control/mppi.py src/uav_sway/evaluation/mppi_schema.py src/uav_sway/evaluation/mppi_runner.py src/uav_sway/evaluation/mppi_gate.py scripts/tune_s5_mppi.py scripts/run_s5_mppi.py scripts/render_s5_mppi.py
 EXIT_CODE=0 after final API name cleanup
+
+TASK=S5-MPPI-COST-ROLLOUT-CORRECTNESS-FIX-R1
+START_HEAD=464016da71e21b6d629b770f2bc262e0b628ccd4
+pytest -q tests/test_mppi_cost.py tests/test_mppi_algorithm.py tests/test_mppi_rollout_state.py tests/test_mppi_information_set.py
+EXIT_CODE=0; 10 passed
+Copy-Item artifacts/s5/tuning/mppi_grid.csv artifacts/s5/tuning/mppi_grid_pre_cost_fix.csv
+EXIT_CODE=0
+Copy-Item artifacts/s5/tuning/mppi_selection.json artifacts/s5/tuning/mppi_selection_pre_cost_fix.json
+EXIT_CODE=0
+python scripts/tune_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --output-dir artifacts/s5/tuning --headless
+EXIT_CODE=2
+RESULT=BLOCKED_NO_SAFE_MPPI; corrected terminal cost, delta sign, static-air-drag rollout and raw candidate Gate; all six candidates unsafe on position fairness
+python scripts/run_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s5
+EXIT_CODE=1
+RESULT=BLOCKED_NO_SAFE_MPPI; no formal three-scenario run executed

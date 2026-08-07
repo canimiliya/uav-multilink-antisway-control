@@ -1,7 +1,7 @@
-candidate_index,temperature,noise_sigma,safe,score,approach_x_rmse,crosswind_x_rmse,approach_tip_rms,crosswind_tip_rms,tuning_seed
-1,1.0,0.2,False,inf,0.1375286256989475,0.15606163381006827,0.2533222450752875,0.10039279660593202,20260809
-2,1.0,0.35,False,inf,0.32860364235687634,0.10701007971826539,0.6084192999454606,0.12721108027086536,20260809
-3,1.0,0.5,False,inf,0.5142714414416161,0.09889875308466861,0.6808054412657847,0.10775333606863688,20260809
-4,5.0,0.2,False,inf,0.289598393216094,0.47267075287559834,0.15930689311175547,0.054348029462560635,20260809
-5,5.0,0.35,False,inf,0.15800580009291118,0.21119652998440233,0.1850876800418363,0.0667310146388315,20260809
-6,5.0,0.5,False,inf,0.10644990368339262,0.16123398531388008,0.20437544267376132,0.08945037560126615,20260809
+candidate_index,temperature,noise_sigma,safe,score,approach_x_rmse,crosswind_x_rmse,approach_tip_rms,crosswind_tip_rms,tuning_seed,approach_position_pass,approach_tip_pass,crosswind_position_pass,crosswind_tip_pass,dynamics_safe,input_safe,actuator_safe,failure_reasons
+1,1.0,0.2,False,inf,0.20180383200856436,0.2023361734128917,0.14680039013951593,0.05018908051477651,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness
+2,1.0,0.35,False,inf,0.17259438989761125,0.1670467475861299,0.14139688601495506,0.051320295905345446,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness
+3,1.0,0.5,False,inf,0.17006681296426554,0.16084446217998602,0.14033522225056128,0.05273399766965553,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness
+4,5.0,0.2,False,inf,0.24519772708760237,0.5410858795785404,0.13705270695054655,0.05289448669572056,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness
+5,5.0,0.35,False,inf,0.22615229606856727,0.27261681300501134,0.14630797909767074,0.05069765001386788,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness
+6,5.0,0.5,False,inf,0.2007537584709552,0.21606939096251682,0.14881232422535795,0.050732274796070266,20260809,False,True,False,True,True,True,True,approach_stop:position_fairness;crosswind_hover:position_fairness

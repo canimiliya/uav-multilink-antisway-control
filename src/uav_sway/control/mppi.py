@@ -15,6 +15,7 @@ from uav_sway.control.state_reader import StateReader
 from uav_sway.linearization.reduced_state import ReducedStateLayout
 from uav_sway.models.state_io import capture_state
 from uav_sway.mppi.reference_horizon import ReferenceHorizon
+from uav_sway.mppi.cost import candidate_acceleration
 from uav_sway.mppi.rollout_engine import NonlinearRolloutEngine
 from uav_sway.mppi.sampler import MPPIUpdate, stable_mppi_update
 
@@ -39,7 +40,8 @@ class MuJoCoMPPI:
                  noise_sigma: float, seed: int, horizon_steps: int = 12,
                  num_rollouts: int = 64, tip_weight: float = 80.0,
                  terminal_multiplier: float = 5.0, ax_min: float = -2.0,
-                 ax_max: float = 2.0, slew_limit: float = 0.25):
+                 ax_max: float = 2.0, slew_limit: float = 0.25,
+                 model_config=None, aerodynamic_config=None):
         self.model = model
         self.q = np.asarray(q, dtype=float).copy()
         self.r = np.asarray(r, dtype=float).copy()
@@ -60,6 +62,7 @@ class MuJoCoMPPI:
             model, self.q, self.r, self.layout, self.reader, self.inner,
             n_links, equilibrium_relative_x, tip_weight, terminal_multiplier,
             ax_min, ax_max, slew_limit,
+            model_config=model_config, aerodynamic_config=aerodynamic_config,
         )
         self.last_update: MPPIUpdate | None = None
         self.diagnostics = MPPIDiagnostics(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 0)
@@ -86,7 +89,7 @@ class MuJoCoMPPI:
         self.nominal[:-1] = update.updated_sequence[1:]
         self.nominal[-1] = 0.0
         correction = float(update.updated_sequence[0])
-        command = self.limiter.limit(float(horizon[0].ax_ref) - correction)
+        command = self.limiter.limit(candidate_acceleration(horizon[0].ax_ref, correction))
         self.diagnostics = MPPIDiagnostics(
             correction, update.cost_min, update.cost_mean, update.cost_std,
             update.weight_max, update.effective_sample_size, invalid,

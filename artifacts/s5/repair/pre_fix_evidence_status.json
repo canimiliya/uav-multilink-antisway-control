@@ -1,0 +1,6 @@
+{
+  "performance_conclusion_valid": false,
+  "reason": "terminal tip cost used the wrong sign",
+  "old_grid_size": 6,
+  "old_safe_candidates": 0
+}

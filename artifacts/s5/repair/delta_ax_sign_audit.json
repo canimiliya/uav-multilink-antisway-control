@@ -1,0 +1,8 @@
+{
+  "formula": "ax_ref + delta_ax",
+  "ax_ref": 0.5,
+  "delta_positive": 0.2,
+  "positive_result": 0.7,
+  "delta_negative": -0.2,
+  "negative_result": 0.3
+}

@@ -1,0 +1,9 @@
+{
+  "formula": "terminal_multiplier * (xQx + tip_weight * tip^2)",
+  "old_terminal_tip_sign": -1,
+  "new_terminal_tip_sign": 1,
+  "tip_0_cost": 0.0,
+  "tip_0p1_cost": 4.000000000000001,
+  "tip_0p2_cost": 16.000000000000004,
+  "monotonic_tip_penalty": true
+}

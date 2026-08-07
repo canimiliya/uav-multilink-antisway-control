@@ -2,10 +2,18 @@
   "rollout_engine": "independent mujoco.MjData nonlinear physics",
   "linear_AB_used": false,
   "simplified_pendulum_used": false,
+  "candidate_acceleration_formula": "ax_ref + delta_ax",
+  "terminal_tip_cost_sign": "positive",
   "future_external_wind_used": false,
+  "rollout_external_wind_forecast_m_s": 0.0,
+  "rollout_static_air_drag_enabled": true,
   "future_reference_used": true,
   "integral_state": false,
   "controller_mix": null,
   "warm_start": "shift_old_sequence_and_zero_tail",
-  "sampler": "numpy.random.Generator(PCG64)"
+  "sampler": "numpy.random.Generator(PCG64)",
+  "real_plant_isolation": true,
+  "horizon_steps": 12,
+  "num_rollouts": 64,
+  "iterations": 1
 }

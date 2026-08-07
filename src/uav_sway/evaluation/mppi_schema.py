@@ -12,7 +12,7 @@ def mppi_schema_columns(n_links: int) -> list[str]:
         "mppi_cost_min", "mppi_cost_mean", "mppi_cost_std",
         "mppi_weight_max", "mppi_effective_sample_size",
         "mppi_invalid_rollouts", "mppi_rollout_physics_steps",
-        "mppi_rollout_calls",
+        "mppi_rollout_calls", "rotor_motor_max_abs_cmd",
     ]
 
 

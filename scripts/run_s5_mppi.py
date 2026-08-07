@@ -44,7 +44,20 @@ def write_protocol_artifacts(output: Path, cfg: dict) -> None:
         raise SystemExit("BLOCKED_DEPENDENCY_DRIFT: S5 timing or limiter drift")
     (output / "dependencies.json").write_text(json.dumps(expected, indent=2) + "\n", encoding="utf-8", newline="\n")
     (output / "controller_contract.json").write_text(json.dumps({"controller": "mppi", "optimized_input": "delta_a_x", "reference_preview": True, "external_wind_preview": False, "rollout_wind_x_m_s": 0.0, "horizon_steps": 12, "num_rollouts": 64, "iterations": 1, "anchor_active": False, "rotor_motors": "zero", "shared_inner_loop": True, "limiter": {"amplitude": [-2.0, 2.0], "slew_per_outer_update": 0.25}}, indent=2) + "\n", encoding="utf-8", newline="\n")
-    (output / "algorithm_audit.json").write_text(json.dumps({"rollout_engine": "independent mujoco.MjData nonlinear physics", "linear_AB_used": False, "simplified_pendulum_used": False, "future_external_wind_used": False, "future_reference_used": True, "integral_state": False, "controller_mix": None, "warm_start": "shift_old_sequence_and_zero_tail", "sampler": "numpy.random.Generator(PCG64)"}, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (output / "algorithm_audit.json").write_text(json.dumps({
+        "rollout_engine": "independent mujoco.MjData nonlinear physics",
+        "linear_AB_used": False, "simplified_pendulum_used": False,
+        "candidate_acceleration_formula": "ax_ref + delta_ax",
+        "terminal_tip_cost_sign": "positive",
+        "future_external_wind_used": False,
+        "rollout_external_wind_forecast_m_s": 0.0,
+        "rollout_static_air_drag_enabled": True,
+        "future_reference_used": True, "integral_state": False,
+        "controller_mix": None, "warm_start": "shift_old_sequence_and_zero_tail",
+        "sampler": "numpy.random.Generator(PCG64)",
+        "real_plant_isolation": True,
+        "horizon_steps": 12, "num_rollouts": 64, "iterations": 1,
+    }, indent=2) + "\n", encoding="utf-8", newline="\n")
     (output / "reproducibility.json").write_text(json.dumps({"formal_seed": int(cfg["formal_seed"]), "tuning_seed": int(cfg["tuning_seed"]), "rng": "numpy.random.PCG64", "same_seed_policy": "same state/reference/nominal/noise produces identical control and state columns except solve_time_ms"}, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
@@ -58,6 +71,13 @@ def main() -> int:
     output.mkdir(parents=True, exist_ok=True)
     write_protocol_artifacts(output, cfg)
     if "selected_temperature" not in cfg or "selected_noise_sigma" not in cfg:
+        (output / "raw_gate.json").write_text(json.dumps({
+            "source": "independent_raw_csv_recomputation",
+            "status": "BLOCKED_NO_SAFE_MPPI",
+            "formal_runs_present": False,
+            "selected_candidate_is_safe": False,
+            "grid_size": 6,
+        }, indent=2) + "\n", encoding="utf-8", newline="\n")
         raise SystemExit("BLOCKED_NO_SAFE_MPPI: no selected candidate in configs/mppi.yaml")
     temperature = float(cfg["selected_temperature"])
     sigma = float(cfg["selected_noise_sigma"])

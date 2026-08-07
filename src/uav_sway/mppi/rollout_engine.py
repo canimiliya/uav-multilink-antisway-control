@@ -8,9 +8,10 @@ import numpy as np
 from uav_sway.control.base import ReferenceState
 from uav_sway.control.geometric_inner_loop import GeometricInnerLoop
 from uav_sway.control.state_reader import StateReader
+from uav_sway.disturbances.wind_applier import clear_and_apply_wind
 from uav_sway.linearization.reduced_state import ReducedStateLayout
 from uav_sway.models.state_io import MujocoStateSnapshot, restore_state
-from uav_sway.mppi.cost import mppi_candidate_cost
+from uav_sway.mppi.cost import candidate_acceleration, mppi_candidate_cost
 from uav_sway.mppi.reference_horizon import ReferenceHorizon
 
 
@@ -26,7 +27,7 @@ class NonlinearRolloutEngine:
                  reader: StateReader, inner: GeometricInnerLoop, n_links: int,
                  equilibrium_relative_x: float, tip_weight: float,
                  terminal_multiplier: float, ax_min: float, ax_max: float,
-                 slew_limit: float):
+                 slew_limit: float, model_config=None, aerodynamic_config=None):
         self.model = model
         self.q = np.asarray(q, dtype=float)
         self.r = np.asarray(r, dtype=float)
@@ -38,6 +39,8 @@ class NonlinearRolloutEngine:
         self.tip_weight = float(tip_weight)
         self.terminal_multiplier = float(terminal_multiplier)
         self.ax_min, self.ax_max, self.slew_limit = float(ax_min), float(ax_max), float(slew_limit)
+        self.model_config = model_config
+        self.aerodynamic_config = aerodynamic_config
         self.data = mujoco.MjData(model)
         self.quad_id = _id(model, mujoco.mjtObj.mjOBJ_BODY, "quadrotor")
         self.tip_id = _id(model, mujoco.mjtObj.mjOBJ_SITE, "cutter_tip")
@@ -88,7 +91,7 @@ class NonlinearRolloutEngine:
         actual_deltas = []
         for action_index, delta in enumerate(np.asarray(delta_sequence, dtype=float)):
             reference = horizon[action_index]
-            amplitude = float(np.clip(reference.ax_ref - float(delta), self.ax_min, self.ax_max))
+            amplitude = float(np.clip(candidate_acceleration(reference.ax_ref, delta), self.ax_min, self.ax_max))
             action_ax = limiter_previous + float(np.clip(amplitude - limiter_previous,
                                                           -self.slew_limit, self.slew_limit))
             action_ax = float(np.clip(action_ax, self.ax_min, self.ax_max))
@@ -97,7 +100,13 @@ class NonlinearRolloutEngine:
             for _ in range(self.outer_steps // self.inner_steps):
                 self._apply_controls(reference, action_ax)
                 for _ in range(self.inner_steps):
-                    self.data.xfrc_applied[:] = 0.0
+                    if self.model_config is not None and self.aerodynamic_config is not None:
+                        clear_and_apply_wind(
+                            self.model, self.data, self.model_config,
+                            self.aerodynamic_config, wind_x=0.0,
+                        )
+                    else:
+                        self.data.xfrc_applied[:] = 0.0
                     mujoco.mj_step(self.model, self.data)
                     if self._unsafe():
                         return 1.0e12, False

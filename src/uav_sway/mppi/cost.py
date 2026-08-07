@@ -5,6 +5,11 @@ from __future__ import annotations
 import numpy as np
 
 
+def candidate_acceleration(ax_ref: float, delta_ax: float) -> float:
+    """Frozen S5 command contract: reference plus sampled correction."""
+    return float(ax_ref) + float(delta_ax)
+
+
 def mppi_candidate_score(tip_rms_ratios, position_rmse_ratios,
                          control_rate_ratios, saturation_rates) -> float:
     """Score safe candidates with four positive penalty terms."""
@@ -29,10 +34,10 @@ def mppi_stage_cost(state: np.ndarray, tip_displacement: float,
 def mppi_terminal_cost(state: np.ndarray, tip_displacement: float,
                        q: np.ndarray, tip_weight: float = 80.0,
                        terminal_multiplier: float = 5.0) -> float:
-    # The signed terminal tip term is frozen by the S5 protocol.
+    """Terminal state plus positive nonlinear tip penalty."""
     return float(terminal_multiplier *
                  (np.asarray(state) @ np.asarray(q) @ np.asarray(state)
-                  - tip_weight * float(tip_displacement) ** 2))
+                  + tip_weight * float(tip_displacement) ** 2))
 
 
 def mppi_candidate_cost(states: np.ndarray, tip_displacements: np.ndarray,
