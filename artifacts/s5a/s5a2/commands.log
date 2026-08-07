@@ -1,0 +1,20 @@
+TASK=S5A2-LQR-STABILIZED-DA-PREVIEW-MPC-PILOT-R1
+START_HEAD=f57f9ae77c3516c8c7d79eb20ca5617d93c37067
+
+git -c safe.directory="D:/Desktop/my_project/Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances" status --porcelain
+git -c safe.directory="D:/Desktop/my_project/Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances" rev-parse HEAD
+git -c safe.directory="D:/Desktop/my_project/Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances" -C third_party/udaan status --porcelain
+
+D:/anaconda/envs/uav_sway/python.exe scripts/identify_s5a2.py --output-dir artifacts/s5a/s5a2
+EXIT=0
+D:/anaconda/envs/uav_sway/python.exe scripts/tune_s5a_da_pmpc.py --model-config configs/model_5link.yaml --da-config configs/da_pmpc.yaml --output-dir artifacts/s5a/tuning --headless
+EXIT=0
+D:/anaconda/envs/uav_sway/python.exe scripts/run_s5a_da_pmpc_pilot.py --model-config configs/model_5link.yaml --da-config configs/da_pmpc.yaml --scenarios approach_stop crosswind_hover --output-dir artifacts/s5a/s5a2 --headless
+EXIT=0
+D:/anaconda/envs/uav_sway/python.exe -m pytest -q tests
+EXIT=0
+D:/anaconda/envs/uav_sway/python.exe -m pytest -q third_party/udaan/tests
+EXIT=0
+
+SCOPE=only S5A2; no gust, no random holdout, no S6
+GRID=tip_weight [20,40,80] x residual_weight [2,8,32] = 9

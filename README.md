@@ -92,3 +92,14 @@ development grid still produced 0/9 Pilot Gate passes: the QP-limiter parity
 and analytic correctness audits passed, but the frozen approach/crosswind
 position and tip gates remained unmet. No gust, 20-seed holdout, or S6 run was
 started; the pre-fix grid and selection are preserved under `artifacts/s5a`.
+
+S5A2 adds the LQR-stabilized DA-PMPC pilot without changing S0-S5. It reads
+the frozen S4 A/B/Q/R/K, uses the A-aware affine reference shift
+`r_next - A @ r_i`, and optimizes only a residual acceleration around the
+frozen LQR command under the same amplitude and slew limits. A matched
+disturbance observer is retained, while future wind remains unavailable. The
+frozen 3x3 `tip_weight` by `residual_weight` grid is selected only on
+`approach_stop + calm` and `crosswind_hover + constant_crosswind`; gust and
+20-seed holdout are not run in this pilot. The selected pilot passed both
+development Raw Gates with zero-error LQR parity; evidence and ablations are
+under `artifacts/s5a/s5a2/`. S5B holdout and S6 are not started here.

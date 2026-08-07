@@ -1,0 +1,32 @@
+{
+  "controller": "lqr_stabilized_da_pmpc",
+  "control_law": "a_x = a_ref - K e - d_hat - v_MPC",
+  "zero_residual_parity_law": "a_x = a_ref - K e",
+  "residual_variable": "v_MPC",
+  "actual_input_constraints": {
+    "acceleration": [
+      -2.0,
+      2.0
+    ],
+    "slew_per_update": 0.25
+  },
+  "horizon_steps": 20,
+  "preview_seconds": 1.0,
+  "solver": "OSQP warm start",
+  "development_scenarios": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "gust_used": false,
+  "random_holdout_used": false,
+  "tip_weight_candidates": [
+    20.0,
+    40.0,
+    80.0
+  ],
+  "residual_weight_candidates": [
+    2.0,
+    8.0,
+    32.0
+  ]
+}

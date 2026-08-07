@@ -1,0 +1,15 @@
+{
+  "formula": "reference_vector(ref_next) - A @ reference_vector(ref_i)",
+  "reference_vector": [
+    "x_ref",
+    "vx_ref",
+    "z_ref - 3.2",
+    "zeros(13)"
+  ],
+  "constant_velocity_old_false_error_m": -0.0375,
+  "constant_velocity_new_error_m": -0.0,
+  "constant_velocity_new_error_vector_norm": 0.0,
+  "constant_acceleration_new_error_vector_norm": 0.0,
+  "constant_velocity_pass": true,
+  "constant_acceleration_pass": true
+}

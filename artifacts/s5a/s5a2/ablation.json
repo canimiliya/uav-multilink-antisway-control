@@ -1,0 +1,41 @@
+{
+  "scenarios": {
+    "approach_stop": {
+      "lqr": {
+        "x_rmse": 0.1053850611809452,
+        "tip_rms": 0.16885907613861284
+      },
+      "lqr_plus_observer": {
+        "x_rmse": 0.10504501614359141,
+        "tip_rms": 0.1719568091572012
+      },
+      "lqr_plus_preview": {
+        "x_rmse": 0.07292118322163804,
+        "tip_rms": 0.14143536630989192
+      },
+      "full_ls_da_pmpc": {
+        "x_rmse": 0.07267354951401518,
+        "tip_rms": 0.1435042759436654
+      }
+    },
+    "crosswind_hover": {
+      "lqr": {
+        "x_rmse": 0.09192348874717145,
+        "tip_rms": 0.048362613519622184
+      },
+      "lqr_plus_observer": {
+        "x_rmse": 0.09986750437291594,
+        "tip_rms": 0.048575621995106386
+      },
+      "lqr_plus_preview": {
+        "x_rmse": 0.08488535527787332,
+        "tip_rms": 0.04796976955144093
+      },
+      "full_ls_da_pmpc": {
+        "x_rmse": 0.0912839089574291,
+        "tip_rms": 0.048141962114915254
+      }
+    }
+  },
+  "gust_used": false
+}

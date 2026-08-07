@@ -10,8 +10,8 @@ import numpy as np
 from .metrics import _integral, _settling, control_rate_proxy
 
 
-BOOL_COLUMNS = {"ax_saturated", "ax_slew_limited", "inner_loop_saturated", "anchor_active"}
-TEXT_COLUMNS = {"scenario", "protocol_mode", "controller"}
+BOOL_COLUMNS = {"ax_saturated", "ax_slew_limited", "inner_loop_saturated", "anchor_active", "observer_enabled", "disturbance_compensation"}
+TEXT_COLUMNS = {"scenario", "protocol_mode", "controller", "controller_mode"}
 
 
 def load_controlled_csv(path: str | Path) -> tuple[list[str], dict[str, np.ndarray]]:

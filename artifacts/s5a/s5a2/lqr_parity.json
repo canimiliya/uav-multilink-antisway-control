@@ -1,0 +1,17 @@
+{
+  "scenarios": {
+    "approach_stop": {
+      "first_command_error": 0.0,
+      "x_rmse_error": 0.0,
+      "tip_rms_error": 0.0
+    },
+    "crosswind_hover": {
+      "first_command_error": 0.0,
+      "x_rmse_error": 0.0,
+      "tip_rms_error": 0.0
+    }
+  },
+  "max_first_command_error": 0.0,
+  "max_x_rmse_error": 0.0,
+  "max_tip_rms_error": 0.0
+}

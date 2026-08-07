@@ -7,6 +7,15 @@ from dataclasses import dataclass
 import numpy as np
 
 
+def reference_vector(reference) -> np.ndarray:
+    """Return the affine 16-state reference vector."""
+    result = np.zeros(16, dtype=float)
+    result[0] = float(reference.x_ref)
+    result[1] = float(reference.vx_ref)
+    result[2] = float(reference.z_ref) - 3.2
+    return result
+
+
 @dataclass(frozen=True)
 class PreviewResult:
     states: np.ndarray
@@ -36,13 +45,24 @@ class PreviewModel:
             raise ValueError("preview model requires A 16x16 and B 16x1")
 
     @staticmethod
-    def reference_shift(reference_i, reference_next) -> np.ndarray:
-        return np.asarray([
-            float(reference_next.x_ref - reference_i.x_ref),
-            float(reference_next.vx_ref - reference_i.vx_ref),
-            float(reference_next.z_ref - reference_i.z_ref),
-            0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-        ], dtype=float)
+    def reference_vector(reference) -> np.ndarray:
+        """Return the affine reference state used by the S4 layout.
+
+        The reduced state is an error state.  In particular, the altitude
+        component is measured relative to the nominal 3.2 m hover height;
+        joint and attitude reference components are zero.
+        """
+        return reference_vector(reference)
+
+    def reference_shift(self, reference_i, reference_next) -> np.ndarray:
+        """Return ``r_next - A @ r_i`` for error-coordinate dynamics."""
+        return reference_vector(reference_next) - self.A @ reference_vector(reference_i)
+
+    @staticmethod
+    def static_reference_shift(A: np.ndarray, reference_i, reference_next) -> np.ndarray:
+        """Functional form useful to observers and analytical tests."""
+        A = np.asarray(A, dtype=float).reshape(16, 16)
+        return reference_vector(reference_next) - A @ reference_vector(reference_i)
 
     def rollout(self, x0: np.ndarray, actions: np.ndarray, references,
                 disturbance: float = 0.0) -> PreviewResult:
