@@ -1,0 +1,28 @@
+{
+  "old_speed_rms_bug_affected_candidate_usable_count": false,
+  "old_speed_rms_bug_affected_usable_count": {
+    "task_lqi": {
+      "legacy": 0,
+      "corrected": 0
+    },
+    "its_rmpc_competence": {
+      "legacy": 0,
+      "corrected": 0
+    }
+  },
+  "old_mpc_null_semantics_affected_usable_with_mpc_count": false,
+  "old_usable_with_mpc_count": 0,
+  "corrected_usable_with_mpc_count": 0,
+  "mpc_contribution_semantics_changed_candidates": [
+    "its_004",
+    "its_019"
+  ],
+  "task_lqi_usable_after_reaudit": 0,
+  "its_rmpc_competence_usable_after_reaudit": 0,
+  "its_rmpc_final_usable_after_reaudit": 0,
+  "old_result_classification": "CLOSED_WITH_NO_USABLE_METHOD",
+  "corrected_result": "CLOSED_WITH_NO_USABLE_METHOD_VALIDATED",
+  "original_result_still_valid": false,
+  "classification_unchanged": true,
+  "explanation": "The previous closure was not valid as a final audit because both gate defects were present; the corrected audit independently establishes the final count."
+}

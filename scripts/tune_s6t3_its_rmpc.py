@@ -18,7 +18,8 @@ import yaml
 
 from uav_sway.control.its_rmpc import ITSRMPC, TaskLQI
 from uav_sway.evaluation.its_rmpc_gate import (
-    SCENES, candidate_score, competence_gate, mpc_contribution, safety_audit,
+    SCENES, candidate_score, competence_gate, final_tip_speed_from_csv,
+    legacy_mpc_contribution, mpc_contribution, safety_audit,
 )
 from uav_sway.evaluation.its_rmpc_runner import run_its_scenario
 from uav_sway.linearization.task_output import TaskOutputMap, identify_task_output_jacobian
@@ -29,6 +30,7 @@ from uav_sway.task_space.reference import build_equilibrium_task_pose
 
 ROOT = Path(__file__).resolve().parents[1]
 START_HEAD = "b228ca4a8d0cb6775042d152a15acdcaacb40813"
+AUDIT_START_HEAD = "5a9ea06b11e6231fe1b8c4a7e702ebbafaebcfbe"
 UDAAN_HEAD = "9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816"
 T2 = ROOT / "artifacts/s6_taskspace/t2"
 RUNTIME_XML = ROOT / "artifacts/s3/runtime/model_5link_controlled.xml"
@@ -116,6 +118,7 @@ def run_candidate(output: Path, kind: str, candidate: dict, model, protocol: dic
         else:
             metrics[scene] = run_its_scenario(ROOT / "configs/model_5link.yaml", controller, "Task-LQI" if kind == "task_lqi" else "ITS-RMPC", scene, SCENE_WINDS[scene], SCENE_REFS[scene], path, ROOT, protocol, start_head, config_sha, candidate)
             write_json(metric_path, metrics[scene])
+        metrics[scene] = dict(metrics[scene], final_tip_speed_m_s=final_tip_speed_from_csv(path))
         safety[scene] = safety_audit(path, metrics[scene], kind != "task_lqi")
     competence = competence_gate(metrics, traditional)
     score = candidate_score(metrics, traditional, old_lqr) if competence["pass"] and all(item["pass"] for item in safety.values()) else {"score": None}
@@ -156,9 +159,117 @@ def write_figures(output: Path, selected: dict | None) -> None:
         plt.xlabel("time (s)"); plt.ylabel("task x error (m)"); plt.legend(); plt.tight_layout(); plt.savefig(figures / "selected_timeseries.png", dpi=160); plt.close()
 
 
+def _existing_candidate_metrics(output: Path, kind: str, candidate_id: str) -> dict:
+    """Load frozen run evidence and derive final speed without running physics."""
+    metrics = {}
+    for scene in SCENES:
+        run_path = output / kind / "runs" / candidate_id / scene / "run.csv"
+        metric_path = run_path.parent / "metrics.json"
+        if not run_path.exists() or not metric_path.exists():
+            raise RuntimeError(f"audit evidence missing: {run_path}")
+        source = json.loads(metric_path.read_text(encoding="utf-8"))
+        metrics[scene] = dict(source, final_tip_speed_m_s=final_tip_speed_from_csv(run_path))
+    return metrics
+
+
+def _audit_row(output: Path, kind: str, candidate_id: str, traditional: dict) -> dict:
+    metrics = _existing_candidate_metrics(output, kind, candidate_id)
+    safety = {}
+    for scene in SCENES:
+        path = output / kind / "runs" / candidate_id / scene / "run.csv"
+        safety[scene] = safety_audit(path, metrics[scene], kind == "its_rmpc")
+    competence = competence_gate(metrics, traditional)
+    legacy_speed_metrics = {scene: dict(value, final_tip_speed_m_s=value["tip_speed_rms_m_s"]) for scene, value in metrics.items()}
+    legacy_competence = competence_gate(legacy_speed_metrics, traditional)
+    return {
+        "candidate_id": candidate_id,
+        "controller": "Task-LQI" if kind == "task_lqi" else "ITS-RMPC",
+        "metrics": metrics,
+        "safety": safety,
+        "competence": competence,
+        "legacy_competence": legacy_competence,
+        "safe": bool(all(item["pass"] for item in safety.values())),
+        "usable": bool(competence["pass"] and all(item["pass"] for item in safety.values())),
+        "legacy_usable": bool(legacy_competence["pass"] and all(item["pass"] for item in safety.values())),
+    }
+
+
+def _write_audit_csv(path: Path, rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fields = list(rows[0].keys()) if rows else []
+    with path.open("w", encoding="utf-8", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def audit_existing(output: Path) -> int:
+    """Audit all existing runs; this path intentionally never calls the MuJoCo runner."""
+    main_head, udaan_head = git_heads()
+    if main_head != AUDIT_START_HEAD or udaan_head != UDAAN_HEAD:
+        raise RuntimeError("dependency drift for audit-only closure")
+    _old_pid, _old_lqr, _task_lqr, traditional = traditional_metrics()
+    lqi_rows = [_audit_row(output, "task_lqi", f"lqi_{index:02d}", traditional) for index in range(1, 5)]
+    its_rows = [_audit_row(output, "its_rmpc", f"its_{index:03d}", traditional) for index in range(1, 33)]
+    closure = output / "closure"
+
+    speed_rows = []
+    for row in lqi_rows + its_rows:
+        for scene in SCENES:
+            metric = row["metrics"][scene]
+            old_pass = row["legacy_competence"]["checks"][f"{scene}_tip_speed"]
+            new_pass = row["competence"]["checks"][f"{scene}_tip_speed"]
+            speed_rows.append({"controller": row["controller"], "candidate_id": row["candidate_id"], "scenario": scene, "final_tip_speed_m_s": metric["final_tip_speed_m_s"], "tip_speed_rms_m_s": metric["tip_speed_rms_m_s"], "task_acquired": metric["task_acquired"], "old_speed_gate_pass": old_pass, "new_speed_gate_pass": new_pass, "speed_gate_changed": old_pass != new_pass})
+    _write_audit_csv(closure / "final_speed_audit.csv", speed_rows)
+    write_json(closure / "final_speed_audit.json", {"old_definition": "whole-run tip_speed_rms_m_s <= 0.10", "new_definition": "final instantaneous tip_speed_m_s <= 0.10", "task_acquisition_speed_definition": "instantaneous tip speed <= 0.10 m/s continuously for 1 s", "rejection_gate_uses_whole_run_rms": False, "changed_rows": sum(bool(row["speed_gate_changed"]) for row in speed_rows), "rows": speed_rows})
+
+    q_values = [0.1, 1.0, 10.0, 100.0]
+    lqi_by_q = {q: lqi_rows[index] for index, q in enumerate(q_values)}
+    contribution_rows = []
+    its_final_usable = []
+    for index, row in enumerate(its_rows, 1):
+        q = q_values[(index - 1) // 8]
+        matched = lqi_by_q[q]
+        contribution = mpc_contribution(row["metrics"], matched["metrics"])
+        legacy_contribution = legacy_mpc_contribution(row["metrics"], matched["metrics"])
+        row["mpc_contribution"] = contribution
+        row["legacy_mpc_contribution"] = legacy_contribution
+        row["usable_with_mpc"] = bool(row["usable"] and contribution["pass"])
+        row["legacy_usable_with_mpc"] = bool(row["legacy_usable"] and legacy_contribution["pass"])
+        if row["usable_with_mpc"]:
+            its_final_usable.append(row)
+        contribution_rows.append({"candidate_id": row["candidate_id"], "q_eta": q, "matched_lqi": matched["candidate_id"], "new": contribution, "legacy": legacy_contribution, "usable_with_mpc": row["usable_with_mpc"], "legacy_usable_with_mpc": row["legacy_usable_with_mpc"]})
+    write_json(closure / "mpc_contribution_semantics.json", {"cases": {"lqi_false_its_true": "acquisition dominance true", "lqi_true_its_false": "acquisition dominance false", "both_true": "compare acquisition time", "both_false": "no acquisition evidence"}, "position_orientation_rule": "ITS <= 110% matched Task-LQI per scene", "thresholds_unchanged": {"acquisition_time_improvement": 0.05, "position_improvement": 0.05, "degradation": 0.10}, "candidates": contribution_rows})
+
+    competence_rows = []
+    for row in lqi_rows + its_rows:
+        competence_rows.append({"controller": row["controller"], "candidate_id": row["candidate_id"], "safe": row["safe"], "competence_pass": row["competence"]["pass"], "usable": row["usable"], "legacy_competence_pass": row["legacy_competence"]["pass"], "legacy_usable": row["legacy_usable"], "changed": row["competence"]["pass"] != row["legacy_competence"]["pass"]})
+    _write_audit_csv(closure / "competence_reaudit.csv", competence_rows)
+    write_json(closure / "competence_reaudit.json", {"criteria": {"position": "<=110% best traditional", "orientation": "<=125% best traditional", "final_tip_speed": "<=0.10 m/s", "task_acquired": True}, "rows": competence_rows})
+
+    lqi_usable = [row for row in lqi_rows if row["usable"]]
+    its_competence_usable = [row for row in its_rows if row["usable"]]
+    legacy_lqi_usable = [row for row in lqi_rows if row["legacy_usable"]]
+    legacy_its_usable = [row for row in its_rows if row["legacy_usable"]]
+    legacy_final = sum(row["legacy_usable_with_mpc"] for row in its_rows)
+    new_final = sum(row["usable_with_mpc"] for row in its_rows)
+    result = "ITS_RMPC_DEVELOPMENT_PASS_AFTER_GATE_FIX" if its_final_usable else "CLOSED_WITH_NO_USABLE_METHOD_VALIDATED"
+    validity = {"old_speed_rms_bug_affected_candidate_usable_count": (len(legacy_lqi_usable) != len(lqi_usable) or len(legacy_its_usable) != len(its_competence_usable)), "old_speed_rms_bug_affected_usable_count": {"task_lqi": {"legacy": len(legacy_lqi_usable), "corrected": len(lqi_usable)}, "its_rmpc_competence": {"legacy": len(legacy_its_usable), "corrected": len(its_competence_usable)}}, "old_mpc_null_semantics_affected_usable_with_mpc_count": legacy_final != new_final, "old_usable_with_mpc_count": legacy_final, "corrected_usable_with_mpc_count": new_final, "mpc_contribution_semantics_changed_candidates": [row["candidate_id"] for row in its_rows if row["legacy_mpc_contribution"]["pass"] != row["mpc_contribution"]["pass"]], "task_lqi_usable_after_reaudit": len(lqi_usable), "its_rmpc_competence_usable_after_reaudit": len(its_competence_usable), "its_rmpc_final_usable_after_reaudit": new_final, "old_result_classification": "CLOSED_WITH_NO_USABLE_METHOD", "corrected_result": result, "original_result_still_valid": False, "classification_unchanged": result == "CLOSED_WITH_NO_USABLE_METHOD_VALIDATED", "explanation": "The previous closure was not valid as a final audit because both gate defects were present; the corrected audit independently establishes the final count."}
+    write_json(closure / "result_validity.json", validity)
+
+    write_json(output / "grid/selection.json", {"selected": bool(its_final_usable), "usable_count": new_final, "selected_candidate": its_final_usable[0]["candidate_id"] if its_final_usable else None, "audit_only": True, "selection_uses_ls_pmpc": False})
+    write_json(output / "raw_gate.json", {"audit_only": True, "task_lqi": [{"candidate_id": row["candidate_id"], "safe": row["safe"], "competence": row["competence"], "usable": row["usable"]} for row in lqi_rows], "its_rmpc": [{"candidate_id": row["candidate_id"], "safe": row["safe"], "competence": row["competence"], "usable": row["usable"], "mpc_contribution": row["mpc_contribution"], "usable_with_mpc": row["usable_with_mpc"]} for row in its_rows]})
+    gate = {"physics_rerun": False, "grid_modified": False, "controller_modified": False, "speed_gate_uses_final_instantaneous_speed": True, "whole_run_speed_rms_is_rejection_gate": False, "mpc_acquisition_dominance_supported": True, "task_lqi_usable_after_reaudit": len(lqi_usable), "its_rmpc_competence_usable_after_reaudit": len(its_competence_usable), "its_rmpc_final_usable_after_reaudit": new_final, "gust_executed": False, "random_holdout_executed": False, "future_wind_used": False, "metric_contract_modified": False, "setpoint_protocol_modified": False, "physical_model_modified": False, "old_lqr_modified": False, "task_lqr_modified": False, "ls_pmpc_modified": False, "result": result, "start_head": AUDIT_START_HEAD, "udaan_head": udaan_head}
+    write_json(output / "gate.json", gate)
+    write_json(closure / "gate.json", gate)
+    return 0
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(); parser.add_argument("--output-dir", default=str(ROOT / "artifacts/s6_taskspace/t3")); parser.add_argument("--reuse-existing-runs", action="store_true"); args = parser.parse_args()
+    parser = argparse.ArgumentParser(); parser.add_argument("--output-dir", default=str(ROOT / "artifacts/s6_taskspace/t3")); parser.add_argument("--reuse-existing-runs", action="store_true"); parser.add_argument("--audit-existing-only", action="store_true"); args = parser.parse_args()
     output = Path(args.output_dir); output.mkdir(parents=True, exist_ok=True)
+    if args.audit_existing_only:
+        return audit_existing(output)
     start_head, udaan_head = git_heads()
     if udaan_head != UDAAN_HEAD or (start_head != START_HEAD and not args.reuse_existing_runs):
         raise RuntimeError("dependency drift")

@@ -23,6 +23,29 @@ def _read_numeric(path: str | Path) -> tuple[list[str], dict[str, np.ndarray]]:
     return columns, values
 
 
+def final_tip_speed_from_csv(path: str | Path) -> float:
+    """Return the instantaneous tip speed at the final logged sample."""
+    _columns, values = _read_numeric(path)
+    if "tip_speed_m_s" not in values or values["tip_speed_m_s"].size == 0:
+        raise ValueError(f"missing final tip speed in {path}")
+    return float(values["tip_speed_m_s"][-1])
+
+
+def legacy_mpc_contribution(its: dict[str, dict], lqi: dict[str, dict]) -> dict:
+    """Reproduce the pre-audit null semantics for validity comparison only."""
+    acquisition = [its[s]["task_acquisition_time_s"] for s in SCENES]
+    lqi_acquisition = [lqi[s]["task_acquisition_time_s"] for s in SCENES]
+    if any(value is None for value in acquisition + lqi_acquisition):
+        return {"pass": False, "reason": "legacy null acquisition rejection"}
+    pos_its = float(np.mean([its[s]["tip_task_position_rmse_m"] for s in SCENES]))
+    pos_lqi = float(np.mean([lqi[s]["tip_task_position_rmse_m"] for s in SCENES]))
+    acq_its = float(np.mean(acquisition)); acq_lqi = float(np.mean(lqi_acquisition))
+    acquisition_improvement = (acq_lqi - acq_its) / max(acq_lqi, 1.0e-12)
+    position_improvement = (pos_lqi - pos_its) / max(pos_lqi, 1.0e-12)
+    no_degradation = all(its[s]["tip_task_position_rmse_m"] <= 1.10 * lqi[s]["tip_task_position_rmse_m"] and its[s]["cutter_orientation_rmse_deg"] <= 1.10 * lqi[s]["cutter_orientation_rmse_deg"] for s in SCENES)
+    return {"pass": bool(no_degradation and (acquisition_improvement >= 0.05 or position_improvement >= 0.05)), "reason": "legacy comparable acquisition rule"}
+
+
 def safety_audit(path: str | Path, metrics: dict, require_qp: bool) -> dict:
     columns, values = _read_numeric(path)
     joints = [key for key in values if key.startswith("joint_") and key.endswith("_angle")]
@@ -65,7 +88,7 @@ def competence_gate(metrics: dict[str, dict], traditional: dict[str, dict]) -> d
         checks[f"{scene}_orientation"] = current["cutter_orientation_rmse_deg"] <= 1.25 * best_orientation
         checks[f"{scene}_final_position"] = current["final_tip_position_error_m"] <= 0.05
         checks[f"{scene}_final_orientation"] = current["final_orientation_error_deg"] <= 5.0
-        checks[f"{scene}_tip_speed"] = current["tip_speed_rms_m_s"] <= 0.10
+        checks[f"{scene}_tip_speed"] = current.get("final_tip_speed_m_s", np.inf) <= 0.10
     return {"checks": checks, "pass": bool(all(checks.values()))}
 
 
@@ -82,16 +105,50 @@ def candidate_score(metrics: dict[str, dict], traditional: dict[str, dict], old_
 
 
 def mpc_contribution(its: dict[str, dict], lqi: dict[str, dict]) -> dict:
-    acquisition = [its[s]["task_acquisition_time_s"] for s in SCENES]
-    lqi_acquisition = [lqi[s]["task_acquisition_time_s"] for s in SCENES]
-    if any(value is None for value in acquisition + lqi_acquisition):
-        return {"acquisition_improvement_vs_lqi": None, "position_improvement_vs_lqi": None,
-                "no_more_than_10_percent_degradation": False, "pass": False,
-                "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"}
+    scene_acquisition = {}
+    comparable_its = []
+    comparable_lqi = []
+    dominance = []
+    for scene in SCENES:
+        its_acquired = bool(its[scene]["task_acquired"])
+        lqi_acquired = bool(lqi[scene]["task_acquired"])
+        if lqi_acquired and its_acquired:
+            comparable_its.append(float(its[scene]["task_acquisition_time_s"]))
+            comparable_lqi.append(float(lqi[scene]["task_acquisition_time_s"]))
+            scene_acquisition[scene] = "both_acquired"
+            dominance.append(None)
+        elif not lqi_acquired and its_acquired:
+            scene_acquisition[scene] = "its_acquisition_dominance"
+            dominance.append(True)
+        elif lqi_acquired and not its_acquired:
+            scene_acquisition[scene] = "its_acquisition_loss"
+            dominance.append(False)
+        else:
+            scene_acquisition[scene] = "both_not_acquired"
+            dominance.append(None)
+
     pos_its = float(np.mean([its[s]["tip_task_position_rmse_m"] for s in SCENES]))
     pos_lqi = float(np.mean([lqi[s]["tip_task_position_rmse_m"] for s in SCENES]))
-    acq_its = float(np.mean(acquisition)); acq_lqi = float(np.mean(lqi_acquisition))
-    acquisition_improvement = (acq_lqi - acq_its) / max(acq_lqi, 1.0e-12)
+    if comparable_its:
+        acq_its = float(np.mean(comparable_its)); acq_lqi = float(np.mean(comparable_lqi))
+        acquisition_improvement = (acq_lqi - acq_its) / max(acq_lqi, 1.0e-12)
+    else:
+        acquisition_improvement = None
     position_improvement = (pos_lqi - pos_its) / max(pos_lqi, 1.0e-12)
     no_degradation = all(its[s]["tip_task_position_rmse_m"] <= 1.10 * lqi[s]["tip_task_position_rmse_m"] and its[s]["cutter_orientation_rmse_deg"] <= 1.10 * lqi[s]["cutter_orientation_rmse_deg"] for s in SCENES)
-    return {"acquisition_improvement_vs_lqi": float(acquisition_improvement), "position_improvement_vs_lqi": float(position_improvement), "no_more_than_10_percent_degradation": bool(no_degradation), "pass": bool(no_degradation and (acquisition_improvement >= 0.05 or position_improvement >= 0.05))}
+    acquisition_dominance = bool(any(value is True for value in dominance) and not any(value is False for value in dominance))
+    acquisition_time_pass = bool(acquisition_improvement is not None and acquisition_improvement >= 0.05)
+    position_pass = bool(position_improvement >= 0.05)
+    pass_gate = bool(no_degradation and (acquisition_time_pass or position_pass or acquisition_dominance))
+    return {
+        "acquisition_improvement_vs_lqi": None if acquisition_improvement is None else float(acquisition_improvement),
+        "position_improvement_vs_lqi": float(position_improvement),
+        "no_more_than_10_percent_degradation": bool(no_degradation),
+        "scene_acquisition_semantics": scene_acquisition,
+        "acquisition_dominance": acquisition_dominance,
+        "acquisition_time_comparison_available": bool(comparable_its),
+        "acquisition_time_pass": acquisition_time_pass,
+        "position_improvement_pass": position_pass,
+        "pass": pass_gate,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement",
+    }

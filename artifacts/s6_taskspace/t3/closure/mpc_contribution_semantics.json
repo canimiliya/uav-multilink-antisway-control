@@ -1,0 +1,848 @@
+{
+  "cases": {
+    "lqi_false_its_true": "acquisition dominance true",
+    "lqi_true_its_false": "acquisition dominance false",
+    "both_true": "compare acquisition time",
+    "both_false": "no acquisition evidence"
+  },
+  "position_orientation_rule": "ITS <= 110% matched Task-LQI per scene",
+  "thresholds_unchanged": {
+    "acquisition_time_improvement": 0.05,
+    "position_improvement": 0.05,
+    "degradation": 0.1
+  },
+  "candidates": [
+    {
+      "candidate_id": "its_001",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -135.2440609394526,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_002",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.395017571966751,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_003",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.06187624750498995,
+        "position_improvement_vs_lqi": -0.004103607527980549,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": true,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_004",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.05788423153692616,
+        "position_improvement_vs_lqi": 0.020188656865464553,
+        "no_more_than_10_percent_degradation": true,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": true,
+        "position_improvement_pass": false,
+        "pass": true,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_005",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -135.24470632284397,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_006",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.395029575826188,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_007",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.05788423153692616,
+        "position_improvement_vs_lqi": 0.005252328609051479,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": true,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_008",
+      "q_eta": 0.1,
+      "matched_lqi": "lqi_01",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.06387225548902184,
+        "position_improvement_vs_lqi": 0.02559595766530346,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": true,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_009",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -138.3388675498213,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_010",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.540258026601829,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_011",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": -0.4306358381502891,
+        "position_improvement_vs_lqi": -0.0009512393582668642,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_012",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.04768786127167631,
+        "position_improvement_vs_lqi": 0.022638897153258876,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_013",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -138.33880352899845,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_014",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.540277830037658,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_015",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": -0.49132947976878616,
+        "position_improvement_vs_lqi": 0.005314532223337905,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_016",
+      "q_eta": 1.0,
+      "matched_lqi": "lqi_02",
+      "new": {
+        "acquisition_improvement_vs_lqi": 0.08381502890173412,
+        "position_improvement_vs_lqi": 0.027532089189200006,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": true,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_017",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -142.02394473484105,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_018",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.713131568419056,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_019",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": -0.21487603305785125,
+        "position_improvement_vs_lqi": 0.005968838617982542,
+        "no_more_than_10_percent_degradation": true,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "its_acquisition_dominance"
+        },
+        "acquisition_dominance": true,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": true,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_020",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -1.290642800163102,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "its_acquisition_dominance"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_021",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -142.02394407866586,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_022",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -5.7132536399145994,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "its_acquisition_loss",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_023",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": -0.3270365997638724,
+        "position_improvement_vs_lqi": -0.0003866673833411513,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "its_acquisition_dominance"
+        },
+        "acquisition_dominance": true,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_024",
+      "q_eta": 10.0,
+      "matched_lqi": "lqi_03",
+      "new": {
+        "acquisition_improvement_vs_lqi": -0.5808736717827626,
+        "position_improvement_vs_lqi": 0.011149293150665724,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_acquired",
+          "task_acquire_crosswind": "its_acquisition_dominance"
+        },
+        "acquisition_dominance": true,
+        "acquisition_time_comparison_available": true,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_025",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -86.4686762205414,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_026",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -3.1056345016579834,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_027",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -3.379777291170262,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_028",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -3.3548287424237375,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_029",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -86.46948286323416,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_030",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -3.1056440340696745,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_031",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -4.047248702824862,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_032",
+      "q_eta": 100.0,
+      "matched_lqi": "lqi_04",
+      "new": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": -4.018839560865196,
+        "no_more_than_10_percent_degradation": false,
+        "scene_acquisition_semantics": {
+          "task_acquire_calm": "both_not_acquired",
+          "task_acquire_crosswind": "both_not_acquired"
+        },
+        "acquisition_dominance": false,
+        "acquisition_time_comparison_available": false,
+        "acquisition_time_pass": false,
+        "position_improvement_pass": false,
+        "pass": false,
+        "reason": "acquisition dominance, comparable acquisition-time improvement, or position improvement"
+      },
+      "legacy": {
+        "pass": false,
+        "reason": "legacy null acquisition rejection"
+      },
+      "usable_with_mpc": false,
+      "legacy_usable_with_mpc": false
+    }
+  ]
+}

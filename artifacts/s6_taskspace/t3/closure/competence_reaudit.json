@@ -1,0 +1,370 @@
+{
+  "criteria": {
+    "position": "<=110% best traditional",
+    "orientation": "<=125% best traditional",
+    "final_tip_speed": "<=0.10 m/s",
+    "task_acquired": true
+  },
+  "rows": [
+    {
+      "controller": "Task-LQI",
+      "candidate_id": "lqi_01",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "Task-LQI",
+      "candidate_id": "lqi_02",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "Task-LQI",
+      "candidate_id": "lqi_03",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "Task-LQI",
+      "candidate_id": "lqi_04",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_001",
+      "safe": false,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_002",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_003",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_004",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_005",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_006",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_007",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_008",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_009",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_010",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_011",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_012",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_013",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_014",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_015",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_016",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_017",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_018",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_019",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_020",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_021",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_022",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_023",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_024",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_025",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_026",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_027",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_028",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_029",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_030",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_031",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    },
+    {
+      "controller": "ITS-RMPC",
+      "candidate_id": "its_032",
+      "safe": true,
+      "competence_pass": false,
+      "usable": false,
+      "legacy_competence_pass": false,
+      "legacy_usable": false,
+      "changed": false
+    }
+  ]
+}
