@@ -1,0 +1,4 @@
+S6T1 preregistered 36 Task-PID and 27 Task-LQR candidates before performance runs.
+Development scenes: approach_stop + calm; crosswind_hover + constant_crosswind.
+No gust or random holdout executed.
+No old PID/LQR, LS-PMPC, SEP, physical model, wind bank, reference, or metric contract modified.

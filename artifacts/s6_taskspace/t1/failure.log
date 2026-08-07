@@ -1,0 +1,3 @@
+Task-PID: TASK_PID_NO_USABLE_CANDIDATE; all 36 candidates failed the frozen competence gate, while safety gates passed.
+Task-LQR: TASK_LQR_NO_USABLE_CANDIDATE; all 27 candidates failed the frozen competence gate, while safety gates passed.
+No grid expansion, cost change, plant change, gust run, or random holdout was performed.

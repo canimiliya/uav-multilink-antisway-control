@@ -1,0 +1,20 @@
+{
+  "task_pid_grid_size": 36,
+  "task_lqr_grid_size": 27,
+  "task_pid_selected": false,
+  "task_lqr_selected": false,
+  "task_pid_status": "TASK_PID_NO_USABLE_CANDIDATE",
+  "task_lqr_status": "TASK_LQR_NO_USABLE_CANDIDATE",
+  "task_output_validation_pass": true,
+  "development_scenes_only": true,
+  "gust_executed": false,
+  "random_holdout_executed": false,
+  "task_metric_contract_modified": false,
+  "physical_model_modified": false,
+  "wind_modified": false,
+  "old_pid_modified": false,
+  "old_lqr_modified": false,
+  "ls_pmpc_modified": false,
+  "selection_uses_ls_pmpc": false,
+  "result": "CLOSED_WITH_PARTIAL_BASELINE"
+}

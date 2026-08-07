@@ -1,0 +1,2778 @@
+{
+  "task_pid": {
+    "pid_001": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.223982491027226,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.08170905258879385,
+        "max_abs_ax": 1.375268984818353,
+        "max_ax_step": 0.0959402579330616
+      }
+    },
+    "pid_002": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2201448798880557,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.08180030994227755,
+        "max_abs_ax": 1.3684023565011076,
+        "max_ax_step": 0.09628811937291579
+      }
+    },
+    "pid_003": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20271243937955752,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.07847437740079137,
+        "max_abs_ax": 1.136202622830325,
+        "max_ax_step": 0.09879633794284026
+      }
+    },
+    "pid_004": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.23834984266585818,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20812723385806844,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_005": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.23771484844884466,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20804347557914948,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_006": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.23649119264647547,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2094615225238329,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_007": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.223623004030051,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.25624817802156435,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_008": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2235745874082608,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.25597799593160014,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_009": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.227481115180026,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.25617579343711644,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_010": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.16790683079937715,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.15462059134202913,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_011": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.16817200589570583,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.16055464582552778,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_012": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.16893188080223281,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1749881745850624,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_013": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2134577899521791,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.21661099714682727,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      }
+    },
+    "pid_014": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.213040038364303,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.21908796931976815,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      }
+    },
+    "pid_015": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.21231309147505203,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.22439795869496232,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_016": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.21815602635019815,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.24701516367323806,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_017": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2181155791751954,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.24776217940134246,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_018": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.21803498293648538,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2452221941395273,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_019": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.199406183994904,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20111869441935346,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_020": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1992189633956691,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20089966373574203,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_021": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.19885640623197876,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1972510956679443,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_022": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20696585621416705,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.22765302447774224,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_023": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20682779017987757,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.22703481866126646,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_024": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20655168157430007,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.22535426059052,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_025": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20812687864324034,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.23932375518082452,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_026": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20812686976604425,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.23967337449307674,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_027": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2081268520116531,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2403661298356649,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      }
+    },
+    "pid_028": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2028029204999191,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.17930633926688505,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_029": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2028013872961974,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.18015551647388478,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_030": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2027983223688272,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.18187754686455143,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_031": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20063001679807155,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.18140830225016222,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_032": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.2005956863554983,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.18203106639240643,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_033": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.20054705158908068,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1832721402109968,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      }
+    },
+    "pid_034": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1988645503460471,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.19795813830099573,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_035": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.19882979686206725,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.19839890846065245,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_036": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.19876268206031117,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.1988599175257267,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      }
+    }
+  },
+  "task_lqr": {
+    "lqr_001": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.07472757802968835,
+        "max_abs_ax": 1.3175797315920375,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.01202314897915847,
+        "max_abs_ax": 0.36035281554383625,
+        "max_ax_step": 0.12743914401556983
+      }
+    },
+    "lqr_002": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.06513078630522032,
+        "max_abs_ax": 1.2035860539357564,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.01203966539321012,
+        "max_abs_ax": 0.31361217754323284,
+        "max_ax_step": 0.10011032667675038
+      }
+    },
+    "lqr_003": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.05692178090060806,
+        "max_abs_ax": 1.1158328833054678,
+        "max_ax_step": 0.2461679588184812
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012131111764648051,
+        "max_abs_ax": 0.27426673648509087,
+        "max_ax_step": 0.0826058358596341
+      }
+    },
+    "lqr_004": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.07138803247412549,
+        "max_abs_ax": 1.271891597853697,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.011931872134894227,
+        "max_abs_ax": 0.34700245006770813,
+        "max_ax_step": 0.12354260407412172
+      }
+    },
+    "lqr_005": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.06323666862711877,
+        "max_abs_ax": 1.181598470131113,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012052050290976238,
+        "max_abs_ax": 0.3071311318764762,
+        "max_ax_step": 0.09804690133464636
+      }
+    },
+    "lqr_006": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.05583680921070487,
+        "max_abs_ax": 1.1057086817116455,
+        "max_ax_step": 0.24627974352783452
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012135520478664228,
+        "max_abs_ax": 0.27106223711478983,
+        "max_ax_step": 0.08150670406932524
+      }
+    },
+    "lqr_007": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.0623911052860546,
+        "max_abs_ax": 1.1519708957943984,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012012524528490939,
+        "max_abs_ax": 0.3071077464883734,
+        "max_ax_step": 0.11015842761150857
+      }
+    },
+    "lqr_008": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.057397155387252353,
+        "max_abs_ax": 1.1132054115952548,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012093726002444039,
+        "max_abs_ax": 0.28621737565301364,
+        "max_ax_step": 0.0904696130882254
+      }
+    },
+    "lqr_009": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.05219583695689811,
+        "max_abs_ax": 1.0697518417350094,
+        "max_ax_step": 0.24665567032637162
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012152145970721886,
+        "max_abs_ax": 0.26676312158471793,
+        "max_ax_step": 0.07742579904744602
+      }
+    },
+    "lqr_010": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.10890916006418734,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.013116591208686912,
+        "max_abs_ax": 0.4794612721505661,
+        "max_ax_step": 0.21006419179980218
+      }
+    },
+    "lqr_011": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.08960696588123089,
+        "max_abs_ax": 1.542974827841491,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012628780319571018,
+        "max_abs_ax": 0.41853344534703163,
+        "max_ax_step": 0.1623839440161934
+      }
+    },
+    "lqr_012": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.0741950616017471,
+        "max_abs_ax": 1.3151823962606404,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.011948557492393637,
+        "max_abs_ax": 0.35991949788189226,
+        "max_ax_step": 0.12611807277279521
+      }
+    },
+    "lqr_013": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.10401145794579954,
+        "max_abs_ax": 1.937968578152986,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012893631068052183,
+        "max_abs_ax": 0.4648708833590385,
+        "max_ax_step": 0.2062590210818582
+      }
+    },
+    "lqr_014": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.08708319784040223,
+        "max_abs_ax": 1.4981571166326582,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012495134007704247,
+        "max_abs_ax": 0.41101329057325164,
+        "max_ax_step": 0.1603593351546715
+      }
+    },
+    "lqr_015": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.0732407042337155,
+        "max_abs_ax": 1.3020671301488487,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.011918365768870735,
+        "max_abs_ax": 0.3561939723850485,
+        "max_ax_step": 0.12505980086520344
+      }
+    },
+    "lqr_016": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.09013476783205211,
+        "max_abs_ax": 1.7093783294220337,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012307237834813547,
+        "max_abs_ax": 0.4197562521594993,
+        "max_ax_step": 0.1930722729436696
+      }
+    },
+    "lqr_017": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.07905299512515866,
+        "max_abs_ax": 1.380851793453836,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012076894551637015,
+        "max_abs_ax": 0.3852946207961555,
+        "max_ax_step": 0.15293526698652432
+      }
+    },
+    "lqr_018": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.06989348653285533,
+        "max_abs_ax": 1.2560119425937772,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.011943482337728739,
+        "max_abs_ax": 0.34257877497881845,
+        "max_ax_step": 0.12102681241391056
+      }
+    },
+    "lqr_019": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.46722173992853444,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.015109086688645463,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_020": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.4282211093771427,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.01377477614889475,
+        "max_abs_ax": 0.5681551481515357,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_021": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.109944124236807,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.013157070269000787,
+        "max_abs_ax": 0.48390949098026786,
+        "max_ax_step": 0.2105039237278228
+      }
+    },
+    "lqr_022": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.47222442489705846,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.014887523910461343,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_023": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.43435634686437224,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.013641106776289368,
+        "max_abs_ax": 0.5601799568250054,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_024": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.10859822178262936,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.013092442786871133,
+        "max_abs_ax": 0.4798974727938452,
+        "max_ax_step": 0.2094923010331476
+      }
+    },
+    "lqr_025": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.46250544466105936,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.014194442824933613,
+        "max_abs_ax": 0.6887693070114571,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_026": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.4609389602866078,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.013181472951540877,
+        "max_abs_ax": 0.5316150209245104,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_027": {
+      "approach_stop": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.10365320576538681,
+        "max_abs_ax": 1.9267880798540933,
+        "max_ax_step": 0.25000000000000006
+      },
+      "crosswind_hover": {
+        "checks": {
+          "finite": true,
+          "anchor_inactive": true,
+          "minimum_uav_height": true,
+          "minimum_tip_height": true,
+          "joint_range": true,
+          "roll_limit": true,
+          "pitch_limit": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "metrics_finite": true
+        },
+        "pass": true,
+        "max_joint_angle_rad": 0.012864671984405742,
+        "max_abs_ax": 0.46505406966777696,
+        "max_ax_step": 0.20562190157741023
+      }
+    }
+  }
+}

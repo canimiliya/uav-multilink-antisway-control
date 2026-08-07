@@ -1,0 +1,10 @@
+{
+  "selected": false,
+  "controller": "task_lqr",
+  "development_scenes": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "metric_contract": "S6T0 frozen",
+  "selection_uses_future_wind": false
+}

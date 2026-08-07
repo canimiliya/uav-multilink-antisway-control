@@ -1,0 +1,9 @@
+python=3.11.15
+platform=Windows-10-10.0.26100-SP0
+mujoco=3.0.1
+numpy=2.4.6
+scipy=1.17.1
+physics_dt=0.001
+inner_dt=0.005
+outer_dt=0.05
+plant_sha256=19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d

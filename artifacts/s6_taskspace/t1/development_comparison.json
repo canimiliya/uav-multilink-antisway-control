@@ -1,0 +1,113 @@
+{
+  "development_scenes": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "rows": [
+    {
+      "controller": "old_PID",
+      "scenario": "approach_stop",
+      "task_position_rmse": 0.304054968405379,
+      "orientation_rmse": 5.057574009336718,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.1757894838583177,
+      "control_energy": 2.8626021982311443,
+      "control_rate": 232.8023917147255,
+      "safety": true
+    },
+    {
+      "controller": "Task-PID",
+      "scenario": "approach_stop",
+      "candidate_id": "pid_003",
+      "candidate_usable": false,
+      "task_position_rmse": 1.2682780546833714,
+      "orientation_rmse": 16.584534602157678,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.17619613183783275,
+      "control_energy": 25.811275071866234,
+      "control_rate": 807.9225837352006,
+      "safety": true
+    },
+    {
+      "controller": "old_PID",
+      "scenario": "crosswind_hover",
+      "task_position_rmse": 0.14893808076652873,
+      "orientation_rmse": 1.1350048269819129,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.036338485869252445,
+      "control_energy": 0.44844777892102616,
+      "control_rate": 2.4765402768075795,
+      "safety": true
+    },
+    {
+      "controller": "Task-PID",
+      "scenario": "crosswind_hover",
+      "candidate_id": "pid_003",
+      "candidate_usable": false,
+      "task_position_rmse": 0.2441195157900757,
+      "orientation_rmse": 3.444269717884573,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.20114482456086488,
+      "control_energy": 2.244181920790077,
+      "control_rate": 54.94128806954296,
+      "safety": true
+    },
+    {
+      "controller": "old_LQR",
+      "scenario": "approach_stop",
+      "task_position_rmse": 0.25517628207206494,
+      "orientation_rmse": 3.835139162075767,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.119480676767012,
+      "control_energy": 1.8827680389756816,
+      "control_rate": 195.084516038155,
+      "safety": true
+    },
+    {
+      "controller": "Task-LQR",
+      "scenario": "approach_stop",
+      "candidate_id": "lqr_010",
+      "candidate_usable": false,
+      "task_position_rmse": 0.24173359180155243,
+      "orientation_rmse": 3.4145287591706017,
+      "task_acquired": true,
+      "acquisition_time": 8.870000000000001,
+      "final_task_error": 0.0008367196914062957,
+      "control_energy": 2.6215758338641555,
+      "control_rate": 453.6734144005118,
+      "safety": true
+    },
+    {
+      "controller": "old_LQR",
+      "scenario": "crosswind_hover",
+      "task_position_rmse": 0.13726809260120784,
+      "orientation_rmse": 0.6921971098814687,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.1534851018001097,
+      "control_energy": 0.3967099727919603,
+      "control_rate": 8.066216152378397,
+      "safety": true
+    },
+    {
+      "controller": "Task-LQR",
+      "scenario": "crosswind_hover",
+      "candidate_id": "lqr_010",
+      "candidate_usable": false,
+      "task_position_rmse": 0.16284935941467443,
+      "orientation_rmse": 0.5376941396068519,
+      "task_acquired": false,
+      "acquisition_time": null,
+      "final_task_error": 0.22390378812976286,
+      "control_energy": 0.4014544878095859,
+      "control_rate": 24.85229945623983,
+      "safety": true
+    }
+  ],
+  "selection_uses_ls_pmpc": false
+}

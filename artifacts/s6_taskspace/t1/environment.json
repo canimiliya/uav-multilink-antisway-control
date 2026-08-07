@@ -1,0 +1,16 @@
+{
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+  "python_version": "3.11.15",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "mujoco": "3.0.1",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "runtime_model_sha256": "19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d",
+  "physics_dt": 0.001,
+  "inner_dt": 0.005,
+  "outer_dt": 0.05,
+  "development_scenes": [
+    "approach_stop",
+    "crosswind_hover"
+  ]
+}
