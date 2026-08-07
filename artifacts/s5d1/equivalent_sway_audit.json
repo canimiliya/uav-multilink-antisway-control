@@ -1,0 +1,15 @@
+{
+  "samples": 100,
+  "perturbation_range_m": [
+    -0.05,
+    0.05
+  ],
+  "definition": "atan2(x_cutterCOM-x_suspension, z_suspension-z_cutterCOM)",
+  "equilibrium_angle_rad": 0.0,
+  "finite": true,
+  "sign_correct_positive_x": true,
+  "sign_correct_negative_x": true,
+  "max_abs_angle_rad": 0.019452798826660966,
+  "state_source": "current MuJoCo kinematics, cutter COM, no future state",
+  "status": "PASS"
+}

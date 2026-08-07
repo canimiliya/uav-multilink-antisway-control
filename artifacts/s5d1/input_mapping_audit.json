@@ -1,0 +1,14 @@
+{
+  "samples": 1000,
+  "mapping": "a_x = a_ref + (u_ae - K_e*e_x)/m_T; equivalently F_x/m_T",
+  "limit": {
+    "ax_min": -2.0,
+    "ax_max": 2.0,
+    "slew_per_update": 0.25
+  },
+  "max_limited_output_mismatch": 2.220446049250313e-16,
+  "tolerance": 1e-06,
+  "status": "PASS",
+  "future_wind_used": false,
+  "random_seed": 20260808
+}

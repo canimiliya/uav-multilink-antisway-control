@@ -1,0 +1,34 @@
+{
+  "tracking_state": "[e_x, e_v, alpha, alpha_dot]",
+  "storage": "0.5*[e_v, alpha_dot]^T*M_p(alpha)*[e_v, alpha_dot] + m_L*g*l*(1-cos(alpha)) + 0.5*K_e*e_x^2",
+  "moving_reference_vx_ref_test": [
+    {
+      "vx_ref": 0.0,
+      "ax_ref": 0.0,
+      "u_ae": 0.0,
+      "a_x": 0.0,
+      "V_tr": 0.0
+    },
+    {
+      "vx_ref": 0.75,
+      "ax_ref": 0.2,
+      "u_ae": 0.0,
+      "a_x": 0.2,
+      "V_tr": 0.0
+    },
+    {
+      "vx_ref": -0.75,
+      "ax_ref": 0.2,
+      "u_ae": 0.0,
+      "a_x": 0.2,
+      "V_tr": 0.0
+    }
+  ],
+  "perfect_tracking_all_u_ae_zero": true,
+  "perfect_tracking_all_storage_zero": true,
+  "perfect_tracking_no_false_braking_vx_ref_0p75": true,
+  "stationary_parity_samples": 100,
+  "stationary_parity_max_abs_error": 0.0,
+  "proof_transfer_claim": "NOT CLAIMED",
+  "status": "PASS"
+}

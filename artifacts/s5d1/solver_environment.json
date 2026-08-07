@@ -1,0 +1,23 @@
+{
+  "windows_environment": {
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.11.15",
+    "casadi": "3.7.2",
+    "acados_available": false
+  },
+  "wsl_environment": {
+    "distribution": "NMPC-Ubuntu22",
+    "os": "Ubuntu 22.04.5 LTS",
+    "python": "3.10.12",
+    "casadi": "installed",
+    "acados_template": "installed",
+    "acados_commit": "4c23274e49e1304cf3c859d59ea6694ce36305a7",
+    "compiler": "gcc 11.4.0",
+    "ld_library_path": "/root/opt/acados/lib"
+  },
+  "solver_stack": "CasADi + acados",
+  "integrator": "fixed-step ERK/RK4",
+  "nlp_solver": "SQP_RTI",
+  "warm_start": true,
+  "benchmark_environment_boundary": "final MuJoCo benchmark must retain the project execution contract"
+}

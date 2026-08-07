@@ -1,0 +1,23 @@
+{
+  "m_Q": 9.74,
+  "m_L": 3.5,
+  "l_eq": 2.57,
+  "g": 9.81,
+  "mapping": "OUR FAIR ADAPTATION",
+  "source_config": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\configs\\model_5link.yaml",
+  "n_links": 5,
+  "total_link_mass_kg": 1.0,
+  "cutter_mass_kg": 2.5,
+  "suspension_position_m": [
+    0.0,
+    0.0,
+    2.96
+  ],
+  "cutter_com_position_m": [
+    0.0,
+    0.0,
+    0.38999999999999996
+  ],
+  "measurement_definition": "equilibrium suspension attachment point to cutter rigid-body COM",
+  "future_wind_used": false
+}

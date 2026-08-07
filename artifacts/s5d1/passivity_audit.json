@@ -1,0 +1,39 @@
+{
+  "paper_inequality": "u_a^T v <= -rho*|v|^2 - epsilon*|u_a|^2",
+  "tracking_inequality": "u_ae*e_v <= -rho*e_v^2 - epsilon*u_ae^2 + s_p",
+  "slack_domain": [
+    0.0,
+    5.0
+  ],
+  "slack_cost_weight": 100000.0,
+  "cases": [
+    {
+      "u_ae": 0.0,
+      "e_v": 0.0,
+      "residual_slack_0": 0.0,
+      "residual_slack_5": -5.0
+    },
+    {
+      "u_ae": 1.0,
+      "e_v": 0.0,
+      "residual_slack_0": 0.005,
+      "residual_slack_5": -4.995
+    },
+    {
+      "u_ae": -1.0,
+      "e_v": 0.2,
+      "residual_slack_0": -0.193,
+      "residual_slack_5": -5.193
+    },
+    {
+      "u_ae": 0.5,
+      "e_v": -0.4,
+      "residual_slack_0": -0.19075,
+      "residual_slack_5": -5.19075
+    }
+  ],
+  "zero_case_satisfied_with_zero_slack": true,
+  "slack_upper_bound_does_not_make_constraint_unbounded": true,
+  "warning": "long-term reliance on s_p near s_p_max must be logged in future benchmark",
+  "status": "PASS"
+}

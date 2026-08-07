@@ -1,0 +1,23 @@
+{
+  "paper": "Rezaei et al., arXiv:2603.08860",
+  "equations": [
+    "Eq. (1)-(2) planar/x-only specialization",
+    "task Section 5 two scalar equations"
+  ],
+  "state_order": [
+    "x",
+    "alpha"
+  ],
+  "mass_matrix": "[[m_T, m_L*l*cos(alpha)], [m_L*l*cos(alpha), m_L*l^2]]",
+  "dynamics": "M_p*[x_ddot, alpha_ddot] = [F_x + m_L*l*sin(alpha)*alpha_dot^2, -m_L*g*l*sin(alpha)]",
+  "samples": 1000,
+  "max_abs_residual": 2.1316282072803006e-14,
+  "finite": true,
+  "symbolic_backend": "CasADi SX",
+  "casadi_version": "3.7.2",
+  "status": "PASS",
+  "force_samples": "uniform [-20,20] N; accelerations solved from M_p",
+  "random_seed": 20260808,
+  "casadi_symbolic_residual_max_abs": 2.1316282072803006e-14,
+  "symbolic_expression": "M_p^{-1} solve substituted into M_p*q_ddot-rhs"
+}

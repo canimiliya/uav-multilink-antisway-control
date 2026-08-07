@@ -1,0 +1,31 @@
+{
+  "selection_order": "pre-registered before any SEP performance evaluation",
+  "development_only": true,
+  "grid_size": 8,
+  "K_e_candidates": [
+    10.0,
+    40.0
+  ],
+  "rho_candidates": [
+    0.05,
+    0.2
+  ],
+  "epsilon_candidates": [
+    0.005,
+    0.02
+  ],
+  "fixed_horizon_seconds": 2.0,
+  "fixed_shooting_nodes": 40,
+  "cost_weights": {
+    "w_x": 20.0,
+    "w_v": 4.0,
+    "w_alpha": 40.0,
+    "w_omega": 6.0,
+    "w_u": 1.0,
+    "w_s": 100000.0
+  },
+  "slack_max": 5.0,
+  "swing_angle_internal_limit_deg": 60.0,
+  "holdout_tuning_allowed": false,
+  "status": "FROZEN"
+}

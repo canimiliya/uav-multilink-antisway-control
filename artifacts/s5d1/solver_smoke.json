@@ -1,0 +1,28 @@
+{
+  "type": "synthetic_no_wind_ocp_only",
+  "plant_connected": false,
+  "reference": "constant zero tracking target",
+  "initial_state": [
+    0.02,
+    0.01,
+    0.03,
+    0.0
+  ],
+  "solver": "acados SQP_RTI",
+  "integrator": "ERK (fixed-step)",
+  "horizon_seconds": 2.0,
+  "shooting_nodes": 40,
+  "status_code": 0,
+  "finite_trajectory": true,
+  "finite_control": true,
+  "first_control_u_ae_N": -0.0825490386,
+  "first_slack": 8.65861986e-07,
+  "final_state": [
+    0.00109969,
+    -0.08255363,
+    -0.0009269,
+    0.05570451
+  ],
+  "performance_metrics_generated": false,
+  "status": "PASS"
+}
