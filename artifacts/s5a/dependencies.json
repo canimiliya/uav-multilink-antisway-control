@@ -1,0 +1,18 @@
+{
+  "runtime_model_sha256": "19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d",
+  "A_shape": [
+    16,
+    16
+  ],
+  "B_shape": [
+    16,
+    1
+  ],
+  "Q_sha256": "f098dd439352ed97243c1a709a29fd12e6eefc56ccb24e5a8ef10048baa3f9d5",
+  "R_sha256": "c309b9ddf5703f7aa0971dcfc1bd864ed7efc0a9c3701523568b1ccf36839bdd",
+  "K_sha256": "fad2bca242912351f2c6ece0beed411e42e2e4f274a105215f30710ed21797f4",
+  "s4_k_parity_max_abs": 0.0,
+  "physics_dt_s": 0.001,
+  "outer_dt_s": 0.05,
+  "s0_s5_protected": true
+}

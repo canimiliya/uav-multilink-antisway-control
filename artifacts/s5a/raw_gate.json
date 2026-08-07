@@ -1,0 +1,11 @@
+{
+  "source": "independent_raw_csv_recomputation",
+  "pass": false,
+  "status": "BLOCKED_DA_PMPC_PILOT",
+  "formal_runs_present": false,
+  "grid_size": 9,
+  "safe_candidate_count": 0,
+  "development_scenarios": ["approach_stop", "crosswind_hover"],
+  "gust_used_for_selection": false,
+  "reason": "all nine candidates failed the frozen position-tracking pilot gate"
+}

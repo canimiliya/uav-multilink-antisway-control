@@ -1,0 +1,24 @@
+{
+  "controller": "DA-PMPC pilot",
+  "preview_horizon_steps": 20,
+  "preview_seconds": 1.0,
+  "outer_dt_s": 0.05,
+  "solver": "OSQP",
+  "warm_start": true,
+  "optimized_input": "delta_a_x",
+  "reference_preview": true,
+  "future_wind_used": false,
+  "physical_model_parameters_modified": false,
+  "pid_lqr_mppi_modified": false,
+  "position_scale_candidates": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "tip_weight_candidates": [
+    20.0,
+    40.0,
+    80.0
+  ],
+  "grid_size": 9
+}

@@ -1,0 +1,7 @@
+identify_tip_output.py --runtime-model artifacts/s3/runtime/model_5link_controlled.xml --output-dir artifacts/s5a
+tune_s5a_da_pmpc.py --model-config configs/model_5link.yaml --da-config configs/da_pmpc.yaml --output-dir artifacts/s5a/tuning --headless
+RESULT=BLOCKED_DA_PMPC_PILOT
+grid_size=9
+safe_candidates=0
+formal_runs=not executed because no candidate passed the pilot gate
+protected_s0_s5=unchanged

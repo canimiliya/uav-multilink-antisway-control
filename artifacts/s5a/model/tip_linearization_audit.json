@@ -1,0 +1,28 @@
+{
+  "shape": [
+    1,
+    16
+  ],
+  "finite": true,
+  "method": "MuJoCo central finite difference at frozen 5-link equilibrium",
+  "epsilon": [
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    1e-05,
+    0.0001,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001,
+    0.0001
+  ],
+  "equilibrium_relative_x": 0.225,
+  "runtime_model_sha256": "19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d"
+}

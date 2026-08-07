@@ -1,0 +1,22 @@
+{
+  "task": "S5A-DISTURBANCE-AWARE-PREVIEW-MPC-PILOT-R1",
+  "result": "BLOCKED_DA_PMPC_PILOT",
+  "grid_size": 9,
+  "safe_candidates": 0,
+  "development_scenarios": [
+    "approach_stop + calm",
+    "crosswind_hover + constant_crosswind"
+  ],
+  "gust_run": false,
+  "random_seed_holdout_run": false,
+  "s6_started": false,
+  "approach_x_rmse_range_m": [1.0169759127114613, 1.053923155759041],
+  "crosswind_x_rmse_range_m": [0.8747257202990885, 0.874728403538904],
+  "approach_tip_rms_range_m": [0.039014676726004095, 0.039592314254210344],
+  "crosswind_tip_rms_range_m": [0.024379487169395957, 0.024379533175227546],
+  "all_candidates_dynamics_safe": true,
+  "all_candidates_input_safe": true,
+  "all_candidates_actuator_safe": true,
+  "selection": null,
+  "gate_source": "independent_raw_csv_recomputation"
+}

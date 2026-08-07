@@ -1,0 +1,15 @@
+{
+  "model": "x_next=A x+B(a+d), d_next=d",
+  "augmented_dimension": 17,
+  "measurement": "full 16-state x",
+  "uses_wind_x": false,
+  "uses_wind_force": false,
+  "uses_future_wind_csv": false,
+  "inputs": [
+    "current_state",
+    "historical_command",
+    "A",
+    "B"
+  ],
+  "observer_gain": 0.15
+}

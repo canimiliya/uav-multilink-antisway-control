@@ -78,3 +78,9 @@ The six-candidate grid is frozen, with 6/6 tip gates passing, 0/6 position
 gates passing, no sampler collapse, and corrected reference timing. Pre-fix,
 corrected, timing-repair, and closure analyses are retained under
 `artifacts/s5/`. S6 final benchmark/evidence is not started by this closure.
+
+S5A is a pilot-only DA-PMPC path. It reads the frozen S4 A/B/Q/R matrices,
+identifies the horizontal tip output from the frozen MuJoCo equilibrium, uses
+a 17-state matched-disturbance observer and a 20-step OSQP preview QP. Only
+`approach_stop + calm` and `crosswind_hover + constant_crosswind` are used;
+gust, random-seed holdout, and S6 are outside this pilot.
