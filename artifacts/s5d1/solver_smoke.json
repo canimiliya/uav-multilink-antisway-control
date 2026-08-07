@@ -9,7 +9,7 @@
     0.0
   ],
   "solver": "acados SQP_RTI",
-  "integrator": "ERK (fixed-step)",
+  "integrator": "ERK with explicit 4-stage, 1-step RK4 settings",
   "horizon_seconds": 2.0,
   "shooting_nodes": 40,
   "status_code": 0,
