@@ -73,6 +73,8 @@ boundary samples for 12 actions, evaluating each post-action state against the
 next boundary while the real plant still uses the current boundary feedforward.
 The same six-point tuning grid was rerun with raw candidate safety and
 actuator gates; all six candidates failed LQR position fairness, so S5 remains
-`BLOCKED_NO_SAFE_MPPI` and no formal MPPI scenario is reported as passed.
-Pre-fix, corrected, and timing-repair grids plus repair audits are retained
-under `artifacts/s5/`.
+`CLOSED_WITH_NEGATIVE_RESULT`; no formal MPPI scenario is reported as passed.
+The six-candidate grid is frozen, with 6/6 tip gates passing, 0/6 position
+gates passing, no sampler collapse, and corrected reference timing. Pre-fix,
+corrected, timing-repair, and closure analyses are retained under
+`artifacts/s5/`. S6 final benchmark/evidence is not started by this closure.

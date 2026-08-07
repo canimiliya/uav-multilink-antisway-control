@@ -1,0 +1,53 @@
+{
+  "stage": "S5",
+  "status": "CLOSED_WITH_NEGATIVE_RESULT",
+  "decision": "frozen_pure_mppi_negative_result",
+  "tuning_grid": {
+    "temperatures": [1.0, 5.0],
+    "noise_sigmas": [0.2, 0.35, 0.5],
+    "candidate_count": 6,
+    "horizon_steps": 12,
+    "num_rollouts": 64,
+    "iterations": 1,
+    "tuning_seed": 20260809,
+    "frozen": true
+  },
+  "gate_counts": {
+    "tip_gate_pass": 6,
+    "tip_gate_total": 6,
+    "position_gate_pass": 0,
+    "position_gate_total": 6,
+    "safe_candidates": 0
+  },
+  "implementation_correctness": {
+    "terminal_tip_cost_sign_positive": true,
+    "delta_ax_formula": "ax_ref + delta_ax",
+    "rollout_static_air_drag_enabled": true,
+    "future_wind_preview": false,
+    "reference_timing_correct": true,
+    "action_count": 12,
+    "reference_boundary_count": 13,
+    "post_action_state_uses_next_reference": true,
+    "terminal_reference_aligned": true,
+    "real_plant_isolation_verified": true,
+    "targeted_tests": "11 passed",
+    "project_tests": "70 passed",
+    "upstream_tests": "226 passed"
+  },
+  "sampler_diagnostics": {
+    "invalid_rollout_rate": 0.0,
+    "minimum_candidate_median_ess": 26.68869538089245,
+    "maximum_candidate_median_weight_max": 0.09007127823354258,
+    "sampler_collapsed": false
+  },
+  "formal_three_scenario_run": {
+    "executed": false,
+    "reason": "no safe tuning candidate"
+  },
+  "raw_gate": {
+    "source": "independent_raw_csv_recomputation",
+    "pass": false,
+    "status": "BLOCKED_NO_SAFE_MPPI"
+  },
+  "next_stage": "S6 final benchmark/evidence; not started by this task"
+}

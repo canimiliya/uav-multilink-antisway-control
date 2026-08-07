@@ -68,3 +68,8 @@ EXIT_CODE=0; 226 passed in 16.46s
 git diff --check
 EXIT_CODE=0
 Protected diff audit: empty; Udaan submodule clean at 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816
+TASK=S5-PURE-MPPI-NEGATIVE-RESULT-CLOSURE-R1
+Read-only verification: current HEAD, clean worktree, six-candidate grid, preserved pre-timing selection, raw gate, and timing audit
+RESULT=verified; grid_rows=6; tip_gate_pass=6; position_gate_pass=0; sampler_collapsed=false; raw_gate_pass=false
+Generated artifacts/s5/closure_status.json and artifacts/s5/failure_analysis.md
+RESULT=CLOSED_WITH_NEGATIVE_RESULT; no further MPPI tuning; S6 not started by this task

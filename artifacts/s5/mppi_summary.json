@@ -1,5 +1,8 @@
 {
   "controller": "mppi",
-  "status": "BLOCKED_NO_SAFE_MPPI",
+  "status": "CLOSED_WITH_NEGATIVE_RESULT",
+  "tuning_result": "BLOCKED_NO_SAFE_MPPI",
+  "closure_evidence": "artifacts/s5/closure_status.json",
+  "failure_analysis": "artifacts/s5/failure_analysis.md",
   "formal_runs_present": false
 }
