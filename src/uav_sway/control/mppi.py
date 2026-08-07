@@ -89,7 +89,8 @@ class MuJoCoMPPI:
         self.nominal[:-1] = update.updated_sequence[1:]
         self.nominal[-1] = 0.0
         correction = float(update.updated_sequence[0])
-        command = self.limiter.limit(candidate_acceleration(horizon[0].ax_ref, correction))
+        # The real plant command uses r0, not the first preview state r1.
+        command = self.limiter.limit(candidate_acceleration(horizon.action_reference(0).ax_ref, correction))
         self.diagnostics = MPPIDiagnostics(
             correction, update.cost_min, update.cost_mean, update.cost_std,
             update.weight_max, update.effective_sample_size, invalid,

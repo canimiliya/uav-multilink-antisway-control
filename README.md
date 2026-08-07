@@ -68,8 +68,11 @@ rollouts, a 12-step horizon, 64 rollouts, the frozen S4 Q/R weights, the
 shared S3 geometric inner loop, and the shared acceleration limiter. The
 correctness repair freezes the positive terminal tip penalty, the
 `ax_ref + delta_ax` command contract, and zero external-wind forecast with
-static-air drag retained in every rollout. The six-point tuning grid was
-rerun with raw candidate safety and actuator gates; all six candidates failed
-LQR position fairness, so S5 remains `BLOCKED_NO_SAFE_MPPI` and no formal MPPI
-scenario is reported as passed. Pre-fix and corrected grids plus repair
-audits are retained under `artifacts/s5/`.
+static-air drag retained in every rollout. The timing repair uses 13 reference
+boundary samples for 12 actions, evaluating each post-action state against the
+next boundary while the real plant still uses the current boundary feedforward.
+The same six-point tuning grid was rerun with raw candidate safety and
+actuator gates; all six candidates failed LQR position fairness, so S5 remains
+`BLOCKED_NO_SAFE_MPPI` and no formal MPPI scenario is reported as passed.
+Pre-fix, corrected, and timing-repair grids plus repair audits are retained
+under `artifacts/s5/`.

@@ -74,6 +74,7 @@ def main() -> int:
         (output / "raw_gate.json").write_text(json.dumps({
             "source": "independent_raw_csv_recomputation",
             "status": "BLOCKED_NO_SAFE_MPPI",
+            "pass": False,
             "formal_runs_present": False,
             "selected_candidate_is_safe": False,
             "grid_size": 6,

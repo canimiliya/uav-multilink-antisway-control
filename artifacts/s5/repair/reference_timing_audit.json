@@ -1,0 +1,13 @@
+{
+  "outer_dt_s": 0.05,
+  "action_count": 12,
+  "reference_boundary_count": 13,
+  "action_0_reference_offset_s": 0.0,
+  "state_after_action_0_reference_offset_s": 0.05,
+  "action_11_reference_offset_s": 0.55,
+  "terminal_state_reference_offset_s": 0.6,
+  "post_action_state_uses_next_reference": true,
+  "terminal_reference_aligned": true,
+  "perfect_tracking_old_alignment_error_m": 0.05,
+  "perfect_tracking_new_alignment_error_m": 0.0
+}

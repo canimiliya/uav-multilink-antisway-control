@@ -1,7 +1,13 @@
 {
   "source": "independent_raw_csv_recomputation",
   "status": "BLOCKED_NO_SAFE_MPPI",
+  "pass": false,
   "formal_runs_present": false,
   "selected_candidate_is_safe": false,
-  "grid_size": 6
+  "grid_size": 6,
+  "reference_timing_alignment_pass": true,
+  "post_action_state_uses_next_reference": true,
+  "terminal_reference_aligned": true,
+  "sampler_diagnostics_recorded": true,
+  "safe_candidate_count": 0
 }

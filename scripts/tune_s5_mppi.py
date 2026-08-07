@@ -15,7 +15,7 @@ import yaml
 from uav_sway.control.base import ReferenceState
 from uav_sway.disturbances.aerodynamics import load_aerodynamic_config
 from uav_sway.disturbances.wind_applier import clear_and_apply_wind
-from uav_sway.evaluation.controlled_metrics import compute_controlled_metrics
+from uav_sway.evaluation.controlled_metrics import compute_controlled_metrics, load_controlled_csv
 from uav_sway.evaluation.mppi_runner import run_mppi_scenario
 from uav_sway.evaluation.mppi_gate import candidate_gate_reasons
 from uav_sway.mppi.cost import candidate_acceleration, mppi_candidate_score, mppi_terminal_cost
@@ -70,11 +70,52 @@ def write_repair_artifacts(output: Path, model_config_path: str) -> None:
         "static_body_force_zero": static_zero,
         "static_body_forces": static,
     }, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (repair / "reference_timing_audit.json").write_text(json.dumps({
+        "outer_dt_s": 0.05,
+        "action_count": 12,
+        "reference_boundary_count": 13,
+        "action_0_reference_offset_s": 0.0,
+        "state_after_action_0_reference_offset_s": 0.05,
+        "action_11_reference_offset_s": 0.55,
+        "terminal_state_reference_offset_s": 0.60,
+        "post_action_state_uses_next_reference": True,
+        "terminal_reference_aligned": True,
+        "perfect_tracking_old_alignment_error_m": 0.05,
+        "perfect_tracking_new_alignment_error_m": 0.0,
+    }, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+
+def sampler_diagnostics(paths: list[Path], num_rollouts: int) -> dict:
+    """Summarize sampler fields before candidate CSVs are removed."""
+    arrays = {name: [] for name in (
+        "mppi_effective_sample_size", "mppi_weight_max", "mppi_cost_min",
+        "mppi_cost_mean", "mppi_cost_std", "mppi_invalid_rollouts",
+        "mppi_nominal_first", "ax_cmd_limited")}
+    for path in paths:
+        _, values = load_controlled_csv(path)
+        for name in arrays:
+            arrays[name].append(values[name])
+    merged = {name: np.concatenate(value) for name, value in arrays.items()}
+    ess = merged["mppi_effective_sample_size"]
+    weights = merged["mppi_weight_max"]
+    return {
+        "median_mppi_ess": float(np.median(ess)),
+        "p05_mppi_ess": float(np.percentile(ess, 5)),
+        "median_weight_max": float(np.median(weights)),
+        "p95_weight_max": float(np.percentile(weights, 95)),
+        "median_cost_min": float(np.median(merged["mppi_cost_min"])),
+        "median_cost_mean": float(np.median(merged["mppi_cost_mean"])),
+        "median_cost_std": float(np.median(merged["mppi_cost_std"])),
+        "invalid_rollout_rate": float(np.mean(merged["mppi_invalid_rollouts"] / float(num_rollouts))),
+        "mean_abs_delta_ax": float(np.mean(np.abs(merged["mppi_nominal_first"]))),
+        "mean_abs_ax_cmd": float(np.mean(np.abs(merged["ax_cmd_limited"]))),
+    }
 
 
 def evaluate_candidate(index, temperature, sigma, model_config, cfg, output, lqr_paths, winds):
     candidate_metrics = {}
     failure_reasons = {}
+    raw_paths = []
     for scene in ("approach_stop", "crosswind_hover"):
         scratch = output / f"candidate_{index:02d}_{scene}.csv"
         metric = run_mppi_scenario(
@@ -84,12 +125,9 @@ def evaluate_candidate(index, temperature, sigma, model_config, cfg, output, lqr
             noise_sigma=sigma,
         )
         candidate_metrics[scene] = metric
+        raw_paths.append(scratch)
         failure_reasons[scene] = candidate_gate_reasons(
             scratch, lqr_paths[scene], cfg, scene)
-        try:
-            scratch.unlink()
-        except FileNotFoundError:
-            pass
     lqr_metrics = {scene: compute_controlled_metrics(lqr_paths[scene], cfg["settling_start_s"][scene])
                    for scene in candidate_metrics}
     tip_ratios = [candidate_metrics[s]["tip_rms_m"] / lqr_metrics[s]["tip_rms_m"] for s in candidate_metrics]
@@ -98,7 +136,8 @@ def evaluate_candidate(index, temperature, sigma, model_config, cfg, output, lqr
     sat = [candidate_metrics[s]["saturation_rate"] for s in candidate_metrics]
     safe = not any(failure_reasons.values())
     score = mppi_candidate_score(tip_ratios, pos_ratios, rate_ratios, sat) if safe else float("inf")
-    return {"candidate_index": index, "temperature": temperature, "noise_sigma": sigma,
+    diagnostics = sampler_diagnostics(raw_paths, int(cfg["num_rollouts"]))
+    result = {"candidate_index": index, "temperature": temperature, "noise_sigma": sigma,
             "safe": safe, "score": score,
             "approach_x_rmse": candidate_metrics["approach_stop"]["x_position_rmse_m"],
             "crosswind_x_rmse": candidate_metrics["crosswind_hover"]["x_position_rmse_m"],
@@ -113,6 +152,13 @@ def evaluate_candidate(index, temperature, sigma, model_config, cfg, output, lqr
             "input_safe": not any(x in failure_reasons[s] for s in failure_reasons for x in ("ax_limit", "ax_slew")),
             "actuator_safe": not any(x in failure_reasons[s] for s in failure_reasons for x in ("thrust", "torque", "rotor_motors")),
             "failure_reasons": ";".join(f"{s}:{','.join(failure_reasons[s])}" for s in ("approach_stop", "crosswind_hover") if failure_reasons[s])}
+    result.update(diagnostics)
+    for path in raw_paths:
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+    return result
 
 
 def main() -> int:

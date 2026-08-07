@@ -45,3 +45,26 @@ RESULT=BLOCKED_NO_SAFE_MPPI; corrected terminal cost, delta sign, static-air-dra
 python scripts/run_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s5
 EXIT_CODE=1
 RESULT=BLOCKED_NO_SAFE_MPPI; no formal three-scenario run executed
+
+TASK=S5-MPPI-REFERENCE-TIMING-CORRECTNESS-FIX-R1
+START_HEAD=bd6c3c6702dca7212382004cb264c1894a7dcaff
+pytest -q tests/test_mppi_algorithm.py tests/test_mppi_cost.py tests/test_mppi_information_set.py tests/test_mppi_rollout_state.py
+EXIT_CODE=0; 11 passed
+Copy-Item artifacts/s5/tuning/mppi_grid.csv artifacts/s5/tuning/mppi_grid_pre_timing_fix.csv
+Copy-Item artifacts/s5/tuning/mppi_selection.json artifacts/s5/tuning/mppi_selection_pre_timing_fix.json
+EXIT_CODE=0; byte-identical preservation verified by SHA-256
+python -m compileall -q src scripts tests
+EXIT_CODE=0
+python scripts/tune_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --output-dir artifacts/s5/tuning --headless
+EXIT_CODE=2; RESULT=BLOCKED_NO_SAFE_MPPI; six candidates completed; no formal run executed
+python scripts/run_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s5
+EXIT_CODE=1; raw_gate.json updated with pass=false; no formal run fabricated
+python -c "make_reference_horizon(approach_stop, 0, 12)"
+EXIT_CODE=0; actions=12; boundaries=13; boundary times=0.0, 0.05, 0.6
+pytest -q tests
+EXIT_CODE=0; 70 passed in 2.37s
+pytest -q third_party/udaan/tests
+EXIT_CODE=0; 226 passed in 16.46s
+git diff --check
+EXIT_CODE=0
+Protected diff audit: empty; Udaan submodule clean at 9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816

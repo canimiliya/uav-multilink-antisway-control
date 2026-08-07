@@ -90,15 +90,18 @@ class NonlinearRolloutEngine:
         tip_values: list[float] = []
         actual_deltas = []
         for action_index, delta in enumerate(np.asarray(delta_sequence, dtype=float)):
-            reference = horizon[action_index]
-            amplitude = float(np.clip(candidate_acceleration(reference.ax_ref, delta), self.ax_min, self.ax_max))
+            if action_index >= horizon.action_count:
+                raise ValueError("delta sequence exceeds reference action horizon")
+            action_reference = horizon.action_reference(action_index)
+            state_reference = horizon.state_reference(action_index)
+            amplitude = float(np.clip(candidate_acceleration(action_reference.ax_ref, delta), self.ax_min, self.ax_max))
             action_ax = limiter_previous + float(np.clip(amplitude - limiter_previous,
                                                           -self.slew_limit, self.slew_limit))
             action_ax = float(np.clip(action_ax, self.ax_min, self.ax_max))
             limiter_previous = action_ax
             actual_deltas.append(float(delta))
             for _ in range(self.outer_steps // self.inner_steps):
-                self._apply_controls(reference, action_ax)
+                self._apply_controls(action_reference, action_ax)
                 for _ in range(self.inner_steps):
                     if self.model_config is not None and self.aerodynamic_config is not None:
                         clear_and_apply_wind(
@@ -110,7 +113,7 @@ class NonlinearRolloutEngine:
                     mujoco.mj_step(self.model, self.data)
                     if self._unsafe():
                         return 1.0e12, False
-            state = self.layout.extract(self.model, self.data, reference)
+            state = self.layout.extract(self.model, self.data, state_reference)
             tip = float(self.data.site_xpos[self.tip_id, 0] - self.data.xpos[self.quad_id, 0] - self.equilibrium_relative_x)
             if not np.isfinite(state).all() or not np.isfinite(tip):
                 return 1.0e12, False
