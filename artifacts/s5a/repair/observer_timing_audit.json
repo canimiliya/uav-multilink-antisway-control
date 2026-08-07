@@ -1,0 +1,9 @@
+{
+  "first_update_skips_prediction": true,
+  "uses_applied_previous_command": true,
+  "uses_preview_model_reference_shift": true,
+  "synthetic_true_disturbance": 0.4,
+  "synthetic_estimated_disturbance": 0.3999999999996001,
+  "moving_reference_false_disturbance": 0.0,
+  "synthetic_tests_pass": true
+}

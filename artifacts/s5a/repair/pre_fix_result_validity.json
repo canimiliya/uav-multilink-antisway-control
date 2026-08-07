@@ -1,0 +1,10 @@
+{
+  "old_result": "BLOCKED_DA_PMPC_PILOT",
+  "performance_conclusion_valid": false,
+  "reason": [
+    "first-step slew constraint sign error",
+    "disturbance observer command timing error",
+    "disturbance observer missing reference-coordinate shift",
+    "QP objective missing R control cost and double-counting terminal stage"
+  ]
+}

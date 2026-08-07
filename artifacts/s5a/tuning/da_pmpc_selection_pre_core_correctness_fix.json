@@ -1,0 +1,11 @@
+{
+  "grid_size": 9,
+  "safe_candidate_count": 0,
+  "development_scenarios": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "gust_used_for_selection": false,
+  "selected": null,
+  "result": "BLOCKED_DA_PMPC_PILOT"
+}

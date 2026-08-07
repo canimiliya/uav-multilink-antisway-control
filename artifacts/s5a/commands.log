@@ -5,3 +5,17 @@ grid_size=9
 safe_candidates=0
 formal_runs=not executed because no candidate passed the pilot gate
 protected_s0_s5=unchanged
+
+core_correctness_fix_targeted_tests=11 passed
+pre_fix_grid=da_pmpc_grid_pre_core_correctness_fix.csv
+pre_fix_selection=da_pmpc_selection_pre_core_correctness_fix.json
+rerun_command=tune_s5a_da_pmpc.py --model-config configs/model_5link.yaml --da-config configs/da_pmpc.yaml --output-dir artifacts/s5a/tuning --headless
+rerun_result=0 of 9 Pilot candidates passed; expected exit code 2
+qp_limiter_parity_max_error=6.938893903907228e-18
+observer_synthetic_estimate=0.3999999999996001
+moving_reference_false_disturbance=0.0
+formal_runs=not executed because no candidate passed the pilot gate
+project_pytest=82 passed
+upstream_pytest=226 passed
+protected_diff=empty
+udaan_worktree=clean

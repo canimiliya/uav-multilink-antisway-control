@@ -1,0 +1,10 @@
+candidate_index,position_scale,tip_weight,safe,score,approach_x_rmse,crosswind_x_rmse,approach_tip_rms,crosswind_tip_rms,failure_reasons,development_scenarios,gust_used_for_selection
+1,1.0,20.0,False,inf,1.0169759127114613,0.874727717524207,0.039592314254210344,0.024379511043257182,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+2,1.0,40.0,False,inf,1.0193166343134996,0.874728403538904,0.03957158363432042,0.024379487169395957,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+3,1.0,80.0,False,inf,1.020718642348427,0.874727765637296,0.03954961721757187,0.02437949351608142,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+4,2.0,20.0,False,inf,1.0314514363406744,0.8747266427637708,0.039369464257977466,0.02437951821310515,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+5,2.0,40.0,False,inf,1.0337890510891705,0.8747257202990885,0.039352728258506206,0.024379533175227546,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+6,2.0,80.0,False,inf,1.0376626168008338,0.874727133152514,0.03933149669545587,0.024379498574961904,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+7,4.0,20.0,False,inf,1.0512522369942687,0.8747275362471143,0.039014676726004095,0.02437949838046291,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+8,4.0,40.0,False,inf,1.052542533721249,0.8747268826921671,0.03901769869809156,0.024379512997780493,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False
+9,4.0,80.0,False,inf,1.053923155759041,0.8747271415033747,0.039030665532804286,0.024379501070876698,approach_stop:approach_position;crosswind_hover:crosswind_position,"approach_stop,crosswind_hover",False

@@ -1,0 +1,27 @@
+{
+  "control_cost_formula": "sum(delta_ax_i^2) for R=1",
+  "control_hessian_matches_2R_I": true,
+  "qp_P": [
+    [
+      8.0,
+      4.0
+    ],
+    [
+      4.0,
+      6.0
+    ]
+  ],
+  "expected_P": [
+    [
+      8.0,
+      4.0
+    ],
+    [
+      4.0,
+      6.0
+    ]
+  ],
+  "terminal_stage_double_count_removed": true,
+  "stage_state_indices": "1..H-1",
+  "terminal_state_index": "H"
+}

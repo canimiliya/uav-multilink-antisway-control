@@ -1,0 +1,17 @@
+{
+  "first_step_delta_interval": [
+    0.55,
+    1.05
+  ],
+  "first_step_actual_interval": [
+    0.75,
+    1.25
+  ],
+  "previous_action": 1.0,
+  "ax_ref": 0.2,
+  "slew_limit": 0.25,
+  "synthetic_limiter_raw": 1.0,
+  "synthetic_limiter_output": 1.0,
+  "candidate_grid_max_mismatch": 6.938893903907228e-18,
+  "parity_pass": true
+}

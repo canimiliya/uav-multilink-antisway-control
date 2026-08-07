@@ -26,6 +26,7 @@ def build_preview_qp(model, x0, references, previous_action: float,
     n = 16
     x0 = np.asarray(x0, dtype=float).reshape(n)
     # x_k = f_k + G_k u, where u is delta-a_x and action ref is an affine term.
+    # The physical input matrix has an explicit positive sign in the model.
     f = np.zeros((H + 1, n), dtype=float); f[0] = x0
     G = np.zeros((H + 1, n, H), dtype=float)
     Q = model.Q.copy()
@@ -33,20 +34,20 @@ def build_preview_qp(model, x0, references, previous_action: float,
     W = Q + float(tip_weight) * (model.C_tip.T @ model.C_tip)
     for k in range(H):
         c = model.reference_shift(references[k], references[k + 1])
-        f[k + 1] = model.A @ f[k] - model.B[:, 0] * (float(references[k].ax_ref) + float(disturbance)) - c
+        f[k + 1] = model.A @ f[k] + model.B[:, 0] * (float(references[k].ax_ref) + float(disturbance)) - c
         G[k + 1] = model.A @ G[k]
-        G[k + 1, :, k] -= model.B[:, 0]
+        G[k + 1, :, k] += model.B[:, 0]
     P = np.zeros((H, H), dtype=float); q = np.zeros(H, dtype=float)
-    for k in range(1, H + 1):
-        P += 2.0 * (G[k].T @ W @ G[k])
-        q += 2.0 * (G[k].T @ W @ f[k])
-    # The frozen terminal cost is -x_N' P x_N + tip term.  OSQP needs a
-    # convex Hessian; add the DARE terminal matrix as a conservative convex
-    # terminal regularizer and record the exact frozen formula separately.
+    stage_weight = W
+    for k in range(1, H):
+        P += 2.0 * (G[k].T @ stage_weight @ G[k])
+        q += 2.0 * (G[k].T @ stage_weight @ f[k])
     terminal_W = float(tip_weight) * (model.C_tip.T @ model.C_tip) + model.P
     P += 2.0 * (G[H].T @ terminal_W @ G[H])
     q += 2.0 * (G[H].T @ terminal_W @ f[H])
-    P += 2.0e-8 * np.eye(H)
+    # OSQP uses 1/2*u'Pu + q'u.  Keep the control cost in every input,
+    # including the first constrained move.
+    P += 2.0 * float(getattr(model, "control_weight", 1.0)) * np.eye(H)
     P = (P + P.T) / 2.0
     rows = []; lower = []; upper = []
     for k in range(H):
@@ -56,8 +57,9 @@ def build_preview_qp(model, x0, references, previous_action: float,
         if k > 0: row[k - 1] = -1.0
         rows.append(row)
         if k == 0:
-            lower.append(float(-slew_limit - previous_action - references[k].ax_ref))
-            upper.append(float(slew_limit - previous_action - references[k].ax_ref))
+            # |(ax_ref + delta_0) - previous_action| <= slew_limit.
+            lower.append(float(previous_action - references[k].ax_ref - slew_limit))
+            upper.append(float(previous_action - references[k].ax_ref + slew_limit))
         else:
             lower.append(float(-slew_limit - references[k].ax_ref + references[k - 1].ax_ref))
             upper.append(float(slew_limit - references[k].ax_ref + references[k - 1].ax_ref))

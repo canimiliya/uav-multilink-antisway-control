@@ -1,2 +1,6 @@
 S5A Pilot blocked: all 9 candidates failed position tracking; no formal runs executed.
 No model, PID, LQR, MPPI, inner-loop, wind, or S0-S5 artifact was modified.
+
+Core correctness repair rerun: all 9 candidates remained outside the frozen
+Pilot position/tip gates. QP limiter parity, observer synthetic tests, and QP
+cost audit passed; no formal gust or random-seed run was executed.

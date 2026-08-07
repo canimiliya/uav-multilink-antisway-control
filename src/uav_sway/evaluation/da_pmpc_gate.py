@@ -27,7 +27,16 @@ def gate_scene(path, lqr_path, scene, config):
     for c,lim in (("mx_cmd_limited_Nm",25),("my_cmd_limited_Nm",25),("mz_cmd_limited_Nm",12)):
         if float(np.max(np.abs(values[c]))) > lim+1e-12: reasons.append(c)
     if float(np.max(np.abs(values["rotor_motor_max_abs_cmd"]))) != 0: reasons.append("rotor_motors")
+    if "qp_limiter_mismatch" in values and float(np.max(values["qp_limiter_mismatch"])) >= 1e-4: reasons.append("qp_limiter_parity")
     metric=compute_controlled_metrics(path, float(config["settling_start_s"][scene]))
+    if "disturbance_hat" in values:
+        metric.update({
+            "final_d_hat": float(values["disturbance_hat"][-1]),
+            "max_abs_d_hat": float(np.max(np.abs(values["disturbance_hat"]))),
+            "mean_abs_raw_ax": float(np.mean(np.abs(values["ax_cmd_raw"]))),
+            "mean_abs_limited_ax": float(np.mean(np.abs(values["ax_cmd_limited"]))),
+            "qp_limiter_mismatch_max": float(np.max(values.get("qp_limiter_mismatch", np.zeros(len(values["time"]))))),
+        })
     lqr=compute_controlled_metrics(lqr_path, float(config["settling_start_s"][scene]))
     if scene == "approach_stop":
         if metric["x_position_rmse_m"] > 1.05*lqr["x_position_rmse_m"]: reasons.append("approach_position")

@@ -2,10 +2,17 @@
   "source": "independent_raw_csv_recomputation",
   "pass": false,
   "status": "BLOCKED_DA_PMPC_PILOT",
-  "formal_runs_present": false,
   "grid_size": 9,
   "safe_candidate_count": 0,
-  "development_scenarios": ["approach_stop", "crosswind_hover"],
+  "development_scenarios": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
   "gust_used_for_selection": false,
-  "reason": "all nine candidates failed the frozen position-tracking pilot gate"
+  "candidate_raw_csvs_deleted_after_metric_extraction": true,
+  "qp_limiter_parity_max_error": 6.938893903907228e-18,
+  "all_candidate_qp_limiter_parity_pass": true,
+  "pilot_gate_unchanged": true,
+  "formal_runs_executed": false,
+  "failure_reason": "all 9 candidates failed frozen approach/crosswind Pilot Gate"
 }

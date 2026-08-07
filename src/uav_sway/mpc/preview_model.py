@@ -14,21 +14,24 @@ class PreviewResult:
 
 
 class PreviewModel:
-    """Builds x[i+1] = A x[i] - B(a[i]+d) - c[i].
+    """Build the DA-PMPC affine preview model.
 
-    The minus sign is the frozen DA-PMPC error-coordinate contract.  The
-    imported S4 B is retained separately in ``physical_B`` for auditability.
+    ``B`` is the physical S4 input matrix, with no hidden sign inversion.  In
+    this project the reduced-state input convention is
+    ``x[k+1] = A x[k] + B (a[k] + d[k]) - c[k]``.  Keeping that convention
+    explicit is important because the observer and QP use the same model.
     """
 
     def __init__(self, A: np.ndarray, B: np.ndarray, Q: np.ndarray,
-                 P: np.ndarray, C_tip: np.ndarray, horizon_steps: int = 20):
+                 P: np.ndarray, C_tip: np.ndarray, horizon_steps: int = 20,
+                 control_weight: float = 1.0):
         self.A = np.asarray(A, dtype=float)
-        self.physical_B = np.asarray(B, dtype=float).reshape(16, 1)
-        self.B = -self.physical_B
+        self.B = np.asarray(B, dtype=float).reshape(16, 1)
         self.Q = np.asarray(Q, dtype=float)
         self.P = np.asarray(P, dtype=float)
         self.C_tip = np.asarray(C_tip, dtype=float).reshape(1, 16)
         self.horizon_steps = int(horizon_steps)
+        self.control_weight = float(control_weight)
         if self.A.shape != (16, 16) or self.B.shape != (16, 1):
             raise ValueError("preview model requires A 16x16 and B 16x1")
 
@@ -51,5 +54,5 @@ class PreviewModel:
         states[0] = x
         for i in range(self.horizon_steps):
             c = self.reference_shift(references[i], references[i + 1])
-            states[i + 1] = self.A @ states[i] - self.B[:, 0] * (actions[i] + float(disturbance)) - c
+            states[i + 1] = self.A @ states[i] + self.B[:, 0] * (actions[i] + float(disturbance)) - c
         return PreviewResult(states=states, input_matrix=self.B.copy())

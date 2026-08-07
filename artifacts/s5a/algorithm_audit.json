@@ -20,5 +20,15 @@
     40.0,
     80.0
   ],
-  "grid_size": 9
+  "grid_size": 9,
+  "preview_input_matrix": "physical S4 B, no hidden sign inversion",
+  "preview_state_equation": "x_next = A @ x + B @ (a + d) - reference_shift",
+  "qp_first_step_slew": "|ax_ref_0 + delta_0 - previous_action| <= slew_limit",
+  "observer_update_api": "update(measured_state, applied_previous_command, reference_shift)",
+  "observer_first_update_skips_prediction": true,
+  "observer_uses_applied_previous_command": true,
+  "observer_uses_reference_shift": true,
+  "qp_control_cost_included": true,
+  "qp_terminal_stage_double_count_removed": true,
+  "pilot_correctness_fix": true
 }

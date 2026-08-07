@@ -84,3 +84,11 @@ identifies the horizontal tip output from the frozen MuJoCo equilibrium, uses
 a 17-state matched-disturbance observer and a 20-step OSQP preview QP. Only
 `approach_stop + calm` and `crosswind_hover + constant_crosswind` are used;
 gust, random-seed holdout, and S6 are outside this pilot.
+
+The S5A core-correctness rerun repaired the first-step slew constraint,
+matched-disturbance observer command/reference timing, explicit physical-B
+preview semantics, and QP control/terminal cost accounting. The unchanged 3x3
+development grid still produced 0/9 Pilot Gate passes: the QP-limiter parity
+and analytic correctness audits passed, but the frozen approach/crosswind
+position and tip gates remained unmet. No gust, 20-seed holdout, or S6 run was
+started; the pre-fix grid and selection are preserved under `artifacts/s5a`.
