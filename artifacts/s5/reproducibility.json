@@ -1,0 +1,6 @@
+{
+  "formal_seed": 20260810,
+  "tuning_seed": 20260809,
+  "rng": "numpy.random.PCG64",
+  "same_seed_policy": "same state/reference/nominal/noise produces identical control and state columns except solve_time_ms"
+}

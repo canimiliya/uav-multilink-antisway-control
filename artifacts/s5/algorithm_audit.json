@@ -1,0 +1,11 @@
+{
+  "rollout_engine": "independent mujoco.MjData nonlinear physics",
+  "linear_AB_used": false,
+  "simplified_pendulum_used": false,
+  "future_external_wind_used": false,
+  "future_reference_used": true,
+  "integral_state": false,
+  "controller_mix": null,
+  "warm_start": "shift_old_sequence_and_zero_tail",
+  "sampler": "numpy.random.Generator(PCG64)"
+}

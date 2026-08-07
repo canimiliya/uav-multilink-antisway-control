@@ -1,0 +1,32 @@
+TASK=S5-MUJOCO-ROLLOUT-MPPI-R1
+WORKDIR=D:\Desktop\my_project\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances
+
+git status --porcelain
+EXIT_CODE=0 before S5 changes
+git rev-parse HEAD
+HEAD=a9e01d1ae9fde4f377c3bbd964e1c72fe06b7f4d
+git -C third_party/udaan status --porcelain
+EXIT_CODE=0
+
+python -m compileall -q src/uav_sway/mppi src/uav_sway/control/mppi.py src/uav_sway/evaluation/mppi_schema.py src/uav_sway/evaluation/mppi_runner.py src/uav_sway/evaluation/mppi_gate.py scripts/tune_s5_mppi.py scripts/run_s5_mppi.py scripts/render_s5_mppi.py
+EXIT_CODE=0
+pytest -q tests/test_mppi_algorithm.py tests/test_mppi_cost.py tests/test_mppi_reproducibility.py tests/test_mppi_information_set.py tests/test_mppi_limiter_parity.py tests/test_mppi_rollout_state.py
+EXIT_CODE=0; 11 passed
+
+python scripts/tune_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --output-dir artifacts/s5/tuning --headless
+FIRST_EXECUTION=terminated after thread-pool performance check; no S5 evidence files were produced
+RERUN_EXIT_CODE=2
+RESULT=BLOCKED_NO_SAFE_MPPI; six candidates completed with zero safe candidates
+
+python scripts/run_s5_mppi.py --model-config configs/model_5link.yaml --mppi-config configs/mppi.yaml --scenarios approach_stop crosswind_hover gust_micro_adjust --headless --output-dir artifacts/s5
+EXIT_CODE=1
+RESULT=BLOCKED_NO_SAFE_MPPI because no candidate was selected; no formal run was fabricated
+
+pytest -q tests
+EXIT_CODE=0; 67 passed in 2.39s
+pytest -q third_party/udaan/tests
+EXIT_CODE=0; 226 passed in 19.78s
+
+Protection policy: S1-S4 artifacts, frozen configs, model/disturbance/scenario/inner-loop sources, PID/LQR files, and Udaan were not modified.
+python -m compileall -q src/uav_sway/mppi src/uav_sway/control/mppi.py src/uav_sway/evaluation/mppi_schema.py src/uav_sway/evaluation/mppi_runner.py src/uav_sway/evaluation/mppi_gate.py scripts/tune_s5_mppi.py scripts/run_s5_mppi.py scripts/render_s5_mppi.py
+EXIT_CODE=0 after final API name cleanup

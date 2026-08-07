@@ -61,3 +61,14 @@ difference epsilon. The 10x local validation passes. Corrected all-positive
 candidate scoring selects a safe Q/R candidate from only `approach_stop` and
 `crosswind_hover`; the three raw-CSV LQR scenarios pass the position-fairness
 and approach-stop sway gates. Evidence is retained under `artifacts/s4/`.
+
+S5 adds the third-controller implementation path: MPPI optimizes only the
+x-direction acceleration correction using independent nonlinear MuJoCo
+rollouts, a 12-step horizon, 64 rollouts, the frozen S4 Q/R weights, the
+shared S3 geometric inner loop, and the shared acceleration limiter. The
+rollouts use zero external-wind forecast while the real plant retains the S2
+wind input; no integral state or controller mixing is used. The frozen six-
+point tuning grid completed, but no candidate satisfied the combined LQR
+position-fairness and tip-sway gates, so S5 is `BLOCKED_NO_SAFE_MPPI` and no
+formal MPPI scenario is reported as passed. The complete candidate grid and
+failure evidence are retained under `artifacts/s5/`.
