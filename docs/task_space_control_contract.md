@@ -55,17 +55,27 @@ stored in `artifacts/s6_taskspace/t0/equilibrium_task_pose.json`.
 \]
 
 The contract freezes `position <= 0.05 m`, `orientation <= 5 deg`, and
-`tip speed <= 0.10 m/s`, continuously for `1.0 s`. Acquisition time is the
-first time at which that continuous interval begins. If it never occurs,
-`task_acquired=false` and `task_acquisition_time_s=null`; the simulation end
-time is never substituted.
+`tip speed <= 0.10 m/s`, continuously for `1.0 s`. The internal
+`task_acquisition_timestamp_s` is the absolute simulation timestamp at which
+that continuous interval begins. The formal
+`task_acquisition_time_s` is elapsed time from `task_start_time_s`, where the
+task starts at the first non-hover reference event:
+
+`task_acquisition_time_s = task_acquisition_timestamp_s - task_start_time_s`.
+
+If it never occurs, both fields are `null`; the simulation end time is never
+substituted.
 
 ## Metrics
 
 Task-space metrics are primary for this audit. UAV x/z metrics remain recorded
-with `secondary_metric=true` and are not task-success definitions. The raw
+with `uav_metrics_secondary=true` and are not task-success definitions. The raw
 baseline CSVs also retain the legacy `tip_displacement` and x/z error columns
 so that parity can be independently recomputed.
+
+The secondary `control_rate_proxy` is always computed by the frozen production
+function `uav_sway.evaluation.metrics.control_rate_proxy`, using
+`sum((diff(u) / diff(t))^2 * diff(t))`.
 
 For gust recovery, the gust window is the nonzero `wind_x` interval. The peak
 is the maximum task error during that interval. Recovery is the elapsed time

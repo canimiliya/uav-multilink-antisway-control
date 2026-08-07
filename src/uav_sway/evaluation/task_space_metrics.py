@@ -7,6 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
+from .metrics import control_rate_proxy
+
 
 POSITION_TOLERANCE_M = 0.05
 ORIENTATION_TOLERANCE_DEG = 5.0
@@ -76,7 +78,16 @@ def compute_task_metrics(path: str | Path) -> dict:
         non_hover = np.flatnonzero(values["reference_event"] != "hover")
         if len(non_hover):
             task_start_time = float(time[non_hover[0]])
-    acquire, acquisition_time = first_continuous_acquisition(time, task_acquisition_mask(position_xz, orientation_deg, speed), start_time_s=task_start_time)
+    acquire, acquisition_timestamp = first_continuous_acquisition(
+        time,
+        task_acquisition_mask(position_xz, orientation_deg, speed),
+        start_time_s=task_start_time,
+    )
+    acquisition_time = (
+        None
+        if acquisition_timestamp is None
+        else float(acquisition_timestamp - task_start_time)
+    )
     gust = _gust_window(values)
     gust_last = int(np.flatnonzero(gust)[-1]) if np.any(gust) else None
     gust_peak_position = float(np.max(position_xz[gust])) if gust_last is not None else None
@@ -86,9 +97,7 @@ def compute_task_metrics(path: str | Path) -> dict:
         recovered, recovered_at = first_continuous_acquisition(time, task_acquisition_mask(position_xz, orientation_deg, speed), start_time_s=float(time[gust_last]))
         if recovered and recovered_at is not None:
             recovery_time = float(recovered_at - time[gust_last])
-    dt = np.diff(time)
     ax = values["ax_cmd_limited"]
-    rate = np.diff(ax) / dt
     position_3d = values["position_error_3d_m"]
     uav_x_error = values["uav_x"] - values["x_ref"]
     uav_z_error = values["uav_z"] - values["z_ref"]
@@ -101,18 +110,21 @@ def compute_task_metrics(path: str | Path) -> dict:
         "cutter_orientation_rmse_deg": float(np.sqrt(_integral(orientation_deg ** 2, time) / duration)),
         "cutter_orientation_max_deg": float(np.max(orientation_deg)),
         "tip_speed_rms_m_s": float(np.sqrt(_integral(speed ** 2, time) / duration)),
-        "task_acquired": bool(acquire), "task_acquisition_time_s": acquisition_time,
+        "task_acquired": bool(acquire),
+        "task_start_time_s": task_start_time,
+        "task_acquisition_timestamp_s": acquisition_timestamp,
+        "task_acquisition_time_s": acquisition_time,
         "final_tip_position_error_m": float(position_3d[-1]), "final_orientation_error_deg": float(orientation_deg[-1]),
         "gust_peak_tip_position_error_m": gust_peak_position, "gust_peak_orientation_error_deg": gust_peak_orientation,
         "gust_recovery_time_s": recovery_time,
         "control_energy_proxy": _integral(ax ** 2, time),
-        "control_rate_proxy": float(_integral(rate ** 2, time[:-1])) if len(rate) else 0.0,
+        "control_rate_proxy": control_rate_proxy(time, ax),
         "solve_time_mean_ms": float(np.mean(values["solve_time_ms"])), "solve_time_p95_ms": float(np.percentile(values["solve_time_ms"], 95)),
         "uav_x": float(values["uav_x"][-1]), "uav_z": float(values["uav_z"][-1]),
         "uav_position_rmse": float(np.sqrt(_integral(uav_x_error ** 2 + uav_z_error ** 2, time) / duration)),
         "uav_x_rmse_m": float(np.sqrt(_integral(uav_x_error ** 2, time) / duration)),
         "uav_z_rmse_m": float(np.sqrt(_integral(uav_z_error ** 2, time) / duration)),
-        "secondary_metric": True, "finite_outputs": _finite(numeric),
+        "uav_metrics_secondary": True, "finite_outputs": _finite(numeric),
         "controller": str(values["controller"][0]), "scenario": str(values["scenario"][0]),
         "legacy_tip_rms_m": float(np.sqrt(_integral(values["tip_displacement"] ** 2, time) / duration)),
         "legacy_x_position_rmse_m": float(np.sqrt(_integral(uav_x_error ** 2, time) / duration)),

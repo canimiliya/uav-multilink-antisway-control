@@ -1,0 +1,12 @@
+{
+  "acquisition_time_elapsed_semantics": true,
+  "control_rate_uses_frozen_formula": true,
+  "baseline_primary_metrics_unchanged": true,
+  "physics_rerun": false,
+  "pid_modified": false,
+  "lqr_modified": false,
+  "ls_pmpc_modified": false,
+  "physical_model_modified": false,
+  "metric_contract_frozen": true,
+  "result": "PASS"
+}

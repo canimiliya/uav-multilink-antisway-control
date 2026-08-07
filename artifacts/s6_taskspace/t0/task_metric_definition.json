@@ -1,4 +1,19 @@
 {
+  "contract_version": "S6T0-task-space-metric-contract-closure-r1",
+  "primary_metrics": [
+    "tip_task_position_rmse_m",
+    "cutter_orientation_rmse_deg",
+    "task_acquisition_time_s",
+    "gust_peak_tip_position_error_m",
+    "gust_peak_orientation_error_deg",
+    "gust_recovery_time_s"
+  ],
+  "secondary_metrics": [
+    "uav_position_rmse",
+    "control_energy_proxy",
+    "control_rate_proxy",
+    "solve_time"
+  ],
   "position_tolerance_m": 0.05,
   "orientation_tolerance_deg": 5.0,
   "tip_speed_tolerance_m_s": 0.1,
@@ -8,5 +23,10 @@
   "orientation_error": "acos(clip(dot(cutter_axis_world, reference_axis_world), -1, 1))",
   "tip_velocity": "mujoco.mj_jacSite(model, data)[:3] @ data.qvel",
   "task_acquisition": "all three tolerances continuously for 1.0 s after first non-hover reference event",
+  "task_start_time_definition": "first non-hover reference event timestamp",
+  "task_acquisition_timestamp_definition": "absolute simulation timestamp returned internally by first_continuous_acquisition",
+  "task_acquisition_time_origin": "elapsed from task_start_time, not absolute simulation timestamp",
+  "task_acquisition_time_definition": "task_acquisition_timestamp_s - task_start_time_s; null if not acquired",
+  "control_rate_proxy_formula": "sum((diff(u) / diff(t))^2 * diff(t))",
   "uav_metrics_secondary": true
 }

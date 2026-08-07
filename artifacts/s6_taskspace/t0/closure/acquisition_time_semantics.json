@@ -1,0 +1,11 @@
+{
+  "task_start_time_s": 1.0,
+  "acquisition_timestamp_s": 2.5,
+  "task_acquisition_time_s": 1.5,
+  "expected_acquisition_timestamp_s": 2.5,
+  "expected_task_acquisition_time_s": 1.5,
+  "absolute_timestamp_retained_internally": true,
+  "formal_metric_is_elapsed": true,
+  "unacquired_value": null,
+  "result": "PASS"
+}

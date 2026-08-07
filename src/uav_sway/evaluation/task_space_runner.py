@@ -219,20 +219,45 @@ def write_t0_summary(output: Path) -> None:
             errors = {key: float(abs(value[0] - value[1])) for key, value in comparisons.items()}
             passed = bool(all(error <= 1.0e-12 for error in errors.values()))
             parity["scenarios"].setdefault(controller, {})[scenario] = {"errors": errors, "pass": passed, "source_old_csv": str(old_root / scenario / "run.csv")}
-            rows.append({"controller": controller.lower(), "scenario": scenario, "task_position_rmse": metrics["tip_task_position_rmse_m"], "orientation_rmse_deg": metrics["cutter_orientation_rmse_deg"], "task_acquisition_time": metrics["task_acquisition_time_s"], "gust_peak_error": metrics["gust_peak_tip_position_error_m"], "gust_recovery_time": metrics["gust_recovery_time_s"], "safety": bool(metrics["finite_outputs"] and old_gate["scenarios"][scenario]["pass"])})
+            rows.append({
+                "controller": controller.lower(), "scenario": scenario,
+                "tip_task_position_rmse_m": metrics["tip_task_position_rmse_m"],
+                "cutter_orientation_rmse_deg": metrics["cutter_orientation_rmse_deg"],
+                "task_acquisition_timestamp_s": metrics["task_acquisition_timestamp_s"],
+                "task_acquisition_time_s": metrics["task_acquisition_time_s"],
+                "gust_peak_tip_position_error_m": metrics["gust_peak_tip_position_error_m"],
+                "gust_peak_orientation_error_deg": metrics["gust_peak_orientation_error_deg"],
+                "gust_recovery_time_s": metrics["gust_recovery_time_s"],
+                "legacy_tip_rms_m": metrics["legacy_tip_rms_m"],
+                "legacy_x_position_rmse_m": metrics["legacy_x_position_rmse_m"],
+                "legacy_z_position_rmse_m": metrics["legacy_z_position_rmse_m"],
+                "safety": bool(metrics["finite_outputs"] and old_gate["scenarios"][scenario]["pass"]),
+            })
     parity["pass"] = bool(parity["scenarios"] and all(item["pass"] for controller in parity["scenarios"].values() for item in controller.values()))
     (output / "parity_audit.json").write_text(json.dumps(parity, indent=2, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
     with (output / "baseline_task_metrics.csv").open("w", encoding="utf-8", newline="") as stream:
-        columns = ["controller", "scenario", "task_position_rmse", "orientation_rmse_deg", "task_acquisition_time", "gust_peak_error", "gust_recovery_time", "safety"]
+        columns = ["controller", "scenario", "tip_task_position_rmse_m", "cutter_orientation_rmse_deg", "task_acquisition_timestamp_s", "task_acquisition_time_s", "gust_peak_tip_position_error_m", "gust_peak_orientation_error_deg", "gust_recovery_time_s", "legacy_tip_rms_m", "legacy_x_position_rmse_m", "legacy_z_position_rmse_m", "safety"]
         writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
-    (output / "baseline_task_metrics.json").write_text(json.dumps({"secondary_metric": True, "rows": rows}, indent=2, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
+    (output / "baseline_task_metrics.json").write_text(json.dumps({"uav_metrics_secondary": True, "task_space_metrics_primary": True, "rows": rows}, indent=2, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
     definition = {
+        "contract_version": "S6T0-task-space-metric-contract-closure-r1",
+        "primary_metrics": [
+            "tip_task_position_rmse_m", "cutter_orientation_rmse_deg", "task_acquisition_time_s",
+            "gust_peak_tip_position_error_m", "gust_peak_orientation_error_deg", "gust_recovery_time_s",
+        ],
+        "secondary_metrics": ["uav_position_rmse", "control_energy_proxy", "control_rate_proxy", "solve_time"],
         "position_tolerance_m": 0.05, "orientation_tolerance_deg": 5.0, "tip_speed_tolerance_m_s": 0.10, "continuous_hold_s": 1.0,
         "position_error": "sqrt((tip_x-tip_ref_x)^2 + (tip_y-tip_ref_y)^2 + (tip_z-tip_ref_z)^2)",
         "planar_position_error": "sqrt((tip_x-tip_ref_x)^2 + (tip_z-tip_ref_z)^2)",
         "orientation_error": "acos(clip(dot(cutter_axis_world, reference_axis_world), -1, 1))",
         "tip_velocity": "mujoco.mj_jacSite(model, data)[:3] @ data.qvel",
         "task_acquisition": "all three tolerances continuously for 1.0 s after first non-hover reference event",
+        "task_start_time_definition": "first non-hover reference event timestamp",
+        "task_acquisition_timestamp_definition": "absolute simulation timestamp returned internally by first_continuous_acquisition",
+        "task_acquisition_time_origin": "elapsed from task_start_time, not absolute simulation timestamp",
+        "task_acquisition_time_definition": "task_acquisition_timestamp_s - task_start_time_s; null if not acquired",
+        "control_rate_proxy_formula": "sum((diff(u) / diff(t))^2 * diff(t))",
+        "acquisition_timestamp_field": "task_acquisition_timestamp_s",
         "uav_metrics_secondary": True,
     }
     (output / "task_metric_definition.json").write_text(json.dumps(definition, indent=2) + "\n", encoding="utf-8", newline="\n")

@@ -1,0 +1,23 @@
+{
+  "contract_version": "S6T0-task-space-metric-contract-closure-r1",
+  "definition_path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\task_metric_definition.json",
+  "definition_sha256": "98a5da298bb2bd147661ef5b568e07c6546aff5e30f460d248a2a5954875326f",
+  "primary_metrics": [
+    "tip_task_position_rmse_m",
+    "cutter_orientation_rmse_deg",
+    "task_acquisition_time_s",
+    "gust_peak_tip_position_error_m",
+    "gust_peak_orientation_error_deg",
+    "gust_recovery_time_s"
+  ],
+  "secondary_metrics": [
+    "uav_position_rmse",
+    "control_energy_proxy",
+    "control_rate_proxy",
+    "solve_time"
+  ],
+  "acquisition_time_origin": "elapsed from task_start_time, not absolute simulation timestamp",
+  "frozen_before_task_controller_development": true,
+  "physics_rerun": false,
+  "result": "PASS"
+}

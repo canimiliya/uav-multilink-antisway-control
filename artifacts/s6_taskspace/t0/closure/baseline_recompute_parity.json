@@ -1,0 +1,240 @@
+{
+  "source": "existing S6T0 baseline raw CSVs only",
+  "baseline_metric_reference": "start commit HEAD metrics JSON",
+  "physics_rerun": false,
+  "tolerance_absolute": 1e-12,
+  "primary_fields": [
+    "tip_task_position_rmse_m",
+    "cutter_orientation_rmse_deg",
+    "gust_peak_tip_position_error_m",
+    "gust_peak_orientation_error_deg",
+    "legacy_tip_rms_m",
+    "legacy_x_position_rmse_m",
+    "legacy_z_position_rmse_m"
+  ],
+  "scenarios": {
+    "pid": {
+      "approach_stop": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\PID\\approach_stop\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\PID\\approach_stop\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.304054968405379,
+          "cutter_orientation_rmse_deg": 5.057574009336718,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.221244144544995,
+          "legacy_x_position_rmse_m": 0.09819340462735267,
+          "legacy_z_position_rmse_m": 0.0033428718014699163
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.304054968405379,
+          "cutter_orientation_rmse_deg": 5.057574009336718,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.221244144544995,
+          "legacy_x_position_rmse_m": 0.09819340462735267,
+          "legacy_z_position_rmse_m": 0.0033428718014699163
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      },
+      "crosswind_hover": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\PID\\crosswind_hover\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\PID\\crosswind_hover\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.14893808076652873,
+          "cutter_orientation_rmse_deg": 1.1350048269819129,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.06443369034822503,
+          "legacy_x_position_rmse_m": 0.08971880565767204,
+          "legacy_z_position_rmse_m": 0.0004044253666556886
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.14893808076652873,
+          "cutter_orientation_rmse_deg": 1.1350048269819129,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.06443369034822503,
+          "legacy_x_position_rmse_m": 0.08971880565767204,
+          "legacy_z_position_rmse_m": 0.0004044253666556886
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      },
+      "gust_micro_adjust": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\PID\\gust_micro_adjust\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\PID\\gust_micro_adjust\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.22757765995750917,
+          "cutter_orientation_rmse_deg": 3.470948103940183,
+          "gust_peak_tip_position_error_m": 0.43982526117310883,
+          "gust_peak_orientation_error_deg": 7.031311410918049,
+          "legacy_tip_rms_m": 0.15760802075890193,
+          "legacy_x_position_rmse_m": 0.07428580612110325,
+          "legacy_z_position_rmse_m": 0.001533731852004667
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.22757765995750917,
+          "cutter_orientation_rmse_deg": 3.470948103940183,
+          "gust_peak_tip_position_error_m": 0.43982526117310883,
+          "gust_peak_orientation_error_deg": 7.031311410918049,
+          "legacy_tip_rms_m": 0.15760802075890193,
+          "legacy_x_position_rmse_m": 0.07428580612110325,
+          "legacy_z_position_rmse_m": 0.001533731852004667
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      }
+    },
+    "lqr": {
+      "approach_stop": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\LQR\\approach_stop\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\LQR\\approach_stop\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.25517628207206494,
+          "cutter_orientation_rmse_deg": 3.835139162075767,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.16885907613861284,
+          "legacy_x_position_rmse_m": 0.1053850611809452,
+          "legacy_z_position_rmse_m": 0.001621854284728099
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.25517628207206494,
+          "cutter_orientation_rmse_deg": 3.835139162075767,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.16885907613861284,
+          "legacy_x_position_rmse_m": 0.1053850611809452,
+          "legacy_z_position_rmse_m": 0.001621854284728099
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      },
+      "crosswind_hover": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\LQR\\crosswind_hover\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\LQR\\crosswind_hover\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.13726809260120784,
+          "cutter_orientation_rmse_deg": 0.6921971098814687,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.048362613519622184,
+          "legacy_x_position_rmse_m": 0.09192348874717145,
+          "legacy_z_position_rmse_m": 0.00019163287854850932
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.13726809260120784,
+          "cutter_orientation_rmse_deg": 0.6921971098814687,
+          "gust_peak_tip_position_error_m": null,
+          "gust_peak_orientation_error_deg": null,
+          "legacy_tip_rms_m": 0.048362613519622184,
+          "legacy_x_position_rmse_m": 0.09192348874717145,
+          "legacy_z_position_rmse_m": 0.00019163287854850932
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      },
+      "gust_micro_adjust": {
+        "source_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t0\\baselines\\LQR\\gust_micro_adjust\\run.csv",
+        "baseline_metrics_source": "HEAD:artifacts\\s6_taskspace\\t0\\baselines\\LQR\\gust_micro_adjust\\metrics.json",
+        "before": {
+          "tip_task_position_rmse_m": 0.12702331223856786,
+          "cutter_orientation_rmse_deg": 1.900679275972587,
+          "gust_peak_tip_position_error_m": 0.3165590972503269,
+          "gust_peak_orientation_error_deg": 4.263605749067176,
+          "legacy_tip_rms_m": 0.0875230591133526,
+          "legacy_x_position_rmse_m": 0.0464037633929995,
+          "legacy_z_position_rmse_m": 0.0006020735994953662
+        },
+        "after": {
+          "tip_task_position_rmse_m": 0.12702331223856786,
+          "cutter_orientation_rmse_deg": 1.900679275972587,
+          "gust_peak_tip_position_error_m": 0.3165590972503269,
+          "gust_peak_orientation_error_deg": 4.263605749067176,
+          "legacy_tip_rms_m": 0.0875230591133526,
+          "legacy_x_position_rmse_m": 0.0464037633929995,
+          "legacy_z_position_rmse_m": 0.0006020735994953662
+        },
+        "absolute_errors": {
+          "tip_task_position_rmse_m": 0.0,
+          "cutter_orientation_rmse_deg": 0.0,
+          "gust_peak_tip_position_error_m": 0.0,
+          "gust_peak_orientation_error_deg": 0.0,
+          "legacy_tip_rms_m": 0.0,
+          "legacy_x_position_rmse_m": 0.0,
+          "legacy_z_position_rmse_m": 0.0
+        },
+        "tolerance_absolute": 1e-12,
+        "pass": true,
+        "acquisition_before_s": null,
+        "acquisition_timestamp_after_s": null,
+        "acquisition_elapsed_after_s": null
+      }
+    }
+  },
+  "all_primary_metrics_unchanged": true,
+  "all_baseline_acquisition_null": true,
+  "result": "PASS"
+}

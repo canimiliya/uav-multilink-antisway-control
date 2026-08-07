@@ -1,0 +1,71 @@
+{
+  "formula": "sum((diff(u) / diff(t))^2 * diff(t))",
+  "production_function": "uav_sway.evaluation.metrics.control_rate_proxy",
+  "cases": [
+    {
+      "case": "uniform",
+      "legacy_frozen_value": 5.0,
+      "task_space_value": 5.0,
+      "absolute_error": 0.0
+    },
+    {
+      "case": "nonuniform",
+      "legacy_frozen_value": 8.0,
+      "task_space_value": 8.0,
+      "absolute_error": 0.0
+    },
+    {
+      "case": "constant",
+      "legacy_frozen_value": 0.0,
+      "task_space_value": 0.0,
+      "absolute_error": 0.0
+    }
+  ],
+  "baseline_raw_csv_checks": [
+    {
+      "controller": "pid",
+      "scenario": "approach_stop",
+      "legacy_frozen_value": 232.8023917147255,
+      "task_space_value": 232.8023917147255,
+      "absolute_error": 0.0
+    },
+    {
+      "controller": "pid",
+      "scenario": "crosswind_hover",
+      "legacy_frozen_value": 2.4765402768075795,
+      "task_space_value": 2.4765402768075795,
+      "absolute_error": 0.0
+    },
+    {
+      "controller": "pid",
+      "scenario": "gust_micro_adjust",
+      "legacy_frozen_value": 59.96555342362272,
+      "task_space_value": 59.96555342362272,
+      "absolute_error": 0.0
+    },
+    {
+      "controller": "lqr",
+      "scenario": "approach_stop",
+      "legacy_frozen_value": 195.084516038155,
+      "task_space_value": 195.084516038155,
+      "absolute_error": 0.0
+    },
+    {
+      "controller": "lqr",
+      "scenario": "crosswind_hover",
+      "legacy_frozen_value": 8.066216152378397,
+      "task_space_value": 8.066216152378397,
+      "absolute_error": 0.0
+    },
+    {
+      "controller": "lqr",
+      "scenario": "gust_micro_adjust",
+      "legacy_frozen_value": 29.946342664996184,
+      "task_space_value": 29.946342664996184,
+      "absolute_error": 0.0
+    }
+  ],
+  "tolerance_absolute": 1e-12,
+  "pass": true,
+  "result": "PASS"
+}
