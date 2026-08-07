@@ -1,0 +1,18 @@
+{
+  "result": "BLOCKED_NO_USABLE_SEP_BASELINE",
+  "selected": null,
+  "selected_index": null,
+  "grid_size": 8,
+  "usable_count": 0,
+  "selection_uses_ls_pmpc": false,
+  "selection_normalization": "frozen LQR development metrics only",
+  "development_scenarios": ["approach_stop", "crosswind_hover"],
+  "holdout_used": false,
+  "gust_used": false,
+  "random_holdout_used": false,
+  "reason": "Candidates 01-04 failed baseline competence; candidates 05-08 had acados SQP_RTI status 4 in approach_stop.",
+  "parameter_grid_unchanged": true,
+  "cost_unchanged": true,
+  "horizon_unchanged": true,
+  "slack_max_unchanged": true
+}

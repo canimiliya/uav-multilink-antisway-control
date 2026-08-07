@@ -1,0 +1,11 @@
+{
+  "candidate": "candidate_08",
+  "scenario": "approach_stop",
+  "sample_count": 0,
+  "solver_failure_count": 1,
+  "acados_status": 4,
+  "safe": false,
+  "safety_reasons": ["acados_solver_failure"],
+  "complete_raw_csv": false,
+  "failure_record": "failure.json"
+}

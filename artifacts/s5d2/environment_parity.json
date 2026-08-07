@@ -1,0 +1,85 @@
+{
+  "result": "PASS_ENVIRONMENT_PARITY",
+  "pass": true,
+  "environment": "WSL2 same-process MuJoCo/controller benchmark",
+  "python": "3.11.0rc1",
+  "mujoco": "3.0.1",
+  "casadi": "3.7.2",
+  "acados_head": "4c23274e49e1304cf3c859d59ea6694ce36305a7",
+  "scenarios": [
+    "approach_stop",
+    "crosswind_hover"
+  ],
+  "duration_s": 12.0,
+  "physics_hz": 1000,
+  "inner_hz": 200,
+  "outer_hz": 20,
+  "same_sample_count_required": 2401,
+  "same_reference_sha256": {
+    "approach_stop": "8cd101146a0bea68d848035b98d77ba61e388c3c818ca0a42a4c133de5706260",
+    "crosswind_hover": "ec3035b8ff37a5665f38c90ec84cbb30e787f090fc694bf4e2484d83f00461e7"
+  },
+  "wind_sha256": {
+    "approach_stop": "931c41154d932069f936753867d8168aeb43022b80be93cefc03abbac8e7f835",
+    "crosswind_hover": "50de9f2c99afdc518fa087cec75dca4935c661433b3146d30a2da9a7c1a78f1b"
+  },
+  "controllers": {
+    "LQR": {
+      "approach_stop": {
+        "sample_count": 2401,
+        "x_rmse_m": 0.10538506118094525,
+        "tip_rms_m": 0.16885907613861292,
+        "frozen_x_rmse_m": 0.1053850612,
+        "frozen_tip_rms_m": 0.1688590761,
+        "relative_x_error": 1.8081080520017348e-10,
+        "relative_tip_error": 2.286694876581987e-10,
+        "relative_error_limit": 0.005,
+        "safe": true,
+        "safety_reasons": [],
+        "pass": true
+      },
+      "crosswind_hover": {
+        "sample_count": 2401,
+        "x_rmse_m": 0.09192348874717146,
+        "tip_rms_m": 0.04836261351962218,
+        "frozen_x_rmse_m": 0.0919234887,
+        "frozen_tip_rms_m": 0.0483626135,
+        "relative_x_error": 5.131600404718476e-10,
+        "relative_tip_error": 4.057303247629426e-10,
+        "relative_error_limit": 0.005,
+        "safe": true,
+        "safety_reasons": [],
+        "pass": true
+      }
+    },
+    "LS-PMPC": {
+      "approach_stop": {
+        "sample_count": 2401,
+        "x_rmse_m": 0.07292118183881881,
+        "tip_rms_m": 0.14143536750679117,
+        "frozen_x_rmse_m": 0.0729211832,
+        "frozen_tip_rms_m": 0.1414353663,
+        "relative_x_error": 1.8666471604043806e-08,
+        "relative_tip_error": 8.532456899336525e-09,
+        "relative_error_limit": 0.005,
+        "safe": true,
+        "safety_reasons": [],
+        "pass": true
+      },
+      "crosswind_hover": {
+        "sample_count": 2401,
+        "x_rmse_m": 0.08488535527787403,
+        "tip_rms_m": 0.04796976955144079,
+        "frozen_x_rmse_m": 0.0848853553,
+        "frozen_tip_rms_m": 0.0479697696,
+        "relative_x_error": 2.606572302637218e-10,
+        "relative_tip_error": 1.0122877931607002e-09,
+        "relative_error_limit": 0.005,
+        "safe": true,
+        "safety_reasons": [],
+        "pass": true
+      }
+    }
+  },
+  "selection_started": false
+}

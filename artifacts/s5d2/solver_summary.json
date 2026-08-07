@@ -1,0 +1,19 @@
+{
+  "solver": "acados SQP_RTI",
+  "integrator": "ERK 4-stage 1-step RK4",
+  "warm_start": true,
+  "candidate_count": 8,
+  "scene_count": 2,
+  "completed_full_runs": 8,
+  "partial_runs_with_solver_failure": 4,
+  "solver_failure_candidates": ["candidate_05", "candidate_06", "candidate_07", "candidate_08"],
+  "full_run_solve_time_ms": {
+    "mean_min": 5.85252934027489,
+    "mean_max": 6.38698626239067,
+    "p95_min": 6.01926,
+    "p95_max": 6.824297,
+    "max_observed_ms": 9.536646
+  },
+  "failure_status": "ACADOS_MINSTEP / status 4",
+  "warmup_samples_removed": false
+}

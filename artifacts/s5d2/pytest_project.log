@@ -1,0 +1,2 @@
+command: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests
+result: 107 passed, 1 skipped in 2.91s

@@ -1,0 +1,21 @@
+{
+  "result": "PASS_ENVIRONMENT_READY",
+  "os": "Ubuntu 22.04.5 LTS",
+  "python": "3.11.0rc1",
+  "python_requirement": "3.11.x",
+  "mujoco": "3.0.1",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "casadi": "3.7.2",
+  "acados_template": "0.5.1",
+  "acados_head": "4c23274e49e1304cf3c859d59ea6694ce36305a7",
+  "compiler": "gcc 11.4.0",
+  "udaan_head": "9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816",
+  "same_process_boundary": true,
+  "controller_plant_reference_wind_in_one_process": true,
+  "windows_reference_environment": {
+    "python": "3.11.15",
+    "mujoco": "3.0.1",
+    "casadi": "3.7.2"
+  }
+}

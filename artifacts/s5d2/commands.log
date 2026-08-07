@@ -1,0 +1,9 @@
+START_HEAD=31d24dc1485fb422e10839d7e232a9a392bbde70
+UDAAN_HEAD=9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816
+wsl parity: python scripts/run_s5d2_environment_parity.py --output artifacts/s5d2/parity
+formal smoke: python -m pytest -q tests/test_sep_nmpc_acados.py
+development grid: python scripts/tune_s5d2_sep_nmpc.py --output artifacts/s5d2
+development scenes: approach_stop+calm; crosswind_hover+constant_crosswind
+forbidden scenes: gust_micro_adjust; random_seed_000..019
+LS-PMPC tuning or modification: false
+S6 started: false

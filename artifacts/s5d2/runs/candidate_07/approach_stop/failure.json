@@ -1,0 +1,5 @@
+{
+  "candidate": "candidate_07",
+  "scene": "approach_stop",
+  "error": "RuntimeError('acados SQP_RTI status 4')"
+}

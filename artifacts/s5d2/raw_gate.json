@@ -1,0 +1,14 @@
+{
+  "result": "BLOCKED_NO_USABLE_SEP_BASELINE",
+  "candidate_count": 8,
+  "development_scene_count": 2,
+  "safe_candidates": ["candidate_01", "candidate_02", "candidate_03", "candidate_04"],
+  "solver_failure_candidates": ["candidate_05", "candidate_06", "candidate_07", "candidate_08"],
+  "baseline_competence_candidates": [],
+  "slack_competence_candidates": ["candidate_01", "candidate_02", "candidate_03", "candidate_04", "candidate_05", "candidate_06", "candidate_07", "candidate_08"],
+  "safety_gate": "finite, anchor false, heights, joint/attitude, acceleration amplitude/slew, thrust/torque, rotor motors, solver status",
+  "qp_limiter_parity_limit_m_s2": 1e-05,
+  "selection_uses_ls_pmpc": false,
+  "ls_pmpc_metrics_used_for_selection": false,
+  "performance_claims": false
+}

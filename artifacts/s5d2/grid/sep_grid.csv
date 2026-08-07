@@ -1,0 +1,9 @@
+candidate,index,K_e,rho,epsilon,safe,candidate_usable,baseline_competence,slack_competence,selection_score,rejection_reasons
+candidate_01,1,10.0,0.05,0.005,True,False,False,True,,['baseline_competence_gate']
+candidate_02,2,10.0,0.05,0.02,True,False,False,True,,['baseline_competence_gate']
+candidate_03,3,10.0,0.2,0.005,True,False,False,True,,['baseline_competence_gate']
+candidate_04,4,10.0,0.2,0.02,True,False,False,True,,['baseline_competence_gate']
+candidate_05,5,40.0,0.05,0.005,False,False,False,True,,"['safety_gate', 'baseline_competence_gate']"
+candidate_06,6,40.0,0.05,0.02,False,False,False,True,,"['safety_gate', 'baseline_competence_gate']"
+candidate_07,7,40.0,0.2,0.005,False,False,False,True,,"['safety_gate', 'baseline_competence_gate']"
+candidate_08,8,40.0,0.2,0.02,False,False,False,True,,"['safety_gate', 'baseline_competence_gate']"

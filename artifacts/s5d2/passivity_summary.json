@@ -1,0 +1,74 @@
+[
+  {
+    "candidate": "candidate_01",
+    "passivity_residual_max": 0.2136203762835173,
+    "slack_max": 0.1559578558498475,
+    "slack_mean": 3.6216680796774044e-05,
+    "slack_rms": 0.0011574040650104592,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 19280
+  },
+  {
+    "candidate": "candidate_02",
+    "passivity_residual_max": 0.19381524751616355,
+    "slack_max": 0.005258932348127806,
+    "slack_mean": 2.1564774722091287e-05,
+    "slack_rms": 0.00015215749604679,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 19280
+  },
+  {
+    "candidate": "candidate_03",
+    "passivity_residual_max": 0.17239162921628196,
+    "slack_max": 0.012283388565932486,
+    "slack_mean": 2.8133243497617523e-05,
+    "slack_rms": 0.000267178122913169,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 19280
+  },
+  {
+    "candidate": "candidate_04",
+    "passivity_residual_max": 0.28555350143204067,
+    "slack_max": 0.008966418391762964,
+    "slack_mean": 2.2105678167445512e-05,
+    "slack_rms": 0.00015964560378486505,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 19280
+  },
+  {
+    "candidate": "candidate_05",
+    "passivity_residual_max": 0.17575399948737475,
+    "slack_max": 3.5354082559806956,
+    "slack_mean": 0.007562771242857102,
+    "slack_rms": 0.12646128200417356,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 14320
+  },
+  {
+    "candidate": "candidate_06",
+    "passivity_residual_max": 0.11710544369281886,
+    "slack_max": 4.502076251152454,
+    "slack_mean": 0.012285141619591992,
+    "slack_rms": 0.1813077675950844,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 14320
+  },
+  {
+    "candidate": "candidate_07",
+    "passivity_residual_max": 0.14510902740203963,
+    "slack_max": 3.55803075771133,
+    "slack_mean": 0.00767625894739418,
+    "slack_rms": 0.12818614260955588,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 14320
+  },
+  {
+    "candidate": "candidate_08",
+    "passivity_residual_max": 0.11285135103859162,
+    "slack_max": 4.517872059370601,
+    "slack_mean": 0.01239893800299709,
+    "slack_rms": 0.18261422652184273,
+    "slack_saturation_rate": 0.0,
+    "prediction_node_count": 14320
+  }
+]

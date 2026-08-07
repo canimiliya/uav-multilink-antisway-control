@@ -1,0 +1,2 @@
+command: D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party\udaan\tests
+result: 226 passed in 17.49s

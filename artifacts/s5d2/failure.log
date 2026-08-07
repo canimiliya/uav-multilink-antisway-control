@@ -1,0 +1,4 @@
+{"candidate": "candidate_05", "error": "RuntimeError('acados SQP_RTI status 4')", "scene": "approach_stop"}
+{"candidate": "candidate_06", "error": "RuntimeError('acados SQP_RTI status 4')", "scene": "approach_stop"}
+{"candidate": "candidate_07", "error": "RuntimeError('acados SQP_RTI status 4')", "scene": "approach_stop"}
+{"candidate": "candidate_08", "error": "RuntimeError('acados SQP_RTI status 4')", "scene": "approach_stop"}
