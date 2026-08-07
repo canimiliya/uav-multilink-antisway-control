@@ -1,0 +1,28 @@
+{
+  "source": "paired_random_holdout",
+  "scenarios": [
+    {
+      "scenario": "approach_stop",
+      "primary_tip_rms_mean": 0.14081274273128605,
+      "secondary_tip_rms_mean": 0.14271309752907563,
+      "secondary_minus_primary_tip_rms": 0.0019003547977895774,
+      "conclusion": "hurts"
+    },
+    {
+      "scenario": "crosswind_hover",
+      "primary_tip_rms_mean": 0.011729817963475685,
+      "secondary_tip_rms_mean": 0.011810006091921402,
+      "secondary_minus_primary_tip_rms": 8.018812844571774e-05,
+      "conclusion": "hurts"
+    },
+    {
+      "scenario": "gust_micro_adjust",
+      "primary_tip_rms_mean": 0.07294792860800772,
+      "secondary_tip_rms_mean": 0.07395731405581733,
+      "secondary_minus_primary_tip_rms": 0.0010093854478096104,
+      "conclusion": "hurts"
+    }
+  ],
+  "overall_conclusion": "hurts",
+  "primary_never_reselected": true
+}

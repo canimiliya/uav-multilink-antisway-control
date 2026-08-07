@@ -103,3 +103,12 @@ frozen 3x3 `tip_weight` by `residual_weight` grid is selected only on
 20-seed holdout are not run in this pilot. The selected pilot passed both
 development Raw Gates with zero-error LQR parity; evidence and ablations are
 under `artifacts/s5a/s5a2/`. S5B holdout and S6 are not started here.
+
+S5B freezes the S5A2 LS-PMPC primary before evaluation, registers LS-DA-PMPC
+as a secondary observer ablation, and evaluates an unseen one-cosine gust plus
+20 pre-existing random wind seeds. The holdout contains 180 retained raw runs,
+60 paired LS-PMPC/LQR comparisons, seeded bootstrap confidence intervals, and
+an independent raw-data Gate. The primary has zero safety failures, 13.06%
+overall paired mean tip-RMS improvement with a 95% bootstrap CI of
+11.00%--15.08%, and an overall x-RMSE ratio of 0.734. S5B is recorded as
+`PASS`; no parameters were changed after freeze and S6 is not started here.

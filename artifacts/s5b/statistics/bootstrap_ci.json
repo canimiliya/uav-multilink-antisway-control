@@ -1,0 +1,58 @@
+{
+  "seed": 20260812,
+  "resamples": 10000,
+  "scenarios": {
+    "approach_stop": {
+      "tip_improvement_percent_mean_ci95": [
+        15.779695939110365,
+        16.415010055724572
+      ],
+      "x_improvement_percent_mean_ci95": [
+        29.250864512386375,
+        30.583314883437794
+      ],
+      "tip_improvement_percent_mean": 16.101772971412124,
+      "x_improvement_percent_mean": 29.95689607667712,
+      "wilcoxon_tip_greater_p": 9.5367431640625e-07
+    },
+    "crosswind_hover": {
+      "tip_improvement_percent_mean_ci95": [
+        1.584385697382747,
+        2.980110603032438
+      ],
+      "x_improvement_percent_mean_ci95": [
+        6.893289184741149,
+        7.12455527987074
+      ],
+      "tip_improvement_percent_mean": 2.3270993516807046,
+      "x_improvement_percent_mean": 7.011176679807461,
+      "wilcoxon_tip_greater_p": 5.245208740234375e-05
+    },
+    "gust_micro_adjust": {
+      "tip_improvement_percent_mean_ci95": [
+        20.107034110570574,
+        21.380657186623708
+      ],
+      "x_improvement_percent_mean_ci95": [
+        21.98570271903036,
+        23.214594728449363
+      ],
+      "tip_improvement_percent_mean": 20.75288467799934,
+      "x_improvement_percent_mean": 22.610288863348355,
+      "wilcoxon_tip_greater_p": 9.5367431640625e-07
+    },
+    "overall": {
+      "tip_improvement_percent_mean_ci95": [
+        11.004057320112132,
+        15.084195277422793
+      ],
+      "x_improvement_percent_mean_ci95": [
+        17.405166807331636,
+        22.218786725787176
+      ],
+      "tip_improvement_percent_mean": 13.060585667030724,
+      "x_improvement_percent_mean": 19.85945387327764,
+      "wilcoxon_tip_greater_p": 1.4175686054006946e-11
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source": "independent_raw_csv_recomputation",
+  "pass": true,
+  "primary_safety_failures": 0,
+  "scene_position_ratios": {
+    "approach_stop": 0.701248235794036,
+    "crosswind_hover": 0.92933875192757,
+    "gust_micro_adjust": 0.7749647681884407
+  },
+  "scene_tip_improvement_percent": {
+    "approach_stop": 16.101772971412124,
+    "crosswind_hover": 2.3270993516807046,
+    "gust_micro_adjust": 20.75288467799934
+  },
+  "overall_position_ratio": 0.7343826991387047,
+  "overall_tip_improvement_percent": 13.060585667030724,
+  "gust_position_ratio": 0.8002582396965541,
+  "gust_tip_ratio": 0.7756616645822386,
+  "bootstrap_tip_ci95": [
+    11.004057320112132,
+    15.084195277422793
+  ],
+  "primary_solve_time_p95_ms": 1.0731,
+  "primary_run_count": 60,
+  "random_seed_count": 20,
+  "conditions": {
+    "safety_zero_failures": true,
+    "position_each_scene_le_1p05": true,
+    "overall_position_not_worse": true,
+    "at_least_two_scene_tip_mean_ge_10": true,
+    "overall_tip_mean_ge_10": true,
+    "bootstrap_tip_ci_lower_gt_0": true,
+    "gust_position_le_1p05": true,
+    "gust_tip_le_0p95": true,
+    "solve_time_p95_lt_50_ms": true
+  },
+  "status": "PASS"
+}

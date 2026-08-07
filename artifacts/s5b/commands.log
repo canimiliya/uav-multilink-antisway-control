@@ -1,0 +1,8 @@
+1. git status --porcelain; git rev-parse HEAD; git -C third_party/udaan status --porcelain; git -C third_party/udaan rev-parse HEAD -> preflight clean, HEAD=eec22d8a30ec419424b565710c5452102de25e85, Udaan=9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816.
+2. D:\anaconda\envs\uav_sway\python.exe -m py_compile scripts/run_s5b_holdout.py src/uav_sway/evaluation/s5b_holdout.py tests/test_s5b_holdout.py -> exit 0.
+3. D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests/test_s5b_holdout.py -> 3 passed, exit 0.
+4. D:\anaconda\envs\uav_sway\python.exe scripts/run_s5b_holdout.py --model-config configs/model_5link.yaml --da-config configs/da_pmpc.yaml --output-dir artifacts/s5b --headless -> first attempt exposed non-integer gust path formatting before a run was archived, exit 1; corrected without changing the method.
+5. Same S5B holdout command after path correction -> all 3 gust and 180 random runs completed; post-processing later exposed Matplotlib keyword compatibility, exit 1 after raw Gate was generated.
+6. D:\anaconda\envs\uav_sway\python.exe scripts/finalize_s5b_holdout.py --output-dir artifacts/s5b -> recomputed all 180 compressed raw CSVs, regenerated summaries/figures/final status, exit 0.
+7. D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q tests -> initial 88 passed, 1 pre-existing YAML-format assertion failed; semantic YAML assertion repair applied to tests/test_da_pmpc_scenarios.py; final 89 passed in 2.42s, exit 0.
+8. D:\anaconda\envs\uav_sway\Scripts\pytest.exe -q third_party\udaan\tests -> 226 passed in 21.04s, exit 0.
