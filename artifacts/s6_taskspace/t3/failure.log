@@ -1,0 +1,1 @@
+Historical first attempt: runner cleared all actuator controls after logging; those non-formal runs were invalid and replaced. Corrected rerun used the shared inner-loop command without post-log clearing. No usable candidate in corrected development set.

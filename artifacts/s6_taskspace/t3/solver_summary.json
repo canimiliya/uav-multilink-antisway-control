@@ -1,0 +1,552 @@
+{
+  "solver": "OSQP",
+  "warm_start": true,
+  "outer_loop_hz": 20,
+  "candidate_count": 32,
+  "solve_times": [
+    {
+      "candidate_id": "its_001",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.2686369012911287,
+          "p95_ms": 0.3922,
+          "max_ms": 0.5944,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.16032852977925866,
+          "p95_ms": 0.2261,
+          "max_ms": 0.3733,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_002",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09135310287380258,
+          "p95_ms": 0.1136,
+          "max_ms": 0.1976,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.0943213244481466,
+          "p95_ms": 0.1168,
+          "max_ms": 0.3473,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_003",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.10948521449396086,
+          "p95_ms": 0.1379,
+          "max_ms": 0.3901,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.10668309037900874,
+          "p95_ms": 0.1399,
+          "max_ms": 0.2038,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_004",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09428950437317783,
+          "p95_ms": 0.1531,
+          "max_ms": 0.3416,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.09344847980008329,
+          "p95_ms": 0.133,
+          "max_ms": 0.2028,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_005",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.5316424406497293,
+          "p95_ms": 0.7197,
+          "max_ms": 0.9573,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.733236859641816,
+          "p95_ms": 1.2709,
+          "max_ms": 1.9521,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_006",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.14662053311120365,
+          "p95_ms": 0.1823,
+          "max_ms": 0.4381,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.15577667638483966,
+          "p95_ms": 0.2119,
+          "max_ms": 0.3354,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_007",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.16620062473969177,
+          "p95_ms": 0.2272,
+          "max_ms": 0.4341,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.1532691378592253,
+          "p95_ms": 0.2085,
+          "max_ms": 0.4237,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_008",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.14184010828821322,
+          "p95_ms": 0.1802,
+          "max_ms": 0.4264,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.14212948771345274,
+          "p95_ms": 0.192,
+          "max_ms": 0.4308,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_009",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.28037880049979175,
+          "p95_ms": 0.3564,
+          "max_ms": 0.5128,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.17490874635568512,
+          "p95_ms": 0.2392,
+          "max_ms": 0.3989,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_010",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09151561849229486,
+          "p95_ms": 0.1168,
+          "max_ms": 0.1793,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.09138004997917534,
+          "p95_ms": 0.1178,
+          "max_ms": 0.1928,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_011",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.11186051645147854,
+          "p95_ms": 0.1462,
+          "max_ms": 0.2591,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.10348567263640152,
+          "p95_ms": 0.1388,
+          "max_ms": 0.1756,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_012",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09766509787588505,
+          "p95_ms": 0.1539,
+          "max_ms": 0.3862,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.09540108288213245,
+          "p95_ms": 0.1335,
+          "max_ms": 0.364,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_013",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.6362483965014577,
+          "p95_ms": 0.8257,
+          "max_ms": 1.064,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.6921069970845481,
+          "p95_ms": 1.3319,
+          "max_ms": 2.3719,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_014",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.18846609745939194,
+          "p95_ms": 0.2282,
+          "max_ms": 0.5978,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.20098917117867554,
+          "p95_ms": 0.265,
+          "max_ms": 0.884,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_015",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.22449754269054562,
+          "p95_ms": 0.2785,
+          "max_ms": 0.3906,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.25290287380258225,
+          "p95_ms": 0.3507,
+          "max_ms": 2.5,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_016",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.19382794668887962,
+          "p95_ms": 0.3006,
+          "max_ms": 0.5003,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.15685839233652643,
+          "p95_ms": 0.2717,
+          "max_ms": 0.4383,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_017",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.23392657226155766,
+          "p95_ms": 0.2935,
+          "max_ms": 0.4046,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.18690666389004582,
+          "p95_ms": 0.2603,
+          "max_ms": 0.4559,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_018",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09011624323198668,
+          "p95_ms": 0.1168,
+          "max_ms": 0.2046,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.08852019991670136,
+          "p95_ms": 0.1135,
+          "max_ms": 0.1815,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_019",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.10328775510204082,
+          "p95_ms": 0.1274,
+          "max_ms": 0.2079,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.10867080383173679,
+          "p95_ms": 0.1422,
+          "max_ms": 0.4093,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_020",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.20900499791753438,
+          "p95_ms": 0.3891,
+          "max_ms": 0.9671,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.11511187005414411,
+          "p95_ms": 0.1963,
+          "max_ms": 0.616,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_021",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.4817757184506456,
+          "p95_ms": 0.6199,
+          "max_ms": 1.076,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.4216591420241566,
+          "p95_ms": 0.5838,
+          "max_ms": 0.7686,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_022",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.14008767180341525,
+          "p95_ms": 0.1754,
+          "max_ms": 0.3191,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.15549383590170762,
+          "p95_ms": 0.2143,
+          "max_ms": 0.2554,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_023",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.21855622657226156,
+          "p95_ms": 0.3033,
+          "max_ms": 0.5241,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.1837543107038734,
+          "p95_ms": 0.2409,
+          "max_ms": 0.4593,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_024",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.1985087463556851,
+          "p95_ms": 0.3175,
+          "max_ms": 0.5122,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.1614895876718034,
+          "p95_ms": 0.2595,
+          "max_ms": 0.4594,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_025",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.20179458558933777,
+          "p95_ms": 0.251,
+          "max_ms": 0.377,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.15775047896709704,
+          "p95_ms": 0.2401,
+          "max_ms": 0.438,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_026",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.09826743023740107,
+          "p95_ms": 0.1337,
+          "max_ms": 0.2351,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.09188300708038319,
+          "p95_ms": 0.1131,
+          "max_ms": 0.2434,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_027",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.1796753436068305,
+          "p95_ms": 0.2548,
+          "max_ms": 0.4902,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.16397867555185341,
+          "p95_ms": 0.2707,
+          "max_ms": 0.4043,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_028",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.24288354852144936,
+          "p95_ms": 0.3944,
+          "max_ms": 0.6785,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.18922982090795498,
+          "p95_ms": 0.3664,
+          "max_ms": 0.8584,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_029",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.4626471470220741,
+          "p95_ms": 0.6229,
+          "max_ms": 1.051,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.47352686380674724,
+          "p95_ms": 0.739,
+          "max_ms": 1.0924,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_030",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.14207942523948355,
+          "p95_ms": 0.1733,
+          "max_ms": 0.3375,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.16021653477717618,
+          "p95_ms": 0.2226,
+          "max_ms": 0.5287,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_031",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.6195947105372761,
+          "p95_ms": 1.1675,
+          "max_ms": 2.626,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.49399004581424405,
+          "p95_ms": 1.6458,
+          "max_ms": 2.5604,
+          "status_nonzero": 0
+        }
+      }
+    },
+    {
+      "candidate_id": "its_032",
+      "scenes": {
+        "task_acquire_calm": {
+          "mean_ms": 0.4711053311120367,
+          "p95_ms": 0.921,
+          "max_ms": 1.5512,
+          "status_nonzero": 0
+        },
+        "task_acquire_crosswind": {
+          "mean_ms": 0.4192743856726364,
+          "p95_ms": 0.9781,
+          "max_ms": 1.4663,
+          "status_nonzero": 0
+        }
+      }
+    }
+  ]
+}

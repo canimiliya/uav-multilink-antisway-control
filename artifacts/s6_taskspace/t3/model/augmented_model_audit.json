@@ -1,0 +1,26 @@
+{
+  "A_I_shape": [
+    17,
+    17
+  ],
+  "B_I_shape": [
+    17,
+    1
+  ],
+  "C_task_shape": [
+    4,
+    16
+  ],
+  "dt_s": 0.05,
+  "state_order": [
+    "x_16D",
+    "eta"
+  ],
+  "eta_definition": "clip(eta + dt * measured e_tip_x, -1, +1)",
+  "pbh_stabilizable": true,
+  "finite": true,
+  "source_A_sha256": "bb8ec9e5671381bf083986a979620e79e165c3b1766e23c791c177f77d3950fe",
+  "source_B_sha256": "7c96ed06c0e6812cb32c1967dbd8bd0dfd6b9568102026cef41413f9ba83c4d5",
+  "source_C_task_sha256": "6e9866ba2b07504f67c1f58ea47811ef4bdf5f84de0724edcb164aad5060cee3",
+  "pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "method": "ITS-RMPC",
+  "exact_reproduction": false,
+  "state_dimension": 17,
+  "internal_model": "frozen 16D A/B plus measured task-error integral",
+  "future_wind_used": false,
+  "future_target_before_issue": false,
+  "ls_pmpc_model_used": false,
+  "old_lqr_modified": false,
+  "task_lqr_modified": false,
+  "shared_inner_loop": true,
+  "outer_loop_hz": 20,
+  "solver": "OSQP",
+  "warm_start": true,
+  "candidate_count": 32,
+  "parameter_selection_uses_ls_pmpc": false
+}

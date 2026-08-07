@@ -1,0 +1,21 @@
+{
+  "q_eta_grid": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "horizon_grid": [
+    20,
+    40
+  ],
+  "residual_weight_grid": [
+    0.25,
+    1.0,
+    4.0,
+    16.0
+  ],
+  "task_lqi_grid_size": 4,
+  "its_rmpc_grid_size": 32,
+  "frozen_before_performance": true
+}

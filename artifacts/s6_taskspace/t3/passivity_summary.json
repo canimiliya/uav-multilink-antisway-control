@@ -1,0 +1,4 @@
+{
+  "passivity_constraint": false,
+  "reason": "ITS-RMPC uses integral augmentation; no passivity inequality is part of this method."
+}

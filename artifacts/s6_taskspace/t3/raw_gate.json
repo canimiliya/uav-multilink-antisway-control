@@ -1,0 +1,1054 @@
+{
+  "task_lqi": [
+    {
+      "candidate_id": "lqi_01",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      }
+    },
+    {
+      "candidate_id": "lqi_02",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      }
+    },
+    {
+      "candidate_id": "lqi_03",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": true,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      }
+    },
+    {
+      "candidate_id": "lqi_04",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": false,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      }
+    }
+  ],
+  "its_rmpc": [
+    {
+      "candidate_id": "its_001",
+      "safe": false,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_002",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_003",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_004",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_005",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_006",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_007",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_008",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_009",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_010",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_011",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_012",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_013",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_014",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_015",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_016",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": true,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_017",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_018",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_019",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": true,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": true,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_020",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": false,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": true,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": true,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_021",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_022",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_023",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": true,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": true,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_024",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": true,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": true,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": true,
+          "task_acquire_crosswind_position": true,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": true,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_025",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_026",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_027",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": false,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": false,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_028",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": false,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": false,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_029",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_030",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": true,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": true,
+          "task_acquire_calm_tip_speed": true,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": true,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": true,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_031",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": false,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": false,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    },
+    {
+      "candidate_id": "its_032",
+      "safe": true,
+      "usable": false,
+      "competence": {
+        "checks": {
+          "task_acquire_calm_acquired": false,
+          "task_acquire_calm_position": false,
+          "task_acquire_calm_orientation": false,
+          "task_acquire_calm_final_position": false,
+          "task_acquire_calm_final_orientation": false,
+          "task_acquire_calm_tip_speed": false,
+          "task_acquire_crosswind_acquired": false,
+          "task_acquire_crosswind_position": false,
+          "task_acquire_crosswind_orientation": false,
+          "task_acquire_crosswind_final_position": false,
+          "task_acquire_crosswind_final_orientation": false,
+          "task_acquire_crosswind_tip_speed": false
+        },
+        "pass": false
+      },
+      "mpc_contribution": {
+        "acquisition_improvement_vs_lqi": null,
+        "position_improvement_vs_lqi": null,
+        "no_more_than_10_percent_degradation": false,
+        "pass": false,
+        "reason": "acquisition unavailable for ITS-RMPC or matched Task-LQI"
+      },
+      "usable_with_mpc": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+S6T3 development: task_acquire_calm + task_acquire_crosswind only.
+No task_gust_recovery performance. No random holdout.
+Old LQR and selected Task-LQR read from frozen S6T2 metrics; no physics rerun.
+Grid frozen before performance: q_eta=4 x horizon=2 x residual=4 = 32.
