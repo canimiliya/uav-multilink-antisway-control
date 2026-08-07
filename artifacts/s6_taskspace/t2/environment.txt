@@ -1,0 +1,10 @@
+python=3.11.15
+platform=Windows-10-10.0.26100-SP0
+mujoco=3.0.1
+numpy=2.4.6
+scipy=1.17.1
+physics_hz=1000
+inner_hz=200
+outer_hz=20
+start_head=df5eb377f4d8da1d476a6f553d039e835969dd24
+udaan_head=9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816

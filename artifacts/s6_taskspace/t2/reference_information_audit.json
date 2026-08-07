@@ -1,0 +1,36 @@
+{
+  "scenes": {
+    "task_acquire_calm": {
+      "scene": "task_acquire_calm",
+      "reference_sha256": "cff38d94ad646400df279a9b42a98f3169bfebb1739cd8c13e08c61ebf4c6d2a",
+      "checks": {
+        "task_start_time_exact": true,
+        "target_delta_x_exact": true,
+        "setpoint_constant_after_issue": true,
+        "no_future_target_before_issue": true,
+        "zero_velocity_reference": true,
+        "zero_acceleration_reference": true,
+        "target_tip_position_from_equilibrium": true
+      },
+      "pass": true
+    },
+    "task_acquire_crosswind": {
+      "scene": "task_acquire_crosswind",
+      "reference_sha256": "975bac472bbb39d8b100f1a4d1828f8effbb6484d211df1f521f36f641a2c29a",
+      "checks": {
+        "task_start_time_exact": true,
+        "target_delta_x_exact": true,
+        "setpoint_constant_after_issue": true,
+        "no_future_target_before_issue": true,
+        "zero_velocity_reference": true,
+        "zero_acceleration_reference": true,
+        "target_tip_position_from_equilibrium": true
+      },
+      "pass": true
+    }
+  },
+  "future_target_leakage": false,
+  "controller_reference_access": "current sample only; no preview API",
+  "reference_preview_before_issue_forbidden": true,
+  "pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+  "python_version": "3.11.15",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "mujoco": "3.0.1",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "runtime_model_sha256": "19105873c0fcc891ebb85efe6c20c378d5b77b6bf9003559e43ae47ca03d153d",
+  "physics_dt": 0.001,
+  "inner_dt": 0.005,
+  "outer_dt": 0.05,
+  "start_head": "df5eb377f4d8da1d476a6f553d039e835969dd24",
+  "udaan_head": "9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816"
+}

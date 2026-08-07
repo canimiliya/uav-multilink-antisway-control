@@ -1,0 +1,449 @@
+{
+  "source": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t1\\preregistered_grid.json",
+  "grid_frozen_before_performance": true,
+  "task_pid_grid": [
+    {
+      "candidate_id": "pid_001",
+      "index": 1,
+      "kp": 0.8,
+      "kd": 1.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_002",
+      "index": 2,
+      "kp": 0.8,
+      "kd": 1.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_003",
+      "index": 3,
+      "kp": 0.8,
+      "kd": 1.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_004",
+      "index": 4,
+      "kp": 0.8,
+      "kd": 2.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_005",
+      "index": 5,
+      "kp": 0.8,
+      "kd": 2.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_006",
+      "index": 6,
+      "kp": 0.8,
+      "kd": 2.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_007",
+      "index": 7,
+      "kp": 0.8,
+      "kd": 4.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_008",
+      "index": 8,
+      "kp": 0.8,
+      "kd": 4.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_009",
+      "index": 9,
+      "kp": 0.8,
+      "kd": 4.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_010",
+      "index": 10,
+      "kp": 1.6,
+      "kd": 1.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_011",
+      "index": 11,
+      "kp": 1.6,
+      "kd": 1.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_012",
+      "index": 12,
+      "kp": 1.6,
+      "kd": 1.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_013",
+      "index": 13,
+      "kp": 1.6,
+      "kd": 2.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_014",
+      "index": 14,
+      "kp": 1.6,
+      "kd": 2.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_015",
+      "index": 15,
+      "kp": 1.6,
+      "kd": 2.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_016",
+      "index": 16,
+      "kp": 1.6,
+      "kd": 4.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_017",
+      "index": 17,
+      "kp": 1.6,
+      "kd": 4.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_018",
+      "index": 18,
+      "kp": 1.6,
+      "kd": 4.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_019",
+      "index": 19,
+      "kp": 3.2,
+      "kd": 1.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_020",
+      "index": 20,
+      "kp": 3.2,
+      "kd": 1.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_021",
+      "index": 21,
+      "kp": 3.2,
+      "kd": 1.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_022",
+      "index": 22,
+      "kp": 3.2,
+      "kd": 2.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_023",
+      "index": 23,
+      "kp": 3.2,
+      "kd": 2.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_024",
+      "index": 24,
+      "kp": 3.2,
+      "kd": 2.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_025",
+      "index": 25,
+      "kp": 3.2,
+      "kd": 4.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_026",
+      "index": 26,
+      "kp": 3.2,
+      "kd": 4.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_027",
+      "index": 27,
+      "kp": 3.2,
+      "kd": 4.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_028",
+      "index": 28,
+      "kp": 6.4,
+      "kd": 1.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_029",
+      "index": 29,
+      "kp": 6.4,
+      "kd": 1.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_030",
+      "index": 30,
+      "kp": 6.4,
+      "kd": 1.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_031",
+      "index": 31,
+      "kp": 6.4,
+      "kd": 2.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_032",
+      "index": 32,
+      "kp": 6.4,
+      "kd": 2.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_033",
+      "index": 33,
+      "kp": 6.4,
+      "kd": 2.0,
+      "ki": 0.3
+    },
+    {
+      "candidate_id": "pid_034",
+      "index": 34,
+      "kp": 6.4,
+      "kd": 4.0,
+      "ki": 0.0
+    },
+    {
+      "candidate_id": "pid_035",
+      "index": 35,
+      "kp": 6.4,
+      "kd": 4.0,
+      "ki": 0.1
+    },
+    {
+      "candidate_id": "pid_036",
+      "index": 36,
+      "kp": 6.4,
+      "kd": 4.0,
+      "ki": 0.3
+    }
+  ],
+  "task_lqr_grid": [
+    {
+      "candidate_id": "lqr_001",
+      "index": 1,
+      "w_p": 20.0,
+      "w_theta": 5.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_002",
+      "index": 2,
+      "w_p": 20.0,
+      "w_theta": 5.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_003",
+      "index": 3,
+      "w_p": 20.0,
+      "w_theta": 5.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_004",
+      "index": 4,
+      "w_p": 20.0,
+      "w_theta": 20.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_005",
+      "index": 5,
+      "w_p": 20.0,
+      "w_theta": 20.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_006",
+      "index": 6,
+      "w_p": 20.0,
+      "w_theta": 20.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_007",
+      "index": 7,
+      "w_p": 20.0,
+      "w_theta": 80.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_008",
+      "index": 8,
+      "w_p": 20.0,
+      "w_theta": 80.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_009",
+      "index": 9,
+      "w_p": 20.0,
+      "w_theta": 80.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_010",
+      "index": 10,
+      "w_p": 80.0,
+      "w_theta": 5.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_011",
+      "index": 11,
+      "w_p": 80.0,
+      "w_theta": 5.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_012",
+      "index": 12,
+      "w_p": 80.0,
+      "w_theta": 5.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_013",
+      "index": 13,
+      "w_p": 80.0,
+      "w_theta": 20.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_014",
+      "index": 14,
+      "w_p": 80.0,
+      "w_theta": 20.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_015",
+      "index": 15,
+      "w_p": 80.0,
+      "w_theta": 20.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_016",
+      "index": 16,
+      "w_p": 80.0,
+      "w_theta": 80.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_017",
+      "index": 17,
+      "w_p": 80.0,
+      "w_theta": 80.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_018",
+      "index": 18,
+      "w_p": 80.0,
+      "w_theta": 80.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_019",
+      "index": 19,
+      "w_p": 320.0,
+      "w_theta": 5.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_020",
+      "index": 20,
+      "w_p": 320.0,
+      "w_theta": 5.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_021",
+      "index": 21,
+      "w_p": 320.0,
+      "w_theta": 5.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_022",
+      "index": 22,
+      "w_p": 320.0,
+      "w_theta": 20.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_023",
+      "index": 23,
+      "w_p": 320.0,
+      "w_theta": 20.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_024",
+      "index": 24,
+      "w_p": 320.0,
+      "w_theta": 20.0,
+      "R": 2.0
+    },
+    {
+      "candidate_id": "lqr_025",
+      "index": 25,
+      "w_p": 320.0,
+      "w_theta": 80.0,
+      "R": 0.5
+    },
+    {
+      "candidate_id": "lqr_026",
+      "index": 26,
+      "w_p": 320.0,
+      "w_theta": 80.0,
+      "R": 1.0
+    },
+    {
+      "candidate_id": "lqr_027",
+      "index": 27,
+      "w_p": 320.0,
+      "w_theta": 80.0,
+      "R": 2.0
+    }
+  ]
+}

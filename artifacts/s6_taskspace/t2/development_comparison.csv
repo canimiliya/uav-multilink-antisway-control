@@ -1,0 +1,9 @@
+acquisition_time,candidate_id,candidate_usable,controller,final_tip_position_error_m,orientation_rmse,safety,scenario,task_acquired,task_position_rmse
+,,True,old_PID,0.4344904046142139,3.3666586999244146,True,task_acquire_calm,False,0.24415565676389434
+,,True,old_PID,0.16198262141489708,3.0689166300084914,True,task_acquire_crosswind,False,0.27022360824013686
+,,True,old_LQR,0.002278868876481598,1.477850781565043,True,task_acquire_calm,False,0.12616564711246922
+,,True,old_LQR,0.13856793275087298,1.7582759989436616,True,task_acquire_crosswind,False,0.1915271548862321
+,pid_001,False,Task-PID,0.5297127646275575,12.402953851601367,True,task_acquire_calm,False,1.0562411095976616
+,pid_001,False,Task-PID,1.024908079809638,8.352221017546238,True,task_acquire_crosswind,False,0.6693076513544942
+2.455,lqr_011,True,Task-LQR,4.97823653389406e-05,0.7134779837951962,True,task_acquire_calm,True,0.10420286740154086
+,lqr_011,True,Task-LQR,0.24883870972351607,1.0200620730689078,True,task_acquire_crosswind,False,0.20364865295245857

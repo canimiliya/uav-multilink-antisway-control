@@ -1,0 +1,2778 @@
+{
+  "task_pid": {
+    "pid_001": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.24
+      }
+    },
+    "pid_002": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2415
+      }
+    },
+    "pid_003": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2445
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2445
+      }
+    },
+    "pid_004": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_005": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_006": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_007": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_008": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_009": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_010": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_011": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      }
+    },
+    "pid_012": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25000000000000006
+      }
+    },
+    "pid_013": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_014": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_015": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_016": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_017": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_018": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_019": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_020": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_021": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_022": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      }
+    },
+    "pid_023": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_024": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_025": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_026": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_027": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_028": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_029": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      }
+    },
+    "pid_030": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_031": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.2500000000000001
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_032": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_033": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_034": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_035": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "pid_036": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    }
+  },
+  "task_lqr": {
+    "lqr_001": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_002": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.8666089060946799,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.8666089060946799,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_003": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_004": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_005": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.8427591441319133,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.8427591441319133,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_006": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.75,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_007": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_008": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.7601727160011849,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.7601727160011849,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_009": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.7324711882043089,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 0.7324711882043089,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_010": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_011": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_012": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_013": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_014": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_015": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_016": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.25,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_017": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.1753238209147314,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.1753238209147314,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_018": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_019": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_020": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_021": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.688969459804463,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_022": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_023": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_024": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.7124627415136169,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_025": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_026": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      }
+    },
+    "lqr_027": {
+      "task_acquire_calm": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 2.0,
+        "max_ax_step": 0.25
+      },
+      "task_acquire_crosswind": {
+        "checks": {
+          "finite": true,
+          "anchor_false": true,
+          "uav_z_above_floor": true,
+          "tip_z_above_floor": true,
+          "joint_angles_under_100_deg": true,
+          "roll_under_25_deg": true,
+          "pitch_under_25_deg": true,
+          "ax_limit": true,
+          "ax_slew_limit": true,
+          "thrust_limit": true,
+          "torque_limit": true,
+          "rotor_motors_zero": true,
+          "sample_count_2401": true,
+          "physics_intervals_12000": true
+        },
+        "pass": true,
+        "max_abs_ax": 1.5512286028821507,
+        "max_ax_step": 0.25
+      }
+    }
+  }
+}

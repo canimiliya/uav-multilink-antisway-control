@@ -1,0 +1,4 @@
+S6T2 setpoint protocol frozen before performance runs.
+Development scenes: task_acquire_calm and task_acquire_crosswind only.
+No task_gust_recovery performance, no random holdout, no TS-MPC.
+Task grids inherited unchanged: 36 Task-PID and 27 Task-LQR.
