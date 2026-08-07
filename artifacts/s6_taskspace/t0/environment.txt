@@ -1,0 +1,10 @@
+python=3.11.15
+platform=Windows-10-10.0.26100-SP0
+mujoco=3.0.1
+numpy=2.4.6
+yaml=6.0.3
+physics_hz=1000
+inner_and_log_hz=200
+outer_hz=20
+duration_s=12
+plant=artifacts/s3/runtime/model_5link_controlled.xml

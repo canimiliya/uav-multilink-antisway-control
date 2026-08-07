@@ -1,0 +1,12 @@
+{
+  "position_tolerance_m": 0.05,
+  "orientation_tolerance_deg": 5.0,
+  "tip_speed_tolerance_m_s": 0.1,
+  "continuous_hold_s": 1.0,
+  "position_error": "sqrt((tip_x-tip_ref_x)^2 + (tip_y-tip_ref_y)^2 + (tip_z-tip_ref_z)^2)",
+  "planar_position_error": "sqrt((tip_x-tip_ref_x)^2 + (tip_z-tip_ref_z)^2)",
+  "orientation_error": "acos(clip(dot(cutter_axis_world, reference_axis_world), -1, 1))",
+  "tip_velocity": "mujoco.mj_jacSite(model, data)[:3] @ data.qvel",
+  "task_acquisition": "all three tolerances continuously for 1.0 s after first non-hover reference event",
+  "uav_metrics_secondary": true
+}

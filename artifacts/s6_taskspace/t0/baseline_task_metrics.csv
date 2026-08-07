@@ -1,0 +1,7 @@
+controller,scenario,task_position_rmse,orientation_rmse_deg,task_acquisition_time,gust_peak_error,gust_recovery_time,safety
+pid,approach_stop,0.304054968405379,5.057574009336718,,,,True
+pid,crosswind_hover,0.14893808076652873,1.1350048269819129,,,,True
+pid,gust_micro_adjust,0.22757765995750917,3.470948103940183,,0.43982526117310883,,True
+lqr,approach_stop,0.25517628207206494,3.835139162075767,,,,True
+lqr,crosswind_hover,0.13726809260120784,0.6921971098814687,,,,True
+lqr,gust_micro_adjust,0.12702331223856786,1.900679275972587,,0.3165590972503269,,True

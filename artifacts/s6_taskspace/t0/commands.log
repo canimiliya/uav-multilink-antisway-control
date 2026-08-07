@@ -1,0 +1,3 @@
+D:\anaconda\envs\uav_sway\python.exe -m uav_sway.evaluation.task_space_runner --controller pid --scenarios approach_stop crosswind_hover gust_micro_adjust --output-dir artifacts\s6_taskspace\t0
+D:\anaconda\envs\uav_sway\python.exe -m uav_sway.evaluation.task_space_runner --controller lqr --scenarios approach_stop crosswind_hover gust_micro_adjust --output-dir artifacts\s6_taskspace\t0
+No Task-PID, Task-LQR, TS-PMPC, LS-PMPC, random holdout, or S6 controller experiment was run.

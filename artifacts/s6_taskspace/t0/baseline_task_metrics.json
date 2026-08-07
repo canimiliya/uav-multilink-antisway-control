@@ -1,0 +1,65 @@
+{
+  "secondary_metric": true,
+  "rows": [
+    {
+      "controller": "pid",
+      "scenario": "approach_stop",
+      "task_position_rmse": 0.304054968405379,
+      "orientation_rmse_deg": 5.057574009336718,
+      "task_acquisition_time": null,
+      "gust_peak_error": null,
+      "gust_recovery_time": null,
+      "safety": true
+    },
+    {
+      "controller": "pid",
+      "scenario": "crosswind_hover",
+      "task_position_rmse": 0.14893808076652873,
+      "orientation_rmse_deg": 1.1350048269819129,
+      "task_acquisition_time": null,
+      "gust_peak_error": null,
+      "gust_recovery_time": null,
+      "safety": true
+    },
+    {
+      "controller": "pid",
+      "scenario": "gust_micro_adjust",
+      "task_position_rmse": 0.22757765995750917,
+      "orientation_rmse_deg": 3.470948103940183,
+      "task_acquisition_time": null,
+      "gust_peak_error": 0.43982526117310883,
+      "gust_recovery_time": null,
+      "safety": true
+    },
+    {
+      "controller": "lqr",
+      "scenario": "approach_stop",
+      "task_position_rmse": 0.25517628207206494,
+      "orientation_rmse_deg": 3.835139162075767,
+      "task_acquisition_time": null,
+      "gust_peak_error": null,
+      "gust_recovery_time": null,
+      "safety": true
+    },
+    {
+      "controller": "lqr",
+      "scenario": "crosswind_hover",
+      "task_position_rmse": 0.13726809260120784,
+      "orientation_rmse_deg": 0.6921971098814687,
+      "task_acquisition_time": null,
+      "gust_peak_error": null,
+      "gust_recovery_time": null,
+      "safety": true
+    },
+    {
+      "controller": "lqr",
+      "scenario": "gust_micro_adjust",
+      "task_position_rmse": 0.12702331223856786,
+      "orientation_rmse_deg": 1.900679275972587,
+      "task_acquisition_time": null,
+      "gust_peak_error": 0.3165590972503269,
+      "gust_recovery_time": null,
+      "safety": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "source": "independent legacy raw-CSV recomputation",
+  "tolerance_absolute": 1e-12,
+  "scenarios": {
+    "PID": {
+      "approach_stop": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s3\\runs\\approach_stop\\run.csv"
+      },
+      "crosswind_hover": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s3\\runs\\crosswind_hover\\run.csv"
+      },
+      "gust_micro_adjust": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s3\\runs\\gust_micro_adjust\\run.csv"
+      }
+    },
+    "LQR": {
+      "approach_stop": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s4\\runs\\approach_stop\\run.csv"
+      },
+      "crosswind_hover": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s4\\runs\\crosswind_hover\\run.csv"
+      },
+      "gust_micro_adjust": {
+        "errors": {
+          "tip_rms_m": 0.0,
+          "x_position_rmse_m": 0.0,
+          "z_position_rmse_m": 0.0
+        },
+        "pass": true,
+        "source_old_csv": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s4\\runs\\gust_micro_adjust\\run.csv"
+      }
+    }
+  },
+  "pass": true
+}

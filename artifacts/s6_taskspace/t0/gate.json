@@ -1,0 +1,12 @@
+{
+  "task_space_state_valid": true,
+  "task_reference_valid": true,
+  "orientation_definition_valid": true,
+  "tip_velocity_valid": true,
+  "legacy_metric_parity": true,
+  "pid_baseline_generated": true,
+  "lqr_baseline_generated": true,
+  "controller_parameters_modified": false,
+  "physical_model_modified": false,
+  "result": "PASS"
+}
