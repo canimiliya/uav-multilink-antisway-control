@@ -13,7 +13,7 @@
 
 ## NOT SAFE TO CLAIM
 
-- Do not claim that S6 established a robust, formally validated task-space anti-wind controller.
+- Do not claim that S6 established a robust, formally validated task-space anti-sway controller.
 - Do not claim that Task-LQR is a final task-space method; it was selected for development evidence only and failed crosswind acquisition.
 - Do not claim ITS-RMPC, DOB-TS-RMPC, DOB-Task-LQR, AE-TSLQR, or AE-TSLQR with acquisition lock as superior to traditional methods or as final methods.
 - Do not claim that any S6 task-space method passed the complete calm-plus-crosswind final competence contract.
