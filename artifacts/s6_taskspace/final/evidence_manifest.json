@@ -1,0 +1,112 @@
+{
+  "protocol": "S6T6-final-evidence-freeze-r1",
+  "generated_from_existing_artifacts": true,
+  "physics_rerun": false,
+  "entries": [
+    {
+      "stage": "S5 frozen method/result",
+      "path": "artifacts/s5b/final_status.json",
+      "sha256": "beaf3f3596db6f12ecc765ca79605d25b348ce57ce23d71c2f5dc0bbab4ec7e9",
+      "status": "PASS",
+      "purpose": "authoritative LS-PMPC holdout and raw-gate status"
+    },
+    {
+      "stage": "S5 frozen statistics",
+      "path": "artifacts/s5b/statistics/primary_summary.json",
+      "sha256": "33fd1ef61f71320a6efabff0846aead8efbaf19c50953d2714c67d225f353d41",
+      "status": "frozen",
+      "purpose": "paired 20-seed summary statistics"
+    },
+    {
+      "stage": "S5 raw gate",
+      "path": "artifacts/s5b/raw_gate.json",
+      "sha256": "cee039dcdfe906e83497251ce9cdecc647f430ed7e07940e74a4d2447635b700",
+      "status": "PASS",
+      "purpose": "independent raw-data gate and solve-time P95"
+    },
+    {
+      "stage": "S6T0 + closure",
+      "path": "artifacts/s6_taskspace/t0/closure/gate.json",
+      "sha256": "0a84ca7e03c9c30b256f82d31ef8863d8c6c295d6245b2efc581fdad14376551",
+      "status": "PASS",
+      "purpose": "task-space metric semantics and no-rerun closure"
+    },
+    {
+      "stage": "S6T0 metric contract",
+      "path": "artifacts/s6_taskspace/t0/task_metric_definition.json",
+      "sha256": "98a5da298bb2bd147661ef5b568e07c6546aff5e30f460d248a2a5954875326f",
+      "status": "FROZEN",
+      "purpose": "primary/secondary task-space metric definitions"
+    },
+    {
+      "stage": "S6T1",
+      "path": "artifacts/s6_taskspace/t1/gate.json",
+      "sha256": "23e781b9f66940369038c75a8a3b2bec07d0d23d38809ddb9757abe7730f3d17",
+      "status": "PASS",
+      "purpose": "task-space state/reference/instrumentation gate"
+    },
+    {
+      "stage": "S6T2",
+      "path": "artifacts/s6_taskspace/t2/gate.json",
+      "sha256": "d424535988b824e9e567a9403de1481dc4eed9ea351ac956865e2fcd7f376971",
+      "status": "PASS",
+      "purpose": "setpoint protocol and Task-PID/Task-LQR development gate"
+    },
+    {
+      "stage": "S6T2 selected Task-LQR",
+      "path": "artifacts/s6_taskspace/t2/task_lqr/selected.json",
+      "sha256": "8d9f39a648067c797d7f3066f78c7d736d882380dc83c89a868a778ab1b9fe0f",
+      "status": "SELECTED in development",
+      "purpose": "frozen lqr_011 selection record; not a final robust task-space method"
+    },
+    {
+      "stage": "S6T2 comparison",
+      "path": "artifacts/s6_taskspace/t2/development_comparison.json",
+      "sha256": "ac82f535f9583e4297205f5d8072a501cabef1b1bcdea65b5b7c399bf612e8b9",
+      "status": "frozen",
+      "purpose": "old-LQR versus Task-LQR positive and negative evidence"
+    },
+    {
+      "stage": "S6T3 + closure",
+      "path": "artifacts/s6_taskspace/t3/closure/gate.json",
+      "sha256": "67cbc22a791846c85d851b6cb0e7cbf010332e71e52aa373d3d23de3b2ea6ddb",
+      "status": "CLOSED_WITH_NO_USABLE_METHOD_VALIDATED",
+      "purpose": "Task-LQI and ITS-RMPC closure gate"
+    },
+    {
+      "stage": "S6T3 competence audit",
+      "path": "artifacts/s6_taskspace/t3/closure/competence_reaudit.json",
+      "sha256": "be0f1e14e50ec2ddd09be9a1bfead2108799bc3da975cb086cc2563f7b4de82f",
+      "status": "frozen",
+      "purpose": "near-miss and competence-failure re-audit"
+    },
+    {
+      "stage": "S6T4",
+      "path": "artifacts/s6_taskspace/t4/gate.json",
+      "sha256": "bc50118f1d31d42578785187e73306894b4120ba25bfa5fa0282ea163ebd1cb1",
+      "status": "CLOSED_WITH_NO_USABLE_METHOD",
+      "purpose": "DOB-Task-LQR and DOB-TS-RMPC closure gate"
+    },
+    {
+      "stage": "S6T5",
+      "path": "artifacts/s6_taskspace/t5/gate.json",
+      "sha256": "5e60a57859c88989bf80799ee667c3dad02cd9ed76144b5b77b5832c058ff28e",
+      "status": "CLOSED_WITH_NO_USABLE_AE_TSLQR",
+      "purpose": "AE-TSLQR development gate"
+    },
+    {
+      "stage": "S6T5R1",
+      "path": "artifacts/s6_taskspace/t5r1/gate.json",
+      "sha256": "a236139cd78996350f110ef3f9db7a9d7d3743c30359686ff6bff46d72548c9b",
+      "status": "CLOSED_WITH_NO_USABLE_AE_TSLQR_FINAL",
+      "purpose": "acquisition-lock final closure and stop-development decision"
+    },
+    {
+      "stage": "S6T5R1 lock audit",
+      "path": "artifacts/s6_taskspace/t5r1/lock_behavior_audit.json",
+      "sha256": "a9a8b1bb8877b14a035dfb23e7cc6451f6e3e122013cc8e09b7446ed2fb89de5",
+      "status": "PASS audit",
+      "purpose": "locked bias invariance and unlock behavior evidence"
+    }
+  ]
+}

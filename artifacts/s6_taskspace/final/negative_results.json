@@ -1,0 +1,37 @@
+{
+  "protocol": "S6T6-final-evidence-freeze-r1",
+  "method_development_closed": true,
+  "negative_results": [
+    {
+      "method": "Task-PID",
+      "result": "no usable candidate",
+      "evidence": ["artifacts/s6_taskspace/t2/task_pid/selected.json", "artifacts/s6_taskspace/t2/development_comparison.json"]
+    },
+    {
+      "method": "Task-LQR",
+      "result": "usable under the setpoint protocol in calm, but no crosswind acquisition",
+      "evidence": ["artifacts/s6_taskspace/t2/task_lqr/selected.json", "artifacts/s6_taskspace/t2/development_comparison.json"]
+    },
+    {
+      "method": "ITS-RMPC",
+      "result": "acquisition-capable near misses exist, but position/orientation competence failed",
+      "evidence": ["artifacts/s6_taskspace/t3/closure/competence_reaudit.json", "artifacts/s6_taskspace/t3/closure/gate.json"]
+    },
+    {
+      "method": "DOB",
+      "result": "the scalar matched-disturbance assumption did not match distributed-body wind behavior",
+      "evidence": ["artifacts/s6_taskspace/t4/dob_directionality_audit.json", "artifacts/s6_taskspace/t4/gate.json"]
+    },
+    {
+      "method": "AE-TSLQR",
+      "result": "crosswind RMSE reduction and partial acquisition were observed, but final stable error and calm preservation were not jointly satisfied",
+      "evidence": ["artifacts/s6_taskspace/t5/gate.json", "artifacts/s6_taskspace/t5/selection.json"]
+    },
+    {
+      "method": "AE-TSLQR + acquisition lock",
+      "result": "lock behavior was correct, but 0/12 candidates were usable and method development was stopped",
+      "evidence": ["artifacts/s6_taskspace/t5r1/gate.json", "artifacts/s6_taskspace/t5r1/lock_behavior_audit.json"]
+    }
+  ],
+  "interpretation": "These are preserved development outcomes, not evidence that the methods are impossible in general. No S6 task-space method is promoted as a final robust controller."
+}

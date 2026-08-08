@@ -112,3 +112,13 @@ an independent raw-data Gate. The primary has zero safety failures, 13.06%
 overall paired mean tip-RMS improvement with a 95% bootstrap CI of
 11.00%--15.08%, and an overall x-RMSE ratio of 0.734. S5B is recorded as
 `PASS`; no parameters were changed after freeze and S6 is not started here.
+
+S6 task-space work is now formally frozen and closed with partial scientific
+success. The project completed the task-space protocol, metric contract,
+traditional baselines, development-selected Task-LQR baseline, and negative
+studies for Task-PID, Task-LQI/ITS-RMPC, DOB, and AE-TSLQR. Task-LQR provided
+positive calm development evidence but did not acquire the crosswind target;
+no S6 task-space method passed the complete final competence contract. The
+final task-space method is therefore `NONE`, and gust/random task-space
+holdouts remain unused and preserved. See `docs/S6_TASKSPACE_FINAL_REPORT.md`,
+`docs/FINAL_CLAIM_MATRIX.md`, and `artifacts/s6_taskspace/final/`.

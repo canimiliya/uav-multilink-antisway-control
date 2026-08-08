@@ -1,0 +1,53 @@
+{
+  "generated_by": "read-only filesystem size audit",
+  "deletion_performed": false,
+  "repo_working_tree_bytes": 2601840931,
+  "git_dir_bytes": 772856910,
+  "artifacts_bytes": 1799243275,
+  "s6_taskspace_directories": {
+    "t0": 19643971,
+    "t1": 426095191,
+    "t2": 452917351,
+    "t3": 300942923,
+    "t4": 33991593,
+    "t5": 103386375,
+    "t5r1": 104177193,
+    "final": 17992
+  },
+  "largest_artifact_directory": {
+    "path": "artifacts/s6_taskspace/t2",
+    "bytes": 452917351
+  },
+  "top_30_largest_files": [
+    {"path":"third_party/udaan/.media/fleet_l1.gif","bytes":5528803},
+    {"path":"third_party/udaan/.media/quad_payload_tendon.gif","bytes":5436276},
+    {"path":"third_party/udaan/.media/quad_payload_links.gif","bytes":5385149},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_004/task_acquire_calm/run.csv","bytes":4430586},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_002/task_acquire_calm/run.csv","bytes":4429685},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_006/task_acquire_calm/run.csv","bytes":4427929},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_001/task_acquire_calm/run.csv","bytes":4427921},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_005/task_acquire_calm/run.csv","bytes":4427666},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_003/task_acquire_calm/run.csv","bytes":4425963},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_007/task_acquire_calm/run.csv","bytes":4421392},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_008/task_acquire_calm/run.csv","bytes":4420646},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_009/task_acquire_calm/run.csv","bytes":4420431},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_002/task_acquire_calm/run.csv","bytes":4404416},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_001/task_acquire_calm/run.csv","bytes":4404393},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_010/task_acquire_calm/run.csv","bytes":4403948},
+    {"path":"artifacts/s6_taskspace/t3/its_rmpc/runs/its_004/task_acquire_calm/run.csv","bytes":4403936},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_012/task_acquire_calm/run.csv","bytes":4403161},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_003/task_acquire_calm/run.csv","bytes":4402838},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_006/task_acquire_calm/run.csv","bytes":4401111},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_004/task_acquire_calm/run.csv","bytes":4400976},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_005/task_acquire_calm/run.csv","bytes":4398490},
+    {"path":"artifacts/s6_taskspace/t5r1/runs/ae_011/task_acquire_calm/run.csv","bytes":4398455},
+    {"path":"artifacts/s6_taskspace/t3/its_rmpc/runs/its_012/task_acquire_calm/run.csv","bytes":4392273},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_007/task_acquire_calm/run.csv","bytes":4392030},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_008/task_acquire_calm/run.csv","bytes":4389382},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_009/task_acquire_calm/run.csv","bytes":4388930},
+    {"path":"artifacts/s6_taskspace/t3/its_rmpc/runs/its_008/task_acquire_calm/run.csv","bytes":4388582},
+    {"path":"artifacts/s6_taskspace/t3/its_rmpc/runs/its_016/task_acquire_calm/run.csv","bytes":4382464},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_010/task_acquire_calm/run.csv","bytes":4371780},
+    {"path":"artifacts/s6_taskspace/t5/runs/ae_011/task_acquire_calm/run.csv","bytes":4370543}
+  ]
+}
