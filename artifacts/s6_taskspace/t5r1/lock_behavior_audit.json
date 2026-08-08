@@ -1,0 +1,718 @@
+{
+  "run_count": 24,
+  "runs": [
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_001\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1521,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 12.0,
+          "sample_count": 1511,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_001",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.475,
+      "task_acquisition_time_s": 2.475,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_001\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_001",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_002\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1521,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 12.0,
+          "sample_count": 1511,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_002",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.47,
+      "task_acquisition_time_s": 2.47,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_002\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_002",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_003\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1521,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 12.0,
+          "sample_count": 1511,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_003",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.465,
+      "task_acquisition_time_s": 2.465,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_003\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_003",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_004\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1251,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.5,
+          "end_time_s": 6.495,
+          "sample_count": 400,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 7.8,
+          "end_time_s": 12.0,
+          "sample_count": 841,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_004",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.5100000000000002,
+      "task_acquisition_time_s": 2.5100000000000002,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_004\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_004",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_005\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1161,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 6.295,
+          "sample_count": 370,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 8.1,
+          "end_time_s": 12.0,
+          "sample_count": 781,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_005",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.49,
+      "task_acquisition_time_s": 2.49,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_005\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_005",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_006\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 1521,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 12.0,
+          "sample_count": 1511,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_006",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.475,
+      "task_acquisition_time_s": 2.475,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_006\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 410,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_006",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_007\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 781,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 8.15,
+          "end_time_s": 12.0,
+          "sample_count": 771,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_007",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 7.16,
+      "task_acquisition_time_s": 6.16,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_007\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 470,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.05,
+          "end_time_s": 11.345,
+          "sample_count": 60,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_007",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.08,
+      "task_acquisition_time_s": 7.08,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_008\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 711,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 8.5,
+          "end_time_s": 12.0,
+          "sample_count": 701,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_008",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 7.545,
+      "task_acquisition_time_s": 6.545,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_008\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 450,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.200000000000001,
+          "end_time_s": 11.395,
+          "sample_count": 40,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_008",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.215,
+      "task_acquisition_time_s": 7.215,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_009\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 731,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 4.45,
+          "end_time_s": 5.345,
+          "sample_count": 180,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 9.3,
+          "end_time_s": 12.0,
+          "sample_count": 541,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_009",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 3.5,
+      "task_acquisition_time_s": 2.5,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_009\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 440,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.450000000000001,
+          "end_time_s": 11.595,
+          "sample_count": 30,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_009",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.47,
+      "task_acquisition_time_s": 7.470000000000001,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_010\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 10,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_010",
+      "scene": "task_acquire_calm",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_010\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 420,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.15,
+          "end_time_s": 11.195,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_010",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.165000000000001,
+      "task_acquisition_time_s": 7.165000000000001,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_011\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 10,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_011",
+      "scene": "task_acquire_calm",
+      "task_acquired": false,
+      "task_acquisition_timestamp_s": null,
+      "task_acquisition_time_s": null,
+      "lock_observed_after_acquisition": false
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_011\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 430,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.4,
+          "end_time_s": 11.495000000000001,
+          "sample_count": 20,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_011",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.44,
+      "task_acquisition_time_s": 7.4399999999999995,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_012\\task_acquire_calm\\run.csv",
+      "locked_sample_count": 30,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 0.995,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 8.9,
+          "end_time_s": 8.995000000000001,
+          "sample_count": 20,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_012",
+      "scene": "task_acquire_calm",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 7.915,
+      "task_acquisition_time_s": 6.915,
+      "lock_observed_after_acquisition": true
+    },
+    {
+      "path": "D:\\Desktop\\my_project\\Simulation of Anti-Sway Control for a UAV-Suspended Multi-Link Cutting Device under Wind Disturbances\\artifacts\\s6_taskspace\\t5r1\\runs\\ae_012\\task_acquire_crosswind\\run.csv",
+      "locked_sample_count": 420,
+      "lock_segments": [
+        {
+          "start_time_s": 0.9500000000000001,
+          "end_time_s": 2.995,
+          "sample_count": 410,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        },
+        {
+          "start_time_s": 11.65,
+          "end_time_s": 11.695,
+          "sample_count": 10,
+          "max_bias_drift_m": 0.0,
+          "max_abs_bias_rate_m_s": 0.0
+        }
+      ],
+      "max_bias_drift_while_locked_m": 0.0,
+      "max_abs_bias_rate_while_locked_m_s": 0.0,
+      "bias_constant_while_locked": true,
+      "unlock_on_invalid_observed": true,
+      "finite": true,
+      "candidate_id": "ae_012",
+      "scene": "task_acquire_crosswind",
+      "task_acquired": true,
+      "task_acquisition_timestamp_s": 10.665000000000001,
+      "task_acquisition_time_s": 7.665000000000001,
+      "lock_observed_after_acquisition": true
+    }
+  ],
+  "all_locked_bias_constant": true,
+  "unlock_on_task_invalid_observed": true,
+  "pass": true,
+  "all_acquired_runs_have_lock": true
+}

@@ -1,0 +1,21 @@
+{
+  "method": "AE-TSLQR",
+  "task_lqr_candidate": "lqr_011",
+  "external_task_target_frozen": true,
+  "internal_equilibrium_bias_only": true,
+  "measured_error_source": "CutterTaskSpaceReader/TaskOutputMap",
+  "wind_truth_used": false,
+  "future_target_used": false,
+  "shared_geometric_inner_loop": true,
+  "outer_loop_hz": 20,
+  "metric_contract_modified": false,
+  "setpoint_protocol_modified": false,
+  "acquisition_lock": true,
+  "acquisition_lock_uses_frozen_task_conditions": true,
+  "unlock_on_task_invalid": true,
+  "reference_change_unlocks": true,
+  "bias_retained_on_reference_change": true,
+  "external_target_frozen": true,
+  "gust_executed": false,
+  "random_holdout_executed": false
+}

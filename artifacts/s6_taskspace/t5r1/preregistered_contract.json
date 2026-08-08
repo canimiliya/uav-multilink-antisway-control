@@ -1,0 +1,52 @@
+{
+  "method": "AE-TSLQR with causal acquisition lock",
+  "grid_frozen": true,
+  "grid_size": 12,
+  "k_b": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "tau_s": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "bias_limit_m": 0.4,
+  "bias_rate_limit_m_s": 0.1,
+  "command_holdoff_s": 1.0,
+  "acquisition_lock": {
+    "position_tolerance_m": 0.05,
+    "orientation_tolerance_deg": 5.0,
+    "speed_tolerance_m_s": 0.1,
+    "hold_s": 1.0,
+    "unlock_on_task_invalid": true
+  },
+  "acquisition_measurements": [
+    "current cutter planar tip position error",
+    "current cutter orientation error",
+    "current cutter tip speed"
+  ],
+  "external_target_tip_position_m": [
+    0.525,
+    0.0,
+    0.39
+  ],
+  "external_target_cutter_axis": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "bias_role": "internal UAV equilibrium reference shift only",
+  "future_wind_used": false,
+  "future_target_used": false,
+  "wind_truth_used": false,
+  "dob_used": false,
+  "scenes": [
+    "task_acquire_calm",
+    "task_acquire_crosswind"
+  ],
+  "gust_executed": false,
+  "random_holdout_executed": false
+}
