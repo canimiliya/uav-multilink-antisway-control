@@ -1,0 +1,17 @@
+{
+  "synthetic_d_true_positive": 0.09999999999999988,
+  "synthetic_d_true_negative": -0.09999999999999988,
+  "synthetic_positive_sign_valid": true,
+  "synthetic_negative_sign_valid": true,
+  "crosswind_run_count": 4,
+  "crosswind_settled_wind_force_total_x_mean": 3.061699164152147,
+  "crosswind_settled_observer_mean_range": [
+    -0.08942916188089729,
+    -0.08854071078835095
+  ],
+  "distributed_wind_force_positive": true,
+  "observer_estimate_negative": true,
+  "matched_observer_code_sign_valid": true,
+  "distributed_wind_matched_model_mismatch": true,
+  "pass": true
+}

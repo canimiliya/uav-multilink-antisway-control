@@ -1,0 +1,10 @@
+{
+  "python": "3.11.15",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "numpy": "2.4.6",
+  "mujoco": "3.0.1",
+  "main_start_head": "c02af636dd5521efebf476304a243132f0ad8776",
+  "udaan_head": "9eb1a2dcfe438ce7b4c4cd119072e4f3d8a6a816",
+  "gust_executed": false,
+  "random_holdout_executed": false
+}

@@ -1,0 +1,65 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "ae_001",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_002",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_003",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_004",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_005",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_006",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_007",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_008",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_009",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_010",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_011",
+      "usable": false,
+      "safety": true
+    },
+    {
+      "candidate_id": "ae_012",
+      "usable": false,
+      "safety": true
+    }
+  ],
+  "result": "CLOSED_WITH_NO_USABLE_AE_TSLQR"
+}

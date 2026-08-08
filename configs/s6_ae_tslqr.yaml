@@ -1,0 +1,16 @@
+method: AE-TSLQR
+task_lqr:
+  candidate_id: lqr_011
+  w_p: 80.0
+  w_theta: 5.0
+  R: 1.0
+adaptation_grid:
+  k_b: [0.10, 0.25, 0.50, 1.00]
+  tau_s: [0.25, 0.50, 1.00]
+bias_limit_m: 0.40
+bias_rate_limit_m_s: 0.10
+command_holdoff_s: 1.0
+runtime:
+  physics_hz: 1000
+  inner_hz: 200
+  outer_hz: 20

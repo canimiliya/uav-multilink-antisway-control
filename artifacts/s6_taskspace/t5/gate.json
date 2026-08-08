@@ -1,0 +1,23 @@
+{
+  "method": "AE-TSLQR",
+  "dob_synthetic_sign_valid": true,
+  "distributed_wind_matched_mismatch": true,
+  "grid_size": 12,
+  "usable_candidates": 0,
+  "selected": false,
+  "calm_acquired": false,
+  "crosswind_acquired": false,
+  "adaptation_contribution_pass": false,
+  "gust_executed": false,
+  "random_holdout_executed": false,
+  "future_wind_used": false,
+  "future_target_before_issue": false,
+  "metric_contract_modified": false,
+  "setpoint_protocol_modified": false,
+  "task_lqr_modified": false,
+  "its_rmpc_modified": false,
+  "dob_evidence_modified": false,
+  "physical_model_modified": false,
+  "wind_modified": false,
+  "result": "CLOSED_WITH_NO_USABLE_AE_TSLQR"
+}
